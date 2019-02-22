@@ -4,5 +4,10 @@
 }
 
 img {
-  width:100%;
+  width:49%;
 }
+
+#mosaic{
+  float:left;
+}
+
