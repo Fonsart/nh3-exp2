@@ -4,6 +4,9 @@ import ReactImageMosaic from "react-image-mosaic";
 import "./styles.css";
 import Images from "./assets/images.full.json";
 
+const MAX_COLS = 80;
+const MAX_ROWS = 80;
+
 export default class App extends Component {
   constructor(props) {
     super(props);
@@ -19,8 +22,8 @@ export default class App extends Component {
       loadProgress: 0,
       target: null,
       dimensions:{},
-      columns: 20,
-      rows: 20,
+      columns: MAX_COLS,
+      rows: MAX_ROWS,
       colorBlending:0.6
     };
 
@@ -34,7 +37,7 @@ export default class App extends Component {
   }
 
   wheelZoom(e){
-    if(e.deltaY < 0)
+    if(e.deltaY < 0 && this.state.columns < MAX_COLS)
     {
       this.setState(
         {
@@ -42,7 +45,7 @@ export default class App extends Component {
           rows:this.state.rows+1 
         });
     }
-    else{
+    else if(this.state.columns > 1){ 
       this.setState(
         {
           columns:this.state.columns-1,
@@ -81,6 +84,8 @@ export default class App extends Component {
   clickedCanvas(data) {
     this.setState({
       target: data.image,
+      columns:MAX_COLS,
+      rows:MAX_ROWS
     });
   }
 
@@ -97,6 +102,21 @@ export default class App extends Component {
   render() {
     return (
       <div className="App">
+        <div id="intro"><h1>Démonstrateur NotreHistoire.ch - LAB</h1>
+        <h2>Expérience 2</h2>
+        <p>Cette application démontre l'intéraction de base imaginée pour l'expérience 2 du LAB, proposée par l'institut MEI (Media Engineering Institute) de la HEIG-VD (Haute École d'Ingénierie et de Gestion du canton de Vaud).</p>
+        <h3>Contrôles</h3>
+        <ul>
+          <li>Utilisez la molette de la souris au dessus de la mosaïque pour modifier sa résolution (résolution actuelle : {this.state.columns + "x" + this.state.rows})
+          </li>
+          <li>Cliquez sur une "tuile" de la mosaïque pour charger l'image correspondante</li>
+        </ul>
+        <h3>Divers</h3>
+        <ul>
+          <li>Le set utilisé pour le démonstrateur est composé de 86 images issues du site web <a href="http://www.notrehistoire.ch">notrehistoire.ch</a></li>
+        </ul>
+        <i>MEI - 2019 - Romain Sandoz</i>
+        </div>
         {this.state.loadProgress < 1 ? (
           <pre>
             Loading {Images.length} images... (
@@ -104,10 +124,9 @@ export default class App extends Component {
           </pre>
         ) : null}
         <div id="control">
-              <label htmlFor="col_input">Nb de colonnes</label><input name="col_input" type="text" value={this.state.columns} onChange={this.changeCols} />
+              {/*<label htmlFor="col_input">Nb de colonnes</label><input name="col_input" type="text" value={this.state.columns} onChange={this.changeCols} />
               <label htmlFor="row_input">Nb de colonnes</label><input name="row_input" type="text" value={this.state.rows} onChange={this.changeRows} />
-              <br />
-              <label htmlFor="blending_input">Transparence des couleurs (0-1)</label><input name="blending_input" type="text" value={this.state.colorBlending} onChange={this.changeColorBlending} />
+            <br />*/}
         </div>
         <div id="mosaic" onWheel = {this.wheelZoom}>
           <ReactImageMosaic
