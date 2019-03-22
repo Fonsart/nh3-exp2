@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { render } from "react-dom";
 import ReactImageMosaic from "react-image-mosaic";
 import "./styles.css";
-import Images from "./assets/images.full.json";
+import Images from "./assets/images.sample.json";
 import WebcamCapture from "./components/WebcamCapture/WebcamCapture"
 
 const MAX_COLS = 50;
@@ -43,13 +43,15 @@ export default class App extends Component {
       target:selfie,
       selfie:selfie,
       isCamera:false,
-      isEmptyState:true
+      isEmptyState:true,
+      columns:MAX_COLS,
+      rows:MAX_ROWS
     })
   }
 
   componentWillMount() {
     this.setState({
-      target: process.env.PUBLIC_URL + "/images/" + Images[10].name
+      target: process.env.PUBLIC_URL + "/images/" + Images[0].name
     });
   }
 

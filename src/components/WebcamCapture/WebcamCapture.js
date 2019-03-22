@@ -17,7 +17,7 @@ const cameraButton = {
     position:'absolute'
 }
 
-export default class WebcamCapture extends Component {
+class WebcamCapture extends Component {
     setRef = webcam => {
         this.webcam = webcam;
     };
@@ -49,4 +49,6 @@ export default class WebcamCapture extends Component {
     );
     }
 }
+
+export default WebcamCapture;
   
