@@ -2,8 +2,9 @@ import React, { Component } from "react";
 import { render } from "react-dom";
 import ReactImageMosaic from "react-image-mosaic";
 import "./styles.css";
-import Images from "./assets/images.sample.json";
+import Images from "./assets/images.full.json";
 import WebcamCapture from "./components/WebcamCapture/WebcamCapture"
+import Swipe from "react-easy-swipe"
 
 const MAX_COLS = 50;
 const MAX_ROWS = 50;
@@ -16,6 +17,7 @@ export default class App extends Component {
     this.clickedCanvas = this.clickedCanvas.bind(this);
     this.onImgLoad = this.onImgLoad.bind(this);
     this.wheelZoom = this.wheelZoom.bind(this);
+    this.onSwipeStart = this.onSwipeStart.bind(this);
 
     this.state = {
       loadProgress: 0,
@@ -29,6 +31,10 @@ export default class App extends Component {
     };
 
     this.imgRef = React.createRef();
+  }
+
+  onSwipeStart = (e) => {
+    alert("coucou :"+e);
   }
 
   openCamera = () => {
@@ -51,7 +57,7 @@ export default class App extends Component {
 
   componentWillMount() {
     this.setState({
-      target: process.env.PUBLIC_URL + "/images/" + Images[0].name
+      target: process.env.PUBLIC_URL + "/images/" + Images[23].name
     });
   }
 
@@ -76,17 +82,17 @@ export default class App extends Component {
   onImgLoad({target:img}) {
     this.setState({
       dimensions:{
-        height:img.offsetHeight,
-        width:img.offsetWidth
-      }
+        height:img.height,
+        width:img.width
+      },
+      columns:MAX_COLS,
+      rows:MAX_ROWS
     });
   }
 
   clickedCanvas(data) {
     this.setState({
-      target: data.image,
-      columns:MAX_COLS,
-      rows:MAX_ROWS
+      target: data.image
     });
   }
 
@@ -119,6 +125,7 @@ export default class App extends Component {
           <ReactImageMosaic
             onClick={this.clickedCanvas}
             onLoadProgress={this.loadProgressChanged}
+            onSwipeStart={this.onSwipeStart}
             colorBlending={this.state.colorBlending}
             width={this.state.dimensions.width}
             height={this.state.dimensions.height}
@@ -132,7 +139,7 @@ export default class App extends Component {
         <div id="target">
           {this.state.target ? (
             <div>
-              <img className="target" src={this.getImgSrc(this.state.target)} ref={this.imgRef} onLoad={this.onImgLoad} alt="" />
+              <img className="target" src={this.getImgSrc(this.state.target)} ref={this.imgRef} onLoad={this.onImgLoad.bind(this)} alt="" />
             </div>
           ) : null}
         </div>
