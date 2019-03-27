@@ -3,8 +3,13 @@
   text-align: center;
 }
 
+html{
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
 body{
   /*overflow: hidden;*/
+  background-color:black;
+  color:rgb(214, 214, 214);
 }
 
 button#openCamera{
@@ -23,6 +28,6 @@ button#openCamera{
 }
 
 #intro{
-  text-align: left;
+  text-align: center;
   margin:0 0 20px 40px;
 } 

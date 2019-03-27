@@ -6,12 +6,10 @@ import Images from "./assets/images.full.json";
 import WebcamCapture from "./components/WebcamCapture/WebcamCapture"
 import Swipe from "react-easy-swipe"
 
-import Test from "react-html5-camera-photo"
-
-const MAX_COLS = 50;
-const MAX_ROWS = 50;
-const ZOOM_STEPS = 1;
-const ZOOM_MIN = 3;
+const MAX_COLS = 30;
+const MAX_ROWS = 30;
+const ZOOM_STEPS = 2;
+const ZOOM_MIN = 4;
 
 
 export default class App extends Component {
@@ -27,31 +25,33 @@ export default class App extends Component {
     this.state = {
       loadProgress: 0,
       target: null,
-      dimensions: {height:{},width:{}},
+      dimensions: { height: {}, width: {} },
       columns: MAX_COLS,
       rows: MAX_ROWS,
       colorBlending: 0.6,
       isEmptyState: true,
       selfie: null,
       swipeMode: true,
-      swipedDown:false,
+      swipedDown: true,
     };
     this.imgRef = React.createRef();
   }
 
   onSwipeStart = (e) => {
-    this.setState({swipedDown:true});
+    this.setState({ swipedDown: true });
   }
 
   onSwipeMove = (pos, e) => {
-    if (this.state.columns - ZOOM_STEPS >= ZOOM_MIN) {
-      this.state.swipeMode ? (
-        this.setState(
-          {
-            columns: this.state.columns - ZOOM_STEPS,
-            rows: this.state.rows - ZOOM_STEPS
-          })
-      ) : (this.triggerAnimation())
+    if (this.state.swipedDown) {
+      if (this.state.columns - ZOOM_STEPS >= ZOOM_MIN) {
+        this.state.swipeMode ? (
+          this.setState(
+            {
+              columns: this.state.columns - ZOOM_STEPS,
+              rows: this.state.rows - ZOOM_STEPS
+            })
+        ) : (this.triggerAnimation())
+      }
     }
     return true;
   }
@@ -115,74 +115,85 @@ export default class App extends Component {
         height: img.height,
         width: img.width
       },
-      swipedDown:false,
       columns: MAX_COLS,
       rows: MAX_ROWS
     });
   }
 
   clickedCanvas(data) {
-    if(this.state.swipedDown){
-    this.setState({
-      target: data.image,
-    });}
+    if (this.state.columns - ZOOM_STEPS >= ZOOM_MIN) {
+      this.setState(
+        {
+          columns: this.state.columns - ZOOM_STEPS,
+          rows: this.state.rows - ZOOM_STEPS
+        });
+    } else {
+      if (this.state.swipedDown) {
+        this.setState({
+          target: data.image,
+        });
+      }
+      /*if (this.state.swipedDown) {
+        this.setState({
+          target: data.image,
+        });
+      }*/
+    }
   }
 
-  loadProgressChanged(progress) {
-    this.setState({
-      loadProgress: progress
-    });
-  }
+    loadProgressChanged(progress) {
+      this.setState({
+        loadProgress: progress
+      });
+    }
 
-  getImgSrc(img) {
-    return typeof img === "string" ? img : img.src;
-  }
+    getImgSrc(img) {
+      return typeof img === "string" ? img : img.src;
+    }
 
-  render() {
-    const hideMosaic = this.state.swipedDown ? {display:'initial'} : {display:'none'};
+    render() {
+      const hideMosaic = this.state.swipedDown ? { display: 'initial' } : { display: 'none' };
 
-    return (
-      <div className="App">
-        <div id="intro">
-          <h3>Démonstrateur LAB NotreHistoire.ch</h3>
-          <h4>Expérience 2</h4>
-          <button onClick={this.openCamera} id="openCamera">Take a selfie</button>
-        </div>
-
-        <Swipe
-          onSwipeMove={this.onSwipeMove}
-          onSwipeUp={this.onSwipeUp}w
-          onSwipeStart={this.onSwipeStart}
-        >
-        <div id="mosaic" onWheel={this.wheelZoom} style={hideMosaic}>
-
-        <ReactImageMosaic
-            onClick={this.clickedCanvas}
-            onLoadProgress={this.loadProgressChanged}
-            colorBlending={this.state.colorBlending}
-            width={this.state.dimensions.width}
-            height={this.state.dimensions.height}
-            columns={this.state.columns}
-            rows={this.state.rows}
-            sources={Images.map(img => process.env.PUBLIC_URL + "/images/" + img.name)}
-            target={this.imgRef.current}
-          />
-        </div>
-
-      <div id="target">
-        {this.state.target ? (
-          <div>
-            <img className="target" src={this.getImgSrc(this.state.target)} ref={this.imgRef} onLoad={this.onImgLoad.bind(this)} alt="" />
+      return (
+        <div className="App">
+          <div id="intro">
+            <h3>PIXPLORER beta</h3>
+            <button onClick={this.openCamera} id="openCamera">Take a selfie</button>
           </div>
-        ) : null}
-      </div>
-      </Swipe>
 
-        { this.state.isCamera ? (<WebcamCapture takeSelfie={this.takeSelfie} />) : null }
-      </div >
-    );
+          {this.state.isCamera ? (<WebcamCapture takeSelfie={this.takeSelfie} />) : null}
+
+          <Swipe
+            onSwipeMove={this.onSwipeMove}
+            onSwipeUp={this.onSwipeUp}
+          >
+            <div id="mosaic" onWheel={this.wheelZoom} style={hideMosaic}>
+
+              <ReactImageMosaic
+                onClick={this.clickedCanvas}
+                onLoadProgress={this.loadProgressChanged}
+                colorBlending={this.state.colorBlending}
+                width={this.state.dimensions.width}
+                height={this.state.dimensions.height}
+                columns={this.state.columns}
+                rows={this.state.rows}
+                sources={Images.map(img => process.env.PUBLIC_URL + "/images/" + img.name)}
+                target={this.imgRef.current}
+              />
+            </div>
+
+            <div id="target">
+              {this.state.target ? (
+                <div>
+                  <img className="target" src={this.getImgSrc(this.state.target)} ref={this.imgRef} onLoad={this.onImgLoad.bind(this)} alt="" />
+                </div>
+              ) : null}
+            </div>
+          </Swipe>
+        </div >
+      );
+    }
   }
-}
 
-const rootElement = document.getElementById("root");
-render(<App />, rootElement);
+  const rootElement = document.getElementById("root");
+  render(<App />, rootElement);

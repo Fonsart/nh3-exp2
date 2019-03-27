@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import Webcam, { FACING_MODES, IMAGE_TYPES } from 'react-html5-camera-photo';
 import 'react-html5-camera-photo/build/css/index.css';
+import "./WebcamCapture.css";
+
 
 class WebcamCapture extends Component {
 
@@ -12,7 +14,8 @@ class WebcamCapture extends Component {
         // const imageSrc = this.webcam.getScreenshot();
         this.props.takeSelfie(img);
     };
-     
+    
+    
     
     render() {
     return (
