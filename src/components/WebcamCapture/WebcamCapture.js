@@ -1,54 +1,34 @@
 import React, { Component } from "react";
-import Webcam from "react-webcam";
-import "./WebcamCapture.css";
-
-const webcamStyle = {
-    height:'100%',
-    width:'100%',
-    left:'0',
-    top:'0',
-    zIndex:'100',
-    position:'absolute'
-}
-
-const cameraButton = {
-    bottom:'20px',
-    zIndex:'110',
-    position:'absolute'
-}
+import Webcam, { FACING_MODES, IMAGE_TYPES } from 'react-html5-camera-photo';
+import 'react-html5-camera-photo/build/css/index.css';
 
 class WebcamCapture extends Component {
+
     setRef = webcam => {
         this.webcam = webcam;
     };
      
-    capture = () => {
-//        const imageSrc = this.webcam.getScreenshot();
-        this.props.takeSelfie(this.webcam.getScreenshot());
+    onTakePhoto = (img) => {
+        // const imageSrc = this.webcam.getScreenshot();
+        this.props.takeSelfie(img);
     };
      
     
     render() {
-    const videoConstraints = {
-        facingMode: {exact:"user"}
-    };
-    
     return (
-        <div>
-        <Webcam
-            style={webcamStyle}
-            audio={false}
-            height={700}
-            ref={this.setRef}
-            screenshotFormat="image/jpeg"
-            width={350}
-            videoConstraints={videoConstraints}
-        />
-        <button style={cameraButton} onClick={this.capture}>Capture photo</button>
+        <div className="camera">
+            <Webcam
+                ref={this.webcam}
+                onTakePhoto = { (dataUri) => { this.onTakePhoto(dataUri); } }
+                idealFacingMode={FACING_MODES.USER}
+                imageType = {IMAGE_TYPES.JPG}
+                isImageMirror={false}
+            />
         </div>
     );
     }
 }
+
 
 export default WebcamCapture;
   
