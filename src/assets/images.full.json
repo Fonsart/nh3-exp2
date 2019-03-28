@@ -1,516 +1,453 @@
-﻿[  {
-    "_id": "529d12f72f5bf67e7d95c74a",
+﻿[
+  {
+    "-id": "529d12f72f5bf67e7d95c74a",
     "type": "image",
     "name": "h-1880_aigle-aigleScierie.jpg",
-    "children": []
+    "titre": "aigleScierie.",
+    "auteur": "x",
+    "date": "1880",
+    "lieu": "Aigles"
   },
   {
-    "_id": "665c6fe52ba31ad47bfd6025",
+    "-id": "665c6fe52ba31ad47bfd6025",
     "type": "image",
     "name": "h-1886_fribourg-ecoleEnfantineProvidence.jpg",
-    "children": []
+    "titre": "ecoleEnfantineProvidence.",
+    "auteur": "x",
+    "date": "1886",
+    "lieu": "fribourg"
   },
   {
-    "_id": "d90e0d474b129053b50c1a30",
+    "-id": "d90e0d474b129053b50c1a30",
     "type": "image",
     "name": "h-1900-1909_zinal-excursionValAnniviers.jpg",
-    "children": []
+    "titre": "excursionValAnniviers.",
+    "auteur": "x",
+    "date": "1900",
+    "lieu": "zinal"
   },
   {
-    "_id": "204fa94d73f2944604a59a09",
+    "-id": "204fa94d73f2944604a59a09",
     "type": "image",
     "name": "h-1900_bourgstpierre-colGrandStBernard.jpg",
-    "children": []
+    "titre": "colGrandStBernard.",
+    "auteur": "x",
+    "date": "1900",
+    "lieu": "bourgstpierre"
   },
   {
-    "_id": "44dc715c0fc002962594005f",
-    "type": "image",
-    "name": "h-1900_carouge-pontCarouge.jpg",
-    "children": []
-  },
-  {
-    "_id": "a11cf6e0f92b013f9a2f3bf9",
+    "-id": "a11cf6e0f92b013f9a2f3bf9",
     "type": "image",
     "name": "h-1900_montreux-HabitantsBrent.jpg",
-    "children": []
+    "titre": "HabitantsBrent.",
+    "auteur": "x",
+    "date": "1900",
+    "lieu": "montreux"
   },
   {
-    "_id": "f4a6b3da92d4a501fd2c0922",
+    "-id": "f4a6b3da92d4a501fd2c0922",
     "type": "image",
     "name": "h-1900_montreux-VendangesBrent.jpg",
-    "children": []
+    "titre": "VendangesBrent.",
+    "auteur": "x",
+    "date": "1900",
+    "lieu": "montreux"
   },
   {
-    "_id": "90fd6dec9e40150131123d66",
+    "-id": "90fd6dec9e40150131123d66",
     "type": "image",
     "name": "h-1905_vevey-vueDeVevey.jpg",
-    "children": []
+    "titre": "vueDeVevey.",
+    "auteur": "x",
+    "date": "1905",
+    "lieu": "vevey"
   },
   {
-    "_id": "c407f9efc5c217ebd66f3fcb",
+    "-id": "c407f9efc5c217ebd66f3fcb",
     "type": "image",
     "name": "h-1906_genève-PlaceLongemalle.jpg",
-    "children": []
+    "titre": "PlaceLongemalle.",
+    "auteur": "x",
+    "date": "1906",
+    "lieu": "genève"
   },
   {
-    "_id": "ed7ba0abd2a1fa293613e557",
+    "-id": "ed7ba0abd2a1fa293613e557",
     "type": "image",
     "name": "h-1907_naters-diligenceRhone.jpg",
-    "children": []
+    "titre": "diligenceRhone.",
+    "auteur": "x",
+    "date": "1907",
+    "lieu": "naters"
   },
   {
-    "_id": "d75636a934daa53d96c51a95",
+    "-id": "d75636a934daa53d96c51a95",
     "type": "image",
     "name": "h-1909_ballens-ballens.jpg",
-    "children": []
-  },
-  {
-    "_id": "e443be7e7541dca4d7ece4b3",
-    "type": "image",
-    "name": "h-1910_avenches-pensionnatMonney.jpg",
-    "children": []
-  },
-  {
-    "_id": "c46bf5c7467c6f30de926374",
-    "type": "image",
-    "name": "h-1910_vallorbe-tunnelMontdOr.jpg",
-    "children": []
-  },
-  {
-    "_id": "9a32912a90f75705592697cb",
-    "type": "image",
-    "name": "h-1910_zinal-pencheeRouet.jpg",
-    "children": []
-  },
-  {
-    "_id": "0ae9f9cf7bdb12c243fe6dba",
-    "type": "image",
-    "name": "h-1913_montana-sanaClairmont.jpg",
-    "children": []
-  },
-  {
-    "_id": "1255957bb27eedaa4b213695",
-    "type": "image",
-    "name": "h-1914_montcherand-autoTransportOrbe.jpg",
-    "children": []
-  },
-  {
-    "_id": "e3651c13243a131a9b235b34",
-    "type": "image",
-    "name": "h-1914_null-ViaducTriege.jpg",
-    "children": []
-  },
-  {
-    "_id": "5b21b0c9306d6e3041bafb12",
-    "type": "image",
-    "name": "h-1915_lausanne-panoramiqueLausanne.jpg",
-    "children": []
-  },
-  {
-    "_id": "49d6243e60bd41223cc2d76b",
-    "type": "image",
-    "name": "h-1915_null-familleMaillard.jpg",
-    "children": []
-  },
-  {
-    "_id": "4717f29c5d355f4e7144291f",
-    "type": "image",
-    "name": "h-1923_fribourg-pontZaehringen.jpg",
-    "children": []
-  },
-  {
-    "_id": "66ce4104599b54a1f15105cb",
-    "type": "image",
-    "name": "h-1924_null-premierTrainNavette.jpg",
-    "children": []
-  },
-  {
-    "_id": "3e02dbdf20759dd92561f7a7",
-    "type": "image",
-    "name": "h-1924_veytaux-inaugurationLausanneStMaurice.jpg",
-    "children": []
-  },
-  {
-    "_id": "1a03cf0f9b09f250a6a179c7",
-    "type": "image",
-    "name": "h-1925_chippis-nouvelleEglise.jpg",
-    "children": []
-  },
-  {
-    "_id": "6342727bd05f14277ee42a33",
-    "type": "image",
-    "name": "h-1925_lausanne-haldimand.jpg",
-    "children": []
-  },
-  {
-    "_id": "b952f96c4b704a2afbab17de",
-    "type": "image",
-    "name": "h-1929_genève-marchéPontFrises.jpg",
-    "children": []
-  },
-  {
-    "_id": "26bf1b7f07f36a617e4907da",
-    "type": "image",
-    "name": "h-1929_montsurRolle-vendanges.jpg",
-    "children": []
-  },
-  {
-    "_id": "1a4464afcae2a7cba0a1d2fa",
-    "type": "image",
-    "name": "h-1929_morges-ConvoiSpecial.jpg",
-    "children": []
-  },
-  {
-    "_id": "e41d54effc543bbeb9ae632f",
-    "type": "image",
-    "name": "h-1929_stCergue-douaneFrancaise.jpg",
-    "children": []
-  },
-  {
-    "_id": "6f92f6b35bcd47142b40a644",
-    "type": "image",
-    "name": "h-1932_genève-emeutes.jpg",
-    "children": []
-  },
-  {
-    "_id": "6dccb29465a6b9a5bc073217",
-    "type": "image",
-    "name": "h-1935_chambesy-moissonPregny.jpg",
-    "children": []
-  },
-  {
-    "_id": "633e9722c790cd3e9ad291bc",
-    "type": "image",
-    "name": "h-1935_genève-centraleTelephonique.jpg",
-    "children": []
-  },
-  {
-    "_id": "516edda2ba4646d9f644dc7a",
-    "type": "image",
-    "name": "h-1935_genève-trams.jpg",
-    "children": []
-  },
-  {
-    "_id": "20dc44cfa263d04ea692c7c0",
-    "type": "image",
-    "name": "h-1936_null-zeppelin.jpg",
-    "children": []
-  },
-  {
-    "_id": "7b456b050ea7bd6f3957d6d9",
-    "type": "image",
-    "name": "h-1937_null-manoeuvre1erCorpsArmée.jpg",
-    "children": []
-  },
-  {
-    "_id": "d973d44e235d3ed3e7dc5b7b",
-    "type": "image",
-    "name": "h-1938_neuchatel-familleDecreuze.jpg",
-    "children": []
-  },
-  {
-    "_id": "17ddca51a66b3db4e54bad34",
-    "type": "image",
-    "name": "h-1939_sierre-MeichtryPeinture.jpg",
-    "children": []
-  },
-  {
-    "_id": "feee61cae729f6232c1ba3d6",
-    "type": "image",
-    "name": "h-1944_kloten-transmission1.jpg",
-    "children": []
-  },
-  {
-    "_id": "01520cfdd743a1a439365401",
-    "type": "image",
-    "name": "h-1944_kloten-transmission2.jpg",
-    "children": []
-  },
-  {
-    "_id": "41a7dd14e13b026f467732da",
-    "type": "image",
-    "name": "h-1945_genève-tramLigne1.jpg",
-    "children": []
-  },
-  {
-    "_id": "56f0c2506052f71a033b4ebd",
-    "type": "image",
-    "name": "h-1945_lausanne-MaterniteLausanne.jpg",
-    "children": []
-  },
-  {
-    "_id": "995fc0a3f51a63ef31dc53ce",
-    "type": "image",
-    "name": "h-1946_genève-pontMontBlanc.jpg",
-    "children": []
-  },
-  {
-    "_id": "f3e6e2274460ed6e175be05d",
-    "type": "image",
-    "name": "h-1946_lutry-vendanges.jpg",
-    "children": []
-  },
-  {
-    "_id": "ab6b4735efe3046a4ed6f73d",
-    "type": "image",
-    "name": "h-1948_paris-freresJacques.jpg",
-    "children": []
-  },
-  {
-    "_id": "63144d67cc9eab7109513c76",
-    "type": "image",
-    "name": "h-1950_genève-jetDeau.jpg",
-    "children": []
-  },
-  {
-    "_id": "1636ede23a0e3370fd6446a5",
-    "type": "image",
-    "name": "h-1955_fribourg-vuegenerale.jpg",
-    "children": []
-  },
-  {
-    "_id": "202933fec44ee561b9d34e59",
-    "type": "image",
-    "name": "h-1955_genève-lembrettclub.jpg",
-    "children": []
-  },
-  {
-    "_id": "aec1240d6010dd174353d935",
-    "type": "image",
-    "name": "h-1960_null-claraHaskilPiano.jpg",
-    "children": []
-  },
-  {
-    "_id": "df2c693433513abd399d635d",
-    "type": "image",
-    "name": "h-1963_nullbifurcationMarin.jpg",
-    "children": []
-  },
-  {
-    "_id": "c5ced0111efd64255cdaa446",
-    "type": "image",
-    "name": "h-1964_genève-harmonieEauxVives.jpg",
-    "children": []
-  },
-  {
-    "_id": "a9aa067ed45c2cd00114676b",
-    "type": "image",
-    "name": "h-1965.jpg",
-    "children": []
-  },
-  {
-    "_id": "ec6f365cdbc7741cdf31b1ea",
-    "type": "image",
-    "name": "h-1975_bourgStPierre-hauteMontagne.jpg",
-    "children": []
-  },
-  {
-    "_id": "6461b9bc63be1a10357e59c0",
-    "type": "image",
-    "name": "h-1975_stCergue-familleAndre.jpg",
-    "children": []
-  },
-  {
-    "_id": "6c1dd22fb70193672747c90c",
-    "type": "image",
-    "name": "h-1978_genève-feuxArtifice.jpg",
-    "children": []
-  },
-  {
-    "_id": "66eb6fc1c76d354e23de734a",
-    "type": "image",
-    "name": "h-1979_genève-travauxNocturnes.jpg",
-    "children": []
-  },
-  {
-    "_id": "647cfb403b669292ae5ba6f5",
-    "type": "image",
-    "name": "h-1979_montreux-albertCollins.jpg",
-    "children": []
-  },
-  {
-    "_id": "523b4ac1a7d1b0e017db02d5",
-    "type": "image",
-    "name": "h-1979_null-hbxhy.jpg",
-    "children": []
-  },
-  {
-    "_id": "99ca137fe146ae2454d0f676",
-    "type": "image",
-    "name": "h-1979_nyon-nyonFolkFestival.jpg",
-    "children": []
-  },
-  {
-    "_id": "4e0767cd9766d19b9f6043a2",
-    "type": "image",
-    "name": "h-1980_genève-CaisserFeteForaine.jpg",
-    "children": []
-  },
-  {
-    "_id": "161fc1535772d04103454eee",
-    "type": "image",
-    "name": "h-1980_lausanne-grandPont.jpg",
-    "children": []
-  },
-  {
-    "_id": "ac74f19e7cc05dcb710ad532",
-    "type": "image",
-    "name": "h-1984_genève-fetesGeneve.jpg",
-    "children": []
-  },
-  {
-    "_id": "566fa70c7a6461035ef5e3b3",
-    "type": "image",
-    "name": "h-1985_salavaux-nouveauDrapeau.jpg",
-    "children": []
-  },
-  {
-    "_id": "70df6d37796592cca055f296",
-    "type": "image",
-    "name": "h-1988_stCergue-maitriseFeu.jpg",
-    "children": []
-  },
-  {
-    "_id": "dbc29e17773ac1d0ceaccdae",
-    "type": "image",
-    "name": "h-1990_lausanne-nagra3e.jpg",
-    "children": []
-  },
-  {
-    "_id": "9dbbecf7ecfe02719540ffd9",
-    "type": "image",
-    "name": "h-1998_berne-FeteFederale.jpg",
-    "children": []
-  },
-  {
-    "_id": "db5a79d919f326cb633cb7f5",
-    "type": "image",
-    "name": "h-1999_lausanne-regaCHUV.jpg",
-    "children": []
-  },
-  {
-    "_id": "ac661e549b31e5a444cfc27d",
-    "type": "image",
-    "name": "h-1999_vevey-feteVignerons.jpg",
-    "children": []
-  },
-  {
-    "_id": "b3063ff27df266c37627e2b0",
-    "type": "image",
-    "name": "h-2000_genève-FamilleNombreuse.jpg",
-    "children": []
-  },
-  {
-    "_id": "db232e361a7e999bc0415fa9",
-    "type": "image",
-    "name": "h-2001_genève-militaires.jpg",
-    "children": []
-  },
-  {
-    "_id": "1f06ac1f6c0270c0f549d1c2",
-    "type": "image",
-    "name": "h-2001_morges-Gelere.jpg",
-    "children": []
-  },
-  {
-    "_id": "9af0f0ef4bc97949105c2a27",
-    "type": "image",
-    "name": "h-2012_fribourg-singfree.jpg",
-    "children": []
-  },
-  {
-    "_id": "b75257ed4541b749fb00cca4",
-    "type": "image",
-    "name": "h-2016_estavayer-lutteEstavayer.jpg",
-    "children": []
-  },
-  {
-    "_id": "3572a7ce6cbe32c0b0b7040e",
-    "type": "image",
-    "name": "h-2018_lausanne-festivalLumieres.jpg",
-    "children": []
-  },
-  {
-    "_id": "662461adabcea5f573244e5d",
-    "type": "image",
-    "name": "h-2018_lausanne-hoteldeville.jpg",
-    "children": []
-  },
-  {
-    "_id": "f796eedec4e2ebe4a6044414",
-    "type": "image",
-    "name": "h-2018_lausanne-ochestreGymnasesColleges.jpg",
-    "children": []
-  },
-  {
-    "_id": "d1ef133ac4175e3f2cf75caf",
-    "type": "image",
-    "name": "h-2019_montreux-mobiliteDouce.jpg",
-    "children": []
-  },
-  {
-    "_id": "b16ef072dca9571d03f3701c",
-    "type": "image",
-    "name": "v-1894_zurich-iconnue.jpg",
-    "children": []
-  },
-  {
-    "_id": "1ddb65ab6aadc545b3149b7b",
-    "type": "image",
-    "name": "v-1900_genève-1900.jpg",
-    "children": []
-  },
-  {
-    "_id": "147bd697e050b31e05ff0600",
-    "type": "image",
-    "name": "v-1900_null-armeeDuSalut.jpg",
-    "children": []
-  },
-  {
-    "_id": "b9799a9ebd5bed5f5157c0a7",
-    "type": "image",
-    "name": "v-1900_stluc-josephAntille.jpg",
-    "children": []
-  },
-  {
-    "_id": "067159df13f94df9e553b3d0",
-    "type": "image",
-    "name": "v-1905_finhaut-routeDiligence.jpg",
-    "children": []
-  },
-  {
-    "_id": "c215a3959f95c0c6969f094e",
-    "type": "image",
-    "name": "v-1912_sierre-ChateauVilla.jpg",
-    "children": []
-  },
-  {
-    "_id": "a0966d73ae3c06d0f37bc065",
-    "type": "image",
-    "name": "v-1918_anniviers-paysannes.jpg",
-    "children": []
-  },
-  {
-    "_id": "11ab326fb43ef51f9161e424",
-    "type": "image",
-    "name": "v-1925_londres-mode1925.jpg",
-    "children": []
-  },
-  {
-    "_id": "59eec05b3e03ce250b001aac",
-    "type": "image",
-    "name": "v-1963_cransMontana-michelemorgan.jpg",
-    "children": []
-  },
-  {
-    "_id": "1f2df33ebe74093aa20ad210",
-    "type": "image",
-    "name": "v-2017_carouge-GrandMereGeante.jpg",
-    "children": []
-  },
-  {
-    "_id": "21b9da0af1a11600a272e570",
-    "type": "image",
-    "name": "v-2019_vevey-charlieChaplin.jpg",
-    "children": []
-  }]
+    "titre": "ballens.",
+    "auteur": "x",
+    "date": "1909",
+    "lieu": "ballens"
+  },
+
+{
+  "-id": "e443be7e7541dca4d7ece4b3",
+  "type": "image",
+  "name": "h-1910_avenches-pensionnatMonney.jpg",
+  "titre": "pensionnatMonney.",
+  "auteur": "x",
+  "date": "1910",
+  "lieu": "avenches"
+},
+
+{
+"-id": "c46bf5c7467c6f30de926374",
+"type": "image",
+"name": "h-1910_vallorbe-tunnelMontdOr.jpg",
+"titre": "tunnelMontdOr.",
+"auteur": "x",
+"date": "1910",
+"lieu": "vallorbe"
+},
+
+{
+"-id": "9a32912a90f75705592697cb",
+"type": "image",
+"name": "h-1910_zinal-pencheeRouet.jpg",
+"titre": "pencheeRouet.",
+"auteur": "x",
+"date": "1910",
+"lieu": "zinal"
+},
+
+{
+"-id": "0ae9f9cf7bdb12c243fe6dba",
+"type": "image",
+"name": "h-1913_montana-sanaClairmont.jpg",
+"titre": "sanaClairmont.",
+"auteur": "x",
+"date": "1913",
+"lieu": "montana"
+},
+{
+"-id": "63144d67cc9eab7109513c76",
+"type": "image",
+"name": "h-1950_genève-jetDeau.jpg",
+"titre": "jetDeau.",
+"auteur": "x",
+"date": "1950",
+"lieu": "genève"},
+{
+"-id": "1636ede23a0e3370fd6446a5",
+"type": "image",
+"name": "h-1955_fribourg-vuegenerale.jpg",
+"titre": "vuegenerale.",
+"auteur": "x",
+"date": "1955",
+"lieu": "fribourg"},
+{
+"-id": "202933fec44ee561b9d34e59",
+"type": "image",
+"name": "h-1955_genève-lembrettclub.jpg",
+"titre": "lembrettclub.",
+"auteur": "x",
+"date": "1955",
+"lieu": "genève"},
+{
+"-id": "df2c693433513abd399d635d",
+"type": "image",
+"name": "h-1963_nullbifurcationMarin.jpg",
+"titre": "nullbifurcationMarin.",
+"auteur": "x",
+"date": "1963",
+"lieu": ""},
+{
+"-id": "ec6f365cdbc7741cdf31b1ea",
+"type": "image",
+"name": "h-1975_bourgStPierre-hauteMontagne.jpg",
+"titre": "hauteMontagne.",
+"auteur": "x",
+"date": "1975",
+"lieu": "bourgstpierre"
+},
+
+{
+"-id": "6461b9bc63be1a10357e59c0",
+"type": "image",
+"name": "h-1975_stCergue-familleAndre.jpg",
+"titre": "familleAndre.",
+"auteur": "x",
+"date": "1975",
+"lieu": "stCergue"
+},
+
+{
+"-id": "6c1dd22fb70193672747c90c",
+"type": "image",
+"name": "h-1978_genève-feuxArtifice.jpg",
+"titre": "feuxArtifice.",
+"auteur": "x",
+"date": "1978",
+"lieu": "genève"
+},
+
+{
+"-id": "66eb6fc1c76d354e23de734a",
+"type": "image",
+"name": "h-1979_genève-travauxNocturnes.jpg",
+"titre": "travauxNocturnes.",
+"auteur": "x",
+"date": "1979",
+"lieu": "genève"
+},
+
+{
+"-id": "99ca137fe146ae2454d0f676",
+"type": "image",
+"name": "h-1979_nyon-nyonFolkFestival.jpg",
+"titre": "nyonFolkFestival.",
+"auteur": "x",
+"date": "1979",
+"lieu": "nyon"
+},
+
+{
+"-id": "4e0767cd9766d19b9f6043a2",
+"type": "image",
+"name": "h-1980_genève-CaisserFeteForaine.jpg",
+"titre": "CaisserFeteForaine.",
+"auteur": "x",
+"date": "1980",
+"lieu": "genève"
+},
+
+{
+"-id": "161fc1535772d04103454eee",
+"type": "image",
+"name": "h-1980_lausanne-grandPont.jpg",
+"titre": "grandPont.",
+"auteur": "x",
+"date": "1980",
+"lieu": "lausanne"
+},
+
+{
+"-id": "ac74f19e7cc05dcb710ad532",
+"type": "image",
+"name": "h-1984_genève-fetesGeneve.jpg",
+"titre": "fetesGeneve.",
+"auteur": "x",
+"date": "1984",
+"lieu": "genève"
+},
+
+{
+"-id": "566fa70c7a6461035ef5e3b3",
+"type": "image",
+"name": "h-1985_salavaux-nouveauDrapeau.jpg",
+"titre": "nouveauDrapeau.",
+"auteur": "x",
+"date": "1985",
+"lieu": "salavaux"
+},
+
+{
+"-id": "70df6d37796592cca055f296",
+"type": "image",
+"name": "h-1988_stCergue-maitriseFeu.jpg",
+"titre": "maitriseFeu.",
+"auteur": "x",
+"date": "1988",
+"lieu": "stCergue"
+},
+
+{
+"-id": "db5a79d919f326cb633cb7f5",
+"type": "image",
+"name": "h-1999_lausanne-regaCHUV.jpg",
+"titre": "regaCHUV.",
+"auteur": "x",
+"date": "1999",
+"lieu": "lausanne"
+},
+
+{
+"-id": "ac661e549b31e5a444cfc27d",
+"type": "image",
+"name": "h-1999_vevey-feteVignerons.jpg",
+"titre": "feteVignerons.",
+"auteur": "x",
+"date": "1999",
+"lieu": "vevey"
+},
+
+{
+"-id": "1f06ac1f6c0270c0f549d1c2",
+"type": "image",
+"name": "h-2001_morges-Gelere.jpg",
+"titre": "Gelere.",
+"auteur": "x",
+"date": "2001",
+"lieu": "morges"
+},
+
+{
+"-id": "9af0f0ef4bc97949105c2a27",
+"type": "image",
+"name": "h-2012_fribourg-singfree.jpg",
+"titre": "singfree.",
+"auteur": "x",
+"date": "2012",
+"lieu": "fribourg"
+},
+
+{
+"-id": "b75257ed4541b749fb00cca4",
+"type": "image",
+"name": "h-2016_estavayer-lutteEstavayer.jpg",
+"titre": "lutteEstavayer.",
+"auteur": "x",
+"date": "2016",
+"lieu": "estavayer"
+},
+
+{
+"-id": "3572a7ce6cbe32c0b0b7040e",
+"type": "image",
+"name": "h-2018_lausanne-festivalLumieres.jpg",
+"titre": "festivalLumieres.",
+"auteur": "x",
+"date": "2018",
+"lieu": "lausanne"
+},
+
+{
+"-id": "662461adabcea5f573244e5d",
+"type": "image",
+"name": "h-2018_lausanne-hoteldeville.jpg",
+"titre": "hoteldeville.",
+"auteur": "x",
+"date": "2018",
+"lieu": "lausanne"
+},
+
+{
+"-id": "f796eedec4e2ebe4a6044414",
+"type": "image",
+"name": "h-2018_lausanne-ochestreGymnasesColleges.jpg",
+"titre": "ochestreGymnasesColleges.",
+"auteur": "x",
+"date": "2018",
+"lieu": "lausanne"
+},
+
+{
+"-id": "d1ef133ac4175e3f2cf75caf",
+"type": "image",
+"name": "h-2019_montreux-mobiliteDouce.jpg",
+"titre": "mobiliteDouce.",
+"auteur": "x",
+"date": "2019",
+"lieu": "montreux"
+},
+
+{
+"-id": "b16ef072dca9571d03f3701c",
+"type": "image",
+"name": "v-1894_zurich-iconnue.jpg",
+"titre": "inconnue.",
+"auteur": "x",
+"date": "1894",
+"lieu": "zurich"
+},
+
+{
+"-id": "147bd697e050b31e05ff0600",
+"type": "image",
+"name": "v-1900_null-armeeDuSalut.jpg",
+"titre": "armeeDuSalut.",
+"auteur": "x",
+"date": "1900",
+"lieu": ""
+},
+
+{
+"-id": "b9799a9ebd5bed5f5157c0a7",
+"type": "image",
+"name": "v-1900_stluc-josephAntille.jpg",
+"titre": "josephAntille.",
+"auteur": "x",
+"date": "1900",
+"lieu": "stluc"
+},
+
+{
+"-id": "067159df13f94df9e553b3d0",
+"type": "image",
+"name": "v-1905_finhaut-routeDiligence.jpg",
+"titre": "routeDiligence.",
+"auteur": "x",
+"date": "1905",
+"lieu": "finhaut"
+},
+
+{
+"-id": "c215a3959f95c0c6969f094e",
+"type": "image",
+"name": "v-1912_sierre-ChateauVilla.jpg",
+"titre": "ChateauVilla.",
+"auteur": "x",
+"date": "1912",
+"lieu": "sierre"
+},
+
+{
+"-id": "a0966d73ae3c06d0f37bc065",
+"type": "image",
+"name": "v-1918_anniviers-paysannes.jpg",
+"titre": "paysannes.",
+"auteur": "x",
+"date": "1918",
+"lieu": "anniviers"
+},
+
+{
+"-id": "11ab326fb43ef51f9161e424",
+"type": "image",
+"name": "v-1925_londres-mode1925.jpg",
+"titre": "mode1925.",
+"auteur": "x",
+"date": "1925",
+"lieu": "londres"
+},
+
+{
+"-id": "59eec05b3e03ce250b001aac",
+"type": "image",
+"name": "v-1963_cransMontana-michelemorgan.jpg",
+"titre": "michelemorgan.",
+"auteur": "x",
+"date": "1963",
+"lieu": "cransMontana"
+},
+
+{
+"-id": "1f2df33ebe74093aa20ad210",
+"type": "image",
+"name": "v-2017_carouge-GrandMereGeante.jpg",
+"titre": "GrandMereGeante.",
+"auteur": "x",
+"date": "2017",
+"lieu": "carouge"
+},
+
+{
+"-id": "21b9da0af1a11600a272e570",
+"type": "image",
+"name": "v-2019_vevey-charlieChaplin.jpg",
+"titre": "charlieChaplin.",
+"auteur": "x",
+"date": "2019",
+"lieu": "vevey"
+}
+]

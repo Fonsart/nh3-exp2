@@ -1,0 +1,23 @@
+.description{
+    width:100%;
+    height:auto;
+    position:absolute;
+    bottom:0px;
+    z-index:30;
+    padding: 20px;
+    background: rgb(73, 127, 245);
+    text-align: left;
+}
+
+.description h2, .description h4{
+    margin:0;
+}
+
+a {
+    position:absolute;
+    right:50px;
+    bottom:10px;
+    font-style: italic;
+    font-size:12px;
+    color:white;
+}
