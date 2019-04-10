@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { render } from "react-dom";
 import ReactImageMosaic from "react-image-mosaic";
 import "./styles.css";
-import Images from "./assets/images.full.json";
+import Images from "./assets/images.json";
 import WebcamCapture from "./components/WebcamCapture/WebcamCapture"
 import ImageDescription from "./components/ImageDescription/ImageDescription"
 
@@ -39,7 +39,7 @@ export default class App extends Component {
       dimensions: { height: {}, width: {} },
       columns: MAX_COLS,
       rows: MAX_ROWS,
-      colorBlending: 0.6,
+      colorBlending: 0.7,
       selfie: null,
       swipedDown: true,
       img_title:null,
@@ -54,9 +54,11 @@ export default class App extends Component {
   componentWillMount() {
     //get a random starting image
     let index = Math.floor(Math.random() * Object.keys(Images).length);
-    
+    let imgPath = Images[index].media.path;
+    let imgName = imgPath.split("/");
+
     this.setState({
-      target: process.env.PUBLIC_URL + "/images/" + Images[index].name,
+      target: process.env.PUBLIC_URL + "/images/" + imgName[3],
     });
 
     this.updateImageData(Images[index]);
@@ -65,13 +67,13 @@ export default class App extends Component {
   
 
   updateImageData(img){    
-    if(img){
+    if(img != null){
       this.setState({
         img_title:img.titre,
-        img_date:img.date,
-        img_author:img.auteur,
-        img_id:img._id,
-        img_place:img.lieu
+        img_date:img.date.year,
+        img_author:img.author,
+        img_id:img.id,
+        img_place:img.location
       })
     }else{
       let imgName = typeof this.state.target === "string" ? this.state.target : this.state.target.attributes.src.value;
@@ -85,29 +87,6 @@ export default class App extends Component {
     }
     
   }
-
-  /* onSwipeMove = (pos, e) => {
-    if (this.state.swipedDown) {
-      if (this.state.columns - ZOOM_STEPS >= ZOOM_MIN) {
-        this.state.swipeMode ? (
-          this.setState(
-            {
-              columns: this.state.columns - ZOOM_STEPS,
-              rows: this.state.rows - ZOOM_STEPS
-            })
-        ) : (this.triggerAnimation())
-      }
-    }
-    return true;
-  }
-
-  onSwipeUp = (e) => {
-    this.setState(
-      {
-        columns: this.state.columns + ZOOM_STEPS,
-        rows: this.state.rows + ZOOM_STEPS
-      })
-  }*/
 
   openCamera = () => {
     this.setState({
@@ -215,7 +194,7 @@ export default class App extends Component {
                 height={this.state.dimensions.height}
                 columns={this.state.columns}
                 rows={this.state.rows}
-                sources={Images.map(img => process.env.PUBLIC_URL + "/images/" + img.name)}
+                sources={Images.map(img => process.env.PUBLIC_URL + "/images/" + img.media.path.split("/")[3])}
                 target={this.state.target}
               />
             ) : ""}
