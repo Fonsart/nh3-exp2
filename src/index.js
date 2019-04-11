@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { render } from "react-dom";
+import { hydrate, render } from "react-dom";
 import ReactImageMosaic from "react-image-mosaic";
 import "./styles.css";
 import Images from "./assets/images.json";
@@ -199,4 +199,8 @@ export default class App extends Component {
 }
 
 const rootElement = document.getElementById("root");
-render(<App />, rootElement);
+if (rootElement.hasChildNodes()) {
+  hydrate(<App />, rootElement);
+} else {
+  render(<App />, rootElement);
+}
