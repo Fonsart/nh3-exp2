@@ -7,10 +7,10 @@ import WebcamCapture from "./components/WebcamCapture/WebcamCapture"
 import ImageDescription from "./components/ImageDescription/ImageDescription"
 
 
-const MAX_COLS = 80;
-const MAX_ROWS = 80;
-const ZOOM_STEPS = 8;
-const ZOOM_MIN = 8;
+const MAX_COLS = 50;
+const MAX_ROWS = 50;
+const ZOOM_STEPS = 5;
+const ZOOM_MIN = 5;
 
 const btnStyle = {
   height: '40px',
@@ -110,6 +110,7 @@ export default class App extends Component {
         columns: MAX_COLS,
         rows: MAX_ROWS
       });
+      clearInterval(this.interval);
       this.updateImageData(this.getImgObjectFromSrc(data.image.attributes.src.value));
     }
   }
@@ -149,6 +150,8 @@ export default class App extends Component {
   render() {
 
     const imageClick = () => {
+      this.interval = setInterval(() => {if(this.state.columns>ZOOM_MIN){this.setState({ columns:this.state.columns-5,rows:this.state.rows-5 })}}, 100);
+
       this.setState({
         initialState: !this.state.initialState,
       })
