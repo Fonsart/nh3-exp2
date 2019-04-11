@@ -6,8 +6,6 @@ import Images from "./assets/images.json";
 import WebcamCapture from "./components/WebcamCapture/WebcamCapture"
 import ImageDescription from "./components/ImageDescription/ImageDescription"
 
-import Swipe from "react-easy-swipe"
-
 
 const MAX_COLS = 30;
 const MAX_ROWS = 30;
@@ -30,7 +28,7 @@ export default class App extends Component {
 
     this.loadProgressChanged = this.loadProgressChanged.bind(this);
     this.clickedCanvas = this.clickedCanvas.bind(this);
-    this.wheelZoom = this.wheelZoom.bind(this);
+    this.updateImageData = this.updateImageData.bind(this);
 
     this.state = {
       initialState: true,
@@ -42,50 +40,41 @@ export default class App extends Component {
       colorBlending: 0.7,
       selfie: null,
       swipedDown: true,
-      img_title:null,
-      img_date:null,
-      img_author:null,
-      img_id:null,
-      img_place:null,
+      img_title: null,
+      img_date: null,
+      img_author: null,
+      img_id: null,
+      img_place: null,
     };
+
     this.imgRef = React.createRef();
+    this.indexFirstImage = Math.floor(Math.random() * Object.keys(Images).length);
   }
 
   componentWillMount() {
     //get a random starting image
-    let index = Math.floor(Math.random() * Object.keys(Images).length);
-    let imgPath = Images[index].media.path;
+    let imgPath = Images[this.indexFirstImage].media.path;
     let imgName = imgPath.split("/");
 
     this.setState({
       target: process.env.PUBLIC_URL + "/images/" + imgName[3],
+      columns: MAX_COLS,
+      rows: MAX_ROWS
     });
 
-    this.updateImageData(Images[index]);
-
+    this.updateImageData(Images[this.indexFirstImage]);
   }
-  
 
-  updateImageData(img){    
-    if(img != null){
+  updateImageData(img) {
+    if (img != null) {
       this.setState({
-        img_title:img.titre,
-        img_date:img.date.year,
-        img_author:img.author,
-        img_id:img.id,
-        img_place:img.location
+        img_title: img.titre,
+        img_date: img.date.year,
+        img_author: img.author,
+        img_id: img.id,
+        img_place: img.location
       })
-    }else{
-      let imgName = typeof this.state.target === "string" ? this.state.target : this.state.target.attributes.src.value;
-      let currentImg  = Images.filter(img => {return process.env.PUBLIC_URL + "/images/" +img.name === imgName});
-      
-      console.log(imgName);
-      console.log(currentImg);
-
-      this.updateImageData(currentImg[0]);
-    
     }
-    
   }
 
   openCamera = () => {
@@ -107,24 +96,6 @@ export default class App extends Component {
     })
   }
 
-
-  wheelZoom(e) {
-    if (e.deltaY < 0 && this.state.columns < MAX_COLS) {
-      this.setState(
-        {
-          columns: this.state.columns + ZOOM_STEPS,
-          rows: this.state.rows + ZOOM_STEPS
-        });
-    }
-    else if (this.state.columns > ZOOM_MIN) {
-      this.setState(
-        {
-          columns: this.state.columns - ZOOM_STEPS,
-          rows: this.state.rows - ZOOM_STEPS
-        })
-    }
-  }
-
   clickedCanvas(data) {
     if (this.state.columns - ZOOM_STEPS >= ZOOM_MIN) {
       this.setState(
@@ -134,40 +105,53 @@ export default class App extends Component {
         });
     } else {
       this.setState({
-        target: data.image,
-        initialState: !this.state.initialState,
-      },
-      this.updateImageData
-      );
+        target: data.image.src,
+        initialState: !this.state.initialState
+      });
+      this.updateImageData(this.getImgObjectFromSrc(data.image.attributes.src.value));
     }
   }
 
   loadProgressChanged(progress) {
     this.setState({
-      loadProgress: progress
+      loadProgress: progress,
     });
+  }
 
-    if (progress > 0.9) {
-      this.setState({
-        dimensions: {
-          height: this.imgRef.current.height,
-          width: this.imgRef.current.width,
-        },
-        columns: MAX_COLS,
-        rows: MAX_ROWS
-      });
-    }
+  handleImageLoaded() {
+    console.log("image loaded with : h - " + this.imgRef.current.offsetHeight + " w - " + this.imgRef.current.offsetWidth)
+    this.setState({
+      dimensions: {
+        height: this.imgRef.current.offsetHeight,
+        width: this.imgRef.current.offsetWidth,
+      }
+    });
   }
 
   getImgSrc(img) {
     return typeof img === "string" ? img : img.src;
   }
 
+  getImgObjectFromSrc(src) {
+
+    let imgPath = src.split("/");
+
+    let currentImg = Images.filter(img => {
+      let targetPath = img.media.path.split("/");
+      return targetPath[3] === imgPath[2]
+    });
+
+    return currentImg[0];
+  }
+
+
   render() {
 
     const imageClick = () => {
       this.setState({
         initialState: !this.state.initialState,
+        columns: MAX_COLS,
+        rows: MAX_ROWS
       })
     }
 
@@ -180,42 +164,37 @@ export default class App extends Component {
 
         {this.state.isCamera ? (<WebcamCapture takeSelfie={this.takeSelfie} />) : null}
 
-        <Swipe
-          onSwipeMove={this.onSwipeMove}
-          onSwipeUp={this.onSwipeUp}
-        >
-          <div id="mosaic" onWheel={this.wheelZoom}>
-            {!this.state.initialState ? (
-              <ReactImageMosaic
-                onClick={this.clickedCanvas}
-                onLoadProgress={this.loadProgressChanged}
-                colorBlending={this.state.colorBlending}
-                width={this.state.dimensions.width}
-                height={this.state.dimensions.height}
-                columns={this.state.columns}
-                rows={this.state.rows}
-                sources={Images.map(img => process.env.PUBLIC_URL + "/images/" + img.media.path.split("/")[3])}
-                target={this.state.target}
-              />
-            ) : ""}
+        {!this.state.initialState ? (
+          <div id="mosaic">
+            <ReactImageMosaic
+              onClick={this.clickedCanvas}
+              onLoadProgress={this.loadProgressChanged}
+              colorBlending={this.state.colorBlending}
+              width={this.state.dimensions.width}
+              height={this.state.dimensions.height}
+              columns={this.state.columns}
+              rows={this.state.rows}
+              sources={Images.map(img => process.env.PUBLIC_URL + "/images/" + img.media.path.split("/")[3])}
+              target={this.state.target}
+            />
           </div>
+        ) : ""}
 
+        {this.state.target ? (
           <div id="target">
-            {this.state.target ? (
-              <div>
-                <img onClick={imageClick} className="target" src={this.getImgSrc(this.state.target)} ref={this.imgRef} alt="" />
-              </div>
-            ) : null}
+            <img onLoad={this.handleImageLoaded.bind(this)} onClick={imageClick} className="target" src={this.getImgSrc(this.state.target)} ref={this.imgRef} alt="" />
           </div>
-        </Swipe>
-        {this.state.initialState ? 
-        <ImageDescription
-          id={this.state.img_id}
-          titre={this.state.img_title}
-          auteur={this.state.img_author}
-          date={this.state.img_date}
-          lieu={this.state.img_place}
-        /> : "" }
+        ) : null}
+
+
+        {this.state.initialState ?
+          <ImageDescription
+            id={this.state.img_id}
+            titre={this.state.img_title}
+            auteur={this.state.img_author}
+            date={this.state.img_date}
+            lieu={this.state.img_place}
+          /> : ""}
 
       </div >
     );
