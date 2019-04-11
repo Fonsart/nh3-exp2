@@ -7,10 +7,10 @@ import WebcamCapture from "./components/WebcamCapture/WebcamCapture"
 import ImageDescription from "./components/ImageDescription/ImageDescription"
 
 
-const MAX_COLS = 30;
-const MAX_ROWS = 30;
-const ZOOM_STEPS = 2;
-const ZOOM_MIN = 4;
+const MAX_COLS = 80;
+const MAX_ROWS = 80;
+const ZOOM_STEPS = 8;
+const ZOOM_MIN = 8;
 
 const btnStyle = {
   height: '40px',
@@ -37,9 +37,8 @@ export default class App extends Component {
       dimensions: { height: {}, width: {} },
       columns: MAX_COLS,
       rows: MAX_ROWS,
-      colorBlending: 0.7,
+      colorBlending: 0.6  ,
       selfie: null,
-      swipedDown: true,
       img_title: null,
       img_date: null,
       img_author: null,
@@ -48,6 +47,7 @@ export default class App extends Component {
     };
 
     this.imgRef = React.createRef();
+
     this.indexFirstImage = Math.floor(Math.random() * Object.keys(Images).length);
   }
 
@@ -106,7 +106,9 @@ export default class App extends Component {
     } else {
       this.setState({
         target: data.image.src,
-        initialState: !this.state.initialState
+        initialState: !this.state.initialState,
+        columns: MAX_COLS,
+        rows: MAX_ROWS
       });
       this.updateImageData(this.getImgObjectFromSrc(data.image.attributes.src.value));
     }
@@ -119,7 +121,6 @@ export default class App extends Component {
   }
 
   handleImageLoaded() {
-    console.log("image loaded with : h - " + this.imgRef.current.offsetHeight + " w - " + this.imgRef.current.offsetWidth)
     this.setState({
       dimensions: {
         height: this.imgRef.current.offsetHeight,
@@ -150,8 +151,6 @@ export default class App extends Component {
     const imageClick = () => {
       this.setState({
         initialState: !this.state.initialState,
-        columns: MAX_COLS,
-        rows: MAX_ROWS
       })
     }
 
@@ -164,8 +163,7 @@ export default class App extends Component {
 
         {this.state.isCamera ? (<WebcamCapture takeSelfie={this.takeSelfie} />) : null}
 
-        {!this.state.initialState ? (
-          <div id="mosaic">
+          <div id="mosaic" className={!this.state.initialState ? "":"hidden"}>
             <ReactImageMosaic
               onClick={this.clickedCanvas}
               onLoadProgress={this.loadProgressChanged}
@@ -178,10 +176,9 @@ export default class App extends Component {
               target={this.state.target}
             />
           </div>
-        ) : ""}
 
         {this.state.target ? (
-          <div id="target">
+          <div id="target" className={this.state.initialState ? "":"hidden"}>
             <img onLoad={this.handleImageLoaded.bind(this)} onClick={imageClick} className="target" src={this.getImgSrc(this.state.target)} ref={this.imgRef} alt="" />
           </div>
         ) : null}

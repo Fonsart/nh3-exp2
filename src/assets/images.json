@@ -216,30 +216,6 @@
         }
     },
     {
-        "id": 31447,
-        "titre": "Arboretum de Riex",
-        "author": "Gérard",
-        "license": "all_rights_reserved",
-        "date": {
-            "year": 2012,
-            "month": 6,
-            "day": 9
-        },
-        "location": "Chemin de la Rochette 22, 1072 Forel (Lavaux), Suisse",
-        "media": {
-            "id": 26245,
-            "user_id": 397,
-            "path": "photos/D/t/DtMTUeCfNqb5xEtJFwxhXJwtVhrffOZ5XN7wupum.jpg",
-            "width": 810,
-            "height": 1098,
-            "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/D/t/DtMTUeCfNqb5xEtJFwxhXJwtVhrffOZ5XN7wupum.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190404%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190404T151451Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=223e54dc8be3e24e44c3b7f071727761b8b8136885cd7cdd2c17f85ba818bd14",
-            "thumbnail_url": "https://notrehistoire.imgix.net/photos/D/t/DtMTUeCfNqb5xEtJFwxhXJwtVhrffOZ5XN7wupum.jpeg?fm=jpg&sharp=3&w=770&s=6abeb1e64a8f1029ade5fc057e5fa71c",
-            "is_processed": true,
-            "created_at": "2012-06-10T14:22:52+00:00",
-            "updated_at": "2019-02-08T08:47:33+00:00"
-        }
-    },
-    {
         "id": 44331,
         "titre": "Pierre Gilliard photographié en Russie",
         "author": "R. Fropora, photographe russe",
@@ -1080,54 +1056,6 @@
         }
     },
     {
-        "id": 46324,
-        "titre": "Butte de Riantbosson. Le toboggan en construction",
-        "author": null,
-        "license": "all_rights_reserved",
-        "date": {
-            "year": 1985,
-            "month": 1,
-            "day": 1
-        },
-        "location": "Rue Lect, 1217 Meyrin, Suisse",
-        "media": {
-            "id": 40973,
-            "user_id": 2315,
-            "path": "photos/0/T/0TYGVlKz7dm1fIUxAG6vZd97HN65ZI3OpG7p6qy5.jpg",
-            "width": 1033,
-            "height": 1572,
-            "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/0/T/0TYGVlKz7dm1fIUxAG6vZd97HN65ZI3OpG7p6qy5.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190404%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190404T153523Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=9697907a8f549cbbbc7f6a3fb4578f1ce886c3fd6fb614113f61bdb503daa2e6",
-            "thumbnail_url": "https://notrehistoire.imgix.net/photos/0/T/0TYGVlKz7dm1fIUxAG6vZd97HN65ZI3OpG7p6qy5.jpeg?fm=jpg&sharp=3&w=770&s=6eec9eb39238fef420362dfa6ebc955f",
-            "is_processed": true,
-            "created_at": "2014-03-26T11:41:28+00:00",
-            "updated_at": "2019-02-08T00:52:25+00:00"
-        }
-    },
-    {
-        "id": 39241,
-        "titre": "Marius Borgeaud, peintre",
-        "author": "Martine Desarzens",
-        "license": "all_rights_reserved",
-        "date": {
-            "year": 2013,
-            "month": 5,
-            "day": 14
-        },
-        "location": "Avenue de Rumine 3, 1005 Lausanne",
-        "media": {
-            "id": 33937,
-            "user_id": 189,
-            "path": "photos/e/o/eoHhDCfpVLTGVLjvOmEjqFNxglYjBgqMehtvpeQn.jpg",
-            "width": 1915,
-            "height": 2419,
-            "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/e/o/eoHhDCfpVLTGVLjvOmEjqFNxglYjBgqMehtvpeQn.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190404%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190404T153523Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=dabe14b2f0b366e13edb05582a1fd4376f52c33784e42e5a8d7595ec1d1550ac",
-            "thumbnail_url": "https://notrehistoire.imgix.net/photos/e/o/eoHhDCfpVLTGVLjvOmEjqFNxglYjBgqMehtvpeQn.jpeg?fm=jpg&sharp=3&w=770&s=b91b4f9519a83a1027bddf8d9301c68b",
-            "is_processed": true,
-            "created_at": "2013-05-14T15:25:21+00:00",
-            "updated_at": "2019-02-07T02:25:23+00:00"
-        }
-    },
-    {
         "id": 51945,
         "titre": "Genève, Saint-François de Sales",
         "author": "A. Salamin",
@@ -1776,31 +1704,6 @@
             "updated_at": "2019-02-04T06:09:38+00:00"
         }
     },
-    
-    {
-        "id": 24917,
-        "titre": "Jacqueline Rey",
-        "author": "imprimerie, St-Paul, Fribourg",
-        "license": "all_rights_reserved",
-        "date": {
-            "year": 1945,
-            "month": 4,
-            "day": 15
-        },
-        "location": "Valais central",
-        "media": {
-            "id": 19768,
-            "user_id": 1082,
-            "path": "photos/V/f/Vfc7TsyuWl8pd2pu2spkkSArez1d75OMMT6viaoM.jpg",
-            "width": 795,
-            "height": 1286,
-            "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/V/f/Vfc7TsyuWl8pd2pu2spkkSArez1d75OMMT6viaoM.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190404%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190404T155612Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=090fc78b7604e3324a3bf197fb12920df40bc7c54f1cc5fa0c75ad61f6e8f2a2",
-            "thumbnail_url": "https://notrehistoire.imgix.net/photos/V/f/Vfc7TsyuWl8pd2pu2spkkSArez1d75OMMT6viaoM.jpeg?fm=jpg&sharp=3&w=770&s=5a7ea6f7373561d453e847fa7af69b32",
-            "is_processed": true,
-            "created_at": "2011-10-16T11:38:08+00:00",
-            "updated_at": "2019-02-08T03:59:49+00:00"
-        }
-    },
     {
         "id": 59853,
         "titre": "Carouge, le Temple",
@@ -2355,30 +2258,6 @@
         }
     },
     {
-        "id": 31763,
-        "titre": "Salle Métropole - Hall d'entrée 3ème étage",
-        "author": "Sylvie Bazzanella",
-        "license": "all_rights_reserved",
-        "date": {
-            "year": 2012,
-            "month": 6,
-            "day": 25
-        },
-        "location": "Place Bel-Air 1, Lausanne",
-        "media": {
-            "id": 26561,
-            "user_id": 108,
-            "path": "photos/0/Q/0QXgLXSpLl3vqZdhAzMQHxWL81cSXP0bMHS5DhFa.jpg",
-            "width": 3456,
-            "height": 4608,
-            "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/0/Q/0QXgLXSpLl3vqZdhAzMQHxWL81cSXP0bMHS5DhFa.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190404%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190404T160215Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=326ae4d4033e327009d49de7fa28ff407a817c43382f0f7ca59a21b547191f9b",
-            "thumbnail_url": "https://notrehistoire.imgix.net/photos/0/Q/0QXgLXSpLl3vqZdhAzMQHxWL81cSXP0bMHS5DhFa.jpeg?fm=jpg&sharp=3&w=770&s=730244053cdf5b83790b96fbc8c53cc5",
-            "is_processed": true,
-            "created_at": "2012-06-25T19:22:53+00:00",
-            "updated_at": "2019-02-03T12:21:44+00:00"
-        }
-    },
-    {
         "id": 19886,
         "titre": "Le cimetière des pestiférés au Boêchet",
         "author": "Deseyegn",
@@ -2548,30 +2427,6 @@
         }
     },
     {
-        "id": 27674,
-        "titre": "Journal LA SUISSE",
-        "author": "Georges Savary",
-        "license": "all_rights_reserved",
-        "date": {
-            "year": 1994,
-            "month": 3,
-            "day": 13
-        },
-        "location": "Rue des Savoises 15, 1205 Genève, Suisse",
-        "media": {
-            "id": 22478,
-            "user_id": 1430,
-            "created_at": "2012-01-21T18:08:48+00:00",
-            "updated_at": "2019-02-08T08:55:40+00:00",
-            "path": "photos/D/h/DhihTULFufGbvLgSqJudM9ACJjrxEdyknKapqzaq.jpg",
-            "width": 3000,
-            "height": 4000,
-            "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/D/h/DhihTULFufGbvLgSqJudM9ACJjrxEdyknKapqzaq.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190404%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190404T160502Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=cce664622e36138787f70cf801b613745ebad7cd66abb945d454434184c2d332",
-            "thumbnail_url": "https://notrehistoire.imgix.net/photos/D/h/DhihTULFufGbvLgSqJudM9ACJjrxEdyknKapqzaq.jpeg?fm=jpg&sharp=3&w=770&s=500599e3b0b92aa58ba4f92a3e3aa80e",
-            "is_processed": true
-        }
-    },
-    {
         "id": 7068,
         "titre": "Le château Ashbourne",
         "author": "Mauro Bernardi",
@@ -2596,30 +2451,6 @@
         }
     },
     {
-        "id": 35794,
-        "titre": "M. Ravel, Ma Mère l'Oye, Cl. Debussy, Nocturnes, OSR, E. Ansermet, 1957, SXL 2062",
-        "author": "Disques DECCA",
-        "license": "all_rights_reserved",
-        "date": {
-            "year": 1957,
-            "month": 10,
-            "day": null
-        },
-        "location": "Genève, Victoria-Hall",
-        "media": {
-            "id": 30584,
-            "user_id": 1655,
-            "path": "photos/A/x/AxcDbYM9Zwl8BIrUDyKO6uFEcktKJ3ckMh6Sapqh.jpg",
-            "width": 3620,
-            "height": 3650,
-            "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/A/x/AxcDbYM9Zwl8BIrUDyKO6uFEcktKJ3ckMh6Sapqh.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190404%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190404T160502Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=1956caeaecc8d7f7b35eb57f05e2e695a8a0969c5a5c1f04d0852ff0b93632df",
-            "thumbnail_url": "https://notrehistoire.imgix.net/photos/A/x/AxcDbYM9Zwl8BIrUDyKO6uFEcktKJ3ckMh6Sapqh.jpeg?fm=jpg&sharp=3&w=770&s=9ff62b24dd4f050ffa5fe8a38f7f6ca9",
-            "is_processed": true,
-            "created_at": "2013-01-10T22:27:13+00:00",
-            "updated_at": "2019-02-06T23:11:48+00:00"
-        }
-    },
-    {
         "id": 47584,
         "titre": "Abrimaux, sculpture au Jardin Anglais",
         "author": "A. Salamin",
@@ -2641,78 +2472,6 @@
             "is_processed": true,
             "created_at": "2014-05-22T17:40:25+00:00",
             "updated_at": "2019-02-07T16:45:20+00:00"
-        }
-    },
-    {
-        "id": 35819,
-        "titre": "Livret service militaire papa",
-        "author": "A.M. Martin",
-        "license": "all_rights_reserved",
-        "date": {
-            "year": 1939,
-            "month": 1,
-            "day": 1
-        },
-        "location": "Place Saint-François 8-10, 1003 Lausanne, Suisse",
-        "media": {
-            "id": 30609,
-            "user_id": 1280,
-            "path": "photos/O/v/OvAfi71HOhCiGRlesMYj9sva9JIu8dlLxRancELG.jpg",
-            "width": 1273,
-            "height": 2099,
-            "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/O/v/OvAfi71HOhCiGRlesMYj9sva9JIu8dlLxRancELG.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190404%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190404T160502Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=f6d762a4d578972b24de7756a5b245087a9d337c4cb112a6366098886e381b2a",
-            "thumbnail_url": "https://notrehistoire.imgix.net/photos/O/v/OvAfi71HOhCiGRlesMYj9sva9JIu8dlLxRancELG.jpeg?fm=jpg&sharp=3&w=770&s=f75b7457c50114caf24b43aedb58162c",
-            "is_processed": true,
-            "created_at": "2013-01-12T23:31:43+00:00",
-            "updated_at": "2019-02-08T12:06:36+00:00"
-        }
-    },
-    {
-        "id": 29146,
-        "titre": "Chemin non déneigé, atelier Yves Dana sculpteur",
-        "author": "Martine Desarzens",
-        "license": "all_rights_reserved",
-        "date": {
-            "year": 2012,
-            "month": 3,
-            "day": 24
-        },
-        "location": "Ancienne Orangerie, av. Tribunal-Fédéral 27 bis 1005 Lausanne",
-        "media": {
-            "id": 23948,
-            "user_id": 189,
-            "path": "photos/T/6/T6kYfBrBBJzqB6h0RjhPaCeHs6ERY0pI1hlHrCvx.jpg",
-            "width": 480,
-            "height": 640,
-            "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/T/6/T6kYfBrBBJzqB6h0RjhPaCeHs6ERY0pI1hlHrCvx.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190404%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190404T160502Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=91518b695f209f930e56a82163136eb8cb6b8459b9c0d22ebb8aec35dc960c01",
-            "thumbnail_url": "https://notrehistoire.imgix.net/photos/T/6/T6kYfBrBBJzqB6h0RjhPaCeHs6ERY0pI1hlHrCvx.jpeg?fm=jpg&sharp=3&w=770&s=8f6379e127506e625525931c0409ff60",
-            "is_processed": true,
-            "created_at": "2012-03-24T21:29:03+00:00",
-            "updated_at": "2019-02-07T19:42:02+00:00"
-        }
-    },
-    {
-        "id": 58484,
-        "titre": "\"La Séparation des Races\"",
-        "author": "© Collection Michel Savioz",
-        "license": "all_rights_reserved",
-        "date": {
-            "year": 1939,
-            "month": 7,
-            "day": 1
-        },
-        "location": "Anniviers",
-        "media": {
-            "id": 52380,
-            "user_id": 27,
-            "path": "photos/g/z/gzCOPHBpuAMcf4pFtIuG1sFi3rL2mRhnGS08ZA1T.jpg",
-            "width": 3750,
-            "height": 5224,
-            "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/g/z/gzCOPHBpuAMcf4pFtIuG1sFi3rL2mRhnGS08ZA1T.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190404%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190404T160502Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=0b4c5342363f523f4b59b750c875d8bf47e099ab053d9f2efa65f417edac5e61",
-            "thumbnail_url": "https://notrehistoire.imgix.net/photos/g/z/gzCOPHBpuAMcf4pFtIuG1sFi3rL2mRhnGS08ZA1T.jpeg?fm=jpg&sharp=3&w=770&s=3560b624b030cbf9e49d5dff2ff8e3bf",
-            "is_processed": true,
-            "created_at": "2016-03-07T18:44:32+00:00",
-            "updated_at": "2019-02-06T20:35:43+00:00"
         }
     },
     {
@@ -3750,30 +3509,6 @@
     }
   },
   {
-    "id": 100347,
-    "titre": "Monde du Cirque Genève 2010",
-    "author": null,
-    "license": "all_rights_reserved",
-    "date": {
-      "year": 2010,
-      "month": 1,
-      "day": 1
-    },
-    "location": "Genève",
-    "media": {
-      "id": 70172,
-      "user_id": 3570,
-      "created_at": "2016-10-30T11:38:15+00:00",
-      "updated_at": "2019-02-05T02:43:38+00:00",
-      "path": "photos/3/6/36KT2QsodSZNCFt90FryQt5s8btdy2JutHl6ITG6.jpg",
-      "width": 1754,
-      "height": 2480,
-      "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/3/6/36KT2QsodSZNCFt90FryQt5s8btdy2JutHl6ITG6.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190405%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190405T105739Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=6b32213e1e3f4f013a1d9eee6d847fbe8d52d47430f2c48e4e795201c7ff8c0e",
-      "thumbnail_url": "https://notrehistoire.imgix.net/photos/3/6/36KT2QsodSZNCFt90FryQt5s8btdy2JutHl6ITG6.jpeg?fm=jpg&sharp=3&w=770&s=289414f70170eea64b5139bb1025b341",
-      "is_processed": true
-    }
-  },
-  {
     "id": 52926,
     "titre": "Musée sapeurs-pompiers Genève",
     "author": "Claude Kissling",
@@ -3819,30 +3554,6 @@
       "is_processed": true,
       "created_at": "2011-10-16T22:35:12+00:00",
       "updated_at": "2019-02-08T10:49:07+00:00"
-    }
-  },
-  {
-    "id": 49370,
-    "titre": "Money kills",
-    "author": "Grégoire Favre",
-    "license": "all_rights_reserved",
-    "date": {
-      "year": 2014,
-      "month": 8,
-      "day": 4
-    },
-    "location": "la Chaux-de-Fonds",
-    "media": {
-      "id": 43992,
-      "user_id": 1082,
-      "path": "photos/E/W/EWSwFMNVUdCJoXHQyKVDBYHHxNGR5naz5JAvQI5V.jpg",
-      "width": 1600,
-      "height": 1600,
-      "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/E/W/EWSwFMNVUdCJoXHQyKVDBYHHxNGR5naz5JAvQI5V.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190405%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190405T105739Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=cc76a6551453bfce9ac259faf60f8324b6cb34630f23e485dd5c5df01befa9f8",
-      "thumbnail_url": "https://notrehistoire.imgix.net/photos/E/W/EWSwFMNVUdCJoXHQyKVDBYHHxNGR5naz5JAvQI5V.jpeg?fm=jpg&sharp=3&w=770&s=1c730e174d383aecea0f3e22202ff176",
-      "is_processed": true,
-      "created_at": "2014-08-05T17:21:49+00:00",
-      "updated_at": "2019-01-25T21:46:29+00:00"
     }
   },
   {
@@ -4398,30 +4109,6 @@
     }
   },
   {
-    "id": 25519,
-    "titre": "Anniviers, acte de baptême",
-    "author": "Antoine Martin",
-    "license": "all_rights_reserved",
-    "date": {
-      "year": 1794,
-      "month": 7,
-      "day": 14
-    },
-    "location": "Vissoie",
-    "media": {
-      "id": 20368,
-      "user_id": 620,
-      "path": "photos/v/Z/vZV9Lez2diVQJm5nXL2e82oay1952SSvTWT1ktkQ.jpg",
-      "width": 2745,
-      "height": 3654,
-      "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/v/Z/vZV9Lez2diVQJm5nXL2e82oay1952SSvTWT1ktkQ.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190405%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190405T110745Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=9ef1e7cc97acc0886c7ac0b3a67dc02e93be5b915d397cc29ed5ae19f041cc8e",
-      "thumbnail_url": "https://notrehistoire.imgix.net/photos/v/Z/vZV9Lez2diVQJm5nXL2e82oay1952SSvTWT1ktkQ.jpeg?fm=jpg&sharp=3&w=770&s=b1ee9ec980db1bc683e89a2dc6f3a911",
-      "is_processed": true,
-      "created_at": "2011-11-06T13:56:00+00:00",
-      "updated_at": "2019-02-05T20:06:43+00:00"
-    }
-  },
-  {
     "id": 45465,
     "titre": "Carouge Les Promenades",
     "author": "Louis Guillermin",
@@ -4635,30 +4322,6 @@
       "is_processed": true,
       "created_at": "2013-04-22T13:17:22+00:00",
       "updated_at": "2019-02-02T23:49:39+00:00"
-    }
-  },
-  {
-    "id": 33402,
-    "titre": "Lausanne Eglise du Sacré Coeur",
-    "author": "A.M. Martin",
-    "license": "all_rights_reserved",
-    "date": {
-      "year": 2012,
-      "month": 9,
-      "day": 23
-    },
-    "location": "Chemin de Beau-Rivage 3, 1006 Lausanne, Suisse",
-    "media": {
-      "id": 28199,
-      "user_id": 1280,
-      "path": "photos/z/o/zodhhlX8DpkT1MaTmUHkr3IqfTlZpLvO4m4HYFCS.jpg",
-      "width": 3240,
-      "height": 4320,
-      "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/z/o/zodhhlX8DpkT1MaTmUHkr3IqfTlZpLvO4m4HYFCS.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190405%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190405T111810Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=5a66ea2c15258b42eac89642ad5216444ba21c2e5a1cd7fe0562daa8bf4c6e22",
-      "thumbnail_url": "https://notrehistoire.imgix.net/photos/z/o/zodhhlX8DpkT1MaTmUHkr3IqfTlZpLvO4m4HYFCS.jpeg?fm=jpg&sharp=3&w=770&s=ab9ac665d0924de8756c5371b73f1dd9",
-      "is_processed": true,
-      "created_at": "2012-09-26T18:09:36+00:00",
-      "updated_at": "2019-02-06T15:03:46+00:00"
     }
   },
   {
@@ -6294,30 +5957,6 @@
     }
   },
   {
-    "id": 19382,
-    "titre": "Livre d'or chalet monique à Mottec été 1946",
-    "author": null,
-    "license": "all_rights_reserved",
-    "date": {
-      "year": 1946,
-      "month": 7,
-      "day": 21
-    },
-    "location": "Mottec",
-    "media": {
-      "id": 14246,
-      "user_id": 956,
-      "path": "photos/U/P/UPq9dMRp4EMWF9XlN7l9FUIIc98E4TaJKBBVJj3B.jpg",
-      "width": 1438,
-      "height": 2000,
-      "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/U/P/UPq9dMRp4EMWF9XlN7l9FUIIc98E4TaJKBBVJj3B.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190405%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190405T112955Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=bc93f419fde4be15e011495c948435e0f1260ef6da00b0e9d771923fc8634828",
-      "thumbnail_url": "https://notrehistoire.imgix.net/photos/U/P/UPq9dMRp4EMWF9XlN7l9FUIIc98E4TaJKBBVJj3B.jpeg?fm=jpg&sharp=3&w=770&s=869d869d9786a187ebc9dc268538e67c",
-      "is_processed": true,
-      "created_at": "2011-02-27T08:05:12+00:00",
-      "updated_at": "2019-02-08T01:29:17+00:00"
-    }
-  },
-  {
     "id": 37661,
     "titre": "Super Seniors à Planachaux",
     "author": "Mario B.",
@@ -6750,30 +6389,6 @@
     }
   },
   {
-    "id": 57579,
-    "titre": "Notes de cours de la Sourcienne Eva Rouffy",
-    "author": "© Archives Fondation La Source.",
-    "license": "all_rights_reserved",
-    "date": {
-      "year": 1829,
-      "month": 1,
-      "day": 1
-    },
-    "location": "Avenue Vinet 30, 1004 Lausanne, Suisse",
-    "media": {
-      "id": 51696,
-      "user_id": 189,
-      "path": "photos/L/g/LgRinQMvmIsQN4eYv0hkLI3A7pyx2hvxqNpDqYDS.jpg",
-      "width": 2011,
-      "height": 2412,
-      "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/L/g/LgRinQMvmIsQN4eYv0hkLI3A7pyx2hvxqNpDqYDS.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190405%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190405T113130Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=cc53d2a5aa41f37315d008c73bb8130ca72e8ed864904a031b5360dbce613722",
-      "thumbnail_url": "https://notrehistoire.imgix.net/photos/L/g/LgRinQMvmIsQN4eYv0hkLI3A7pyx2hvxqNpDqYDS.jpeg?fm=jpg&sharp=3&w=770&s=aaf53fd60ea191b163f90f05865c975d",
-      "is_processed": true,
-      "created_at": "2016-01-23T21:33:52+00:00",
-      "updated_at": "2019-02-04T21:01:55+00:00"
-    }
-  },
-  {
     "id": 23802,
     "titre": "Mont-Blanc Express",
     "author": "Patrick Darbellay",
@@ -7203,30 +6818,6 @@
       "is_processed": true,
       "created_at": "2016-01-27T14:50:39+00:00",
       "updated_at": "2019-02-05T13:04:42+00:00"
-    }
-  },
-  {
-    "id": 20298,
-    "titre": "Montagnon",
-    "author": "Patrick Darbellay",
-    "license": "all_rights_reserved",
-    "date": {
-      "year": 2006,
-      "month": 3,
-      "day": 26
-    },
-    "location": "Montagnon",
-    "media": {
-      "id": 15157,
-      "user_id": 469,
-      "path": "photos/S/V/SVLn5dHXtkTvgNGHeRcRvRN6GwGcGLyd5aqGht1I.jpg",
-      "width": 1024,
-      "height": 1536,
-      "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/S/V/SVLn5dHXtkTvgNGHeRcRvRN6GwGcGLyd5aqGht1I.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190405%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190405T114252Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=57d1c9cc2302054a75417b576609743be2faaeb3d5b1db00fe439787f7f2eeaf",
-      "thumbnail_url": "https://notrehistoire.imgix.net/photos/S/V/SVLn5dHXtkTvgNGHeRcRvRN6GwGcGLyd5aqGht1I.jpeg?fm=jpg&sharp=3&w=770&s=953436aaebefcc73cc05147a77c15e08",
-      "is_processed": true,
-      "created_at": "2011-04-23T21:47:23+00:00",
-      "updated_at": "2019-02-02T10:40:02+00:00"
     }
   },
   {
