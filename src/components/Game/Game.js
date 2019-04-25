@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import ReactImageMosaic from "react-image-mosaic";
 import "./Game.css";
 import Images from "../../assets/images.json";
-import WebcamCapture from "../WebcamCapture/WebcamCapture"
-import ImageDescription from "../ImageDescription/ImageDescription"
+import WebcamCapture from "./WebcamCapture/WebcamCapture";
+import ImageDescription from "./ImageDescription/ImageDescription";
 
 
 const MAX_COLS = 50;
@@ -85,6 +85,7 @@ class Game extends Component {
   }
 
   takeSelfie = (selfie) => {
+    clearInterval(this.zoomTimer);
     this.setState({
       initialState: true,
       target: selfie,
@@ -116,13 +117,12 @@ class Game extends Component {
 
     this.zoomTimer = setInterval(() => {
       if (this.state.columns - ZOOM_STEPS >= ZOOM_MIN) {
-        console.log(this.zoomTimer)
         this.setState(
           {
             columns: this.state.columns - ZOOM_STEPS,
             rows: this.state.rows - ZOOM_STEPS
           }); 
-      }}, 100);
+      }}, 300);
   }
 
   loadProgressChanged(progress) {
@@ -161,7 +161,6 @@ class Game extends Component {
     return (
       <div className="Game">
         <div id="intro">
-          <Link to="/">Home</Link>
           {Math.round(this.state.loadProgress * 100)}
           <button onClick={this.openCamera} id="openCamera" style={btnStyle}><i className="fas fa-camera"></i></button>
         </div>

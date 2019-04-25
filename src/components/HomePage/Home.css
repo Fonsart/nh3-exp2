@@ -1,0 +1,14 @@
+
+#home footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+}
+
+#home footer :first-child {
+    justify-self: start;
+}
+
+#home footer>* {
+    padding: 0.5rem;
+}

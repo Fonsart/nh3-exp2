@@ -3,12 +3,10 @@ import { render } from "react-dom";
 import "./styles.css";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Game from "./components/Game/Game"
+import About from "./components/About/About" 
+import Home from "./components/HomePage/Home" 
 
 export default class App extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   componentWillMount() {
 
   }
@@ -16,24 +14,14 @@ export default class App extends Component {
   render() {
     return (
     <Router>
-      <div className="App">
+      <div id="App">
         <Route exact path="/" component={Home} />
+        <Route exact path="/about" component={About} />
         <Route path="/game" component={Game} />
       </div>
     </Router>
     );
   }
-}
-
-function Home(){
-  return(
-    <div>
-        <div id="intro">
-        <h1>Welcome</h1>
-        </div>
-        <Link to={`/game/`}>explorer</Link>
-      </div >
-  ); 
 }
 
 const rootElement = document.getElementById("root");
