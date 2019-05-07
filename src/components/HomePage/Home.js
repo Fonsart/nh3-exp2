@@ -3,9 +3,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import "./Home.css";
 
 
-class Home extends Component {
-
-    render() {
+function Home(){
         return (
             <div className="fullBG flex flex-col" id="home">
                 <header className="mt-auto">
@@ -13,16 +11,14 @@ class Home extends Component {
                 </header>
 
                 <main className="flex mt-auto justify-center relative">
-                    <Link to={`/game/`} class="btn btn__primary">Explorer</Link>
+                    <Link to={`/game/`} className="btn btn__primary">Explorer</Link>
                 </main>
 
-                <footer class="mt-auto">
-                    <Link to={`/about/`} class="btn">À propos</Link>
+                <footer className="mt-auto">
+                    <Link to={`/about/`} className="btn">À propos</Link>
                 </footer>
             </div >
         );
-    }
-
 }
 
 

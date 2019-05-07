@@ -1,1183 +1,413 @@
 [
-    {
-        "id": 29608,
-        "titre": "Souvenir de l'Académie d'Ouchy",
-        "author": "Sylvie Bazzanella",
-        "license": "all_rights_reserved",
-        "date": {
-            "year": 2012,
-            "month": 4,
-            "day": 9
-        },
-        "location": "Quai d'Ouchy",
-        "media": {
-            "id": 24410,
-            "user_id": 108,
-            "path": "photos/m/Q/mQwiVarkU4pRGShkY0QV7aR66zKTWq4jlIr21Ysg.jpg",
-            "width": 603,
-            "height": 640,
-            "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/m/Q/mQwiVarkU4pRGShkY0QV7aR66zKTWq4jlIr21Ysg.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190404%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190404T151451Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=5d403c9b117ea87bac21de5eef4ae3b05e6c833ce4585e187d9b2125cca458a4",
-            "thumbnail_url": "https://notrehistoire.imgix.net/photos/m/Q/mQwiVarkU4pRGShkY0QV7aR66zKTWq4jlIr21Ysg.jpeg?fm=jpg&sharp=3&w=770&s=542b4a72dd71f6258c6f355b403d8c49",
-            "is_processed": true,
-            "created_at": "2012-04-09T17:22:24+00:00",
-            "updated_at": "2019-02-07T23:19:41+00:00"
-        }
+  {
+    "id": 26658,
+    "titre": "GP de Gollion - James Hunt",
+    "author": "Mauro Bernardi",
+    "license": "all_rights_reserved",
+    "date": {
+      "year": 1990,
+      "month": 10,
+      "day": 7
     },
-    {
-        "id": 26658,
-        "titre": "GP de Gollion - James Hunt",
-        "author": "Mauro Bernardi",
-        "license": "all_rights_reserved",
-        "date": {
-            "year": 1990,
-            "month": 10,
-            "day": 7
-        },
-        "location": "Rue du Village 8-10, 1124 Gollion, Suisse",
-        "media": {
-            "id": 21479,
-            "user_id": 198,
-            "path": "photos/j/j/jjvRYfdGZzZfYEBldur7c3iuTFWD1ZADRyOp5NIn.jpg",
-            "width": 567,
-            "height": 850,
-            "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/j/j/jjvRYfdGZzZfYEBldur7c3iuTFWD1ZADRyOp5NIn.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190404%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190404T151755Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=f0327f35e3f4ef3e5706ce822dd4bcd385d0b8abddee26dfaebee947ef788f89",
-            "thumbnail_url": "https://notrehistoire.imgix.net/photos/j/j/jjvRYfdGZzZfYEBldur7c3iuTFWD1ZADRyOp5NIn.jpeg?fm=jpg&sharp=3&w=770&s=ad83ec5ce2daf3acb634a436b56e5022",
-            "is_processed": true,
-            "created_at": "2011-12-21T10:05:34+00:00",
-            "updated_at": "2019-02-08T00:13:13+00:00"
-        }
+    "location": "Rue du Village 8-10, 1124 Gollion, Suisse",
+    "media": {
+      "id": 21479,
+      "user_id": 198,
+      "path": "photos/j/j/jjvRYfdGZzZfYEBldur7c3iuTFWD1ZADRyOp5NIn.jpg",
+      "width": 567,
+      "height": 850,
+      "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/j/j/jjvRYfdGZzZfYEBldur7c3iuTFWD1ZADRyOp5NIn.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190404%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190404T151755Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=f0327f35e3f4ef3e5706ce822dd4bcd385d0b8abddee26dfaebee947ef788f89",
+      "thumbnail_url": "https://notrehistoire.imgix.net/photos/j/j/jjvRYfdGZzZfYEBldur7c3iuTFWD1ZADRyOp5NIn.jpeg?fm=jpg&sharp=3&w=770&s=ad83ec5ce2daf3acb634a436b56e5022",
+      "is_processed": true,
+      "created_at": "2011-12-21T10:05:34+00:00",
+      "updated_at": "2019-02-08T00:13:13+00:00"
+    }
+  },
+  {
+    "id": 17212,
+    "titre": "Fabrique de pâtes alimentaires La Timbale, Villars-sur-Glâne",
+    "author": null,
+    "license": "all_rights_reserved",
+    "date": {
+      "year": 1965,
+      "month": 1,
+      "day": 1
     },
-    {
-        "id": 4818,
-        "titre": "Fribourg. Funérailles de Jo Siffert",
-        "author": "Mülhauser, Johann",
-        "license": "all_rights_reserved",
-        "date": {
-            "year": 1971,
-            "month": 1,
-            "day": 1
-        },
-        "location": "Rue du Pont-Muré, 1700 Fribourg",
-        "media": {
-            "id": 166,
-            "user_id": 20,
-            "path": "photos/P/h/PhaB983o2xJX6xoLz7nKh7UTc1VIZUb263YbTg84.jpg",
-            "width": 597,
-            "height": 600,
-            "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/P/h/PhaB983o2xJX6xoLz7nKh7UTc1VIZUb263YbTg84.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190404%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190404T151755Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=6050866675e77cc23319c6de6c798008a7d66ec3d555379e2e850028649f6a58",
-            "thumbnail_url": "https://notrehistoire.imgix.net/photos/P/h/PhaB983o2xJX6xoLz7nKh7UTc1VIZUb263YbTg84.jpeg?fm=jpg&sharp=3&w=770&s=51ff6db8d2eb26ac73e2138252288661",
-            "is_processed": true,
-            "created_at": "2009-10-28T10:43:26+00:00",
-            "updated_at": "2019-02-08T07:14:04+00:00"
-        }
+    "location": "Route de Sainte-Apolline 27, 1752 Villars-sur-Glâne, Suisse",
+    "media": {
+      "id": 12112,
+      "user_id": 758,
+      "path": "photos/v/D/vDrbU9yjCLEpFEyzRdboTQa8QEe4q0hATR8msqrq.jpg",
+      "width": 670,
+      "height": 682,
+      "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/v/D/vDrbU9yjCLEpFEyzRdboTQa8QEe4q0hATR8msqrq.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190404%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190404T151755Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=290999cc71525a71d42849a9ae3b59887227231264bcd52904656c155eb8a1e3",
+      "thumbnail_url": "https://notrehistoire.imgix.net/photos/v/D/vDrbU9yjCLEpFEyzRdboTQa8QEe4q0hATR8msqrq.jpeg?fm=jpg&sharp=3&w=770&s=3c5f0f11efad46a7ad44c211f1027e79",
+      "is_processed": true,
+      "created_at": "2010-11-19T16:12:10+00:00",
+      "updated_at": "2019-02-06T13:49:52+00:00"
+    }
+  },
+  {
+    "id": 29856,
+    "titre": "Promotions Bellevue 2010 dragon de l'armée suisse",
+    "author": null,
+    "license": "all_rights_reserved",
+    "date": {
+      "year": 2010,
+      "month": 7,
+      "day": 3
     },
-    {
-        "id": 17212,
-        "titre": "Fabrique de pâtes alimentaires La Timbale, Villars-sur-Glâne",
-        "author": null,
-        "license": "all_rights_reserved",
-        "date": {
-            "year": 1965,
-            "month": 1,
-            "day": 1
-        },
-        "location": "Route de Sainte-Apolline 27, 1752 Villars-sur-Glâne, Suisse",
-        "media": {
-            "id": 12112,
-            "user_id": 758,
-            "path": "photos/v/D/vDrbU9yjCLEpFEyzRdboTQa8QEe4q0hATR8msqrq.jpg",
-            "width": 670,
-            "height": 682,
-            "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/v/D/vDrbU9yjCLEpFEyzRdboTQa8QEe4q0hATR8msqrq.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190404%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190404T151755Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=290999cc71525a71d42849a9ae3b59887227231264bcd52904656c155eb8a1e3",
-            "thumbnail_url": "https://notrehistoire.imgix.net/photos/v/D/vDrbU9yjCLEpFEyzRdboTQa8QEe4q0hATR8msqrq.jpeg?fm=jpg&sharp=3&w=770&s=3c5f0f11efad46a7ad44c211f1027e79",
-            "is_processed": true,
-            "created_at": "2010-11-19T16:12:10+00:00",
-            "updated_at": "2019-02-06T13:49:52+00:00"
-        }
+    "location": "Chemin de la Mojonne 28, 1293 Bellevue, Suisse",
+    "media": {
+      "id": 24655,
+      "user_id": 1631,
+      "path": "photos/W/C/WCuDRGx5A7QlWJMP66bLGNxbJqBknXfsAZhBwKio.jpg",
+      "width": 2505,
+      "height": 2594,
+      "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/W/C/WCuDRGx5A7QlWJMP66bLGNxbJqBknXfsAZhBwKio.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190404%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190404T152052Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=c944e08c7762d230090ab388d3312ab2c58321cc7635cc9ff9f0c6988316c40a",
+      "thumbnail_url": "https://notrehistoire.imgix.net/photos/W/C/WCuDRGx5A7QlWJMP66bLGNxbJqBknXfsAZhBwKio.jpeg?fm=jpg&sharp=3&w=770&s=2ab2f15c0db104c092362424b5390bc3",
+      "is_processed": true,
+      "created_at": "2012-04-13T14:58:29+00:00",
+      "updated_at": "2019-02-08T12:49:03+00:00"
+    }
+  },
+  {
+    "id": 29737,
+    "titre": "Silène",
+    "author": "C. Mesot",
+    "date": {
+      "year": 1999,
+      "month": 8,
+      "day": 1
     },
-    {
-        "id": 34219,
-        "titre": "Grandvaux statue de Corto Maltese",
-        "author": "A.M. Martin",
-        "license": "all_rights_reserved",
-        "date": {
-            "year": 2012,
-            "month": 10,
-            "day": 3
-        },
-        "location": "Rue Saint-Georges 2, 1091 Grandvaux, Suisse",
-        "media": {
-            "id": 29016,
-            "user_id": 1280,
-            "path": "photos/S/S/SSaXwkZtHfi0QQl8dWFMUzBI8Ly7iiVlwm4CwDmw.jpg",
-            "width": 3240,
-            "height": 4320,
-            "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/S/S/SSaXwkZtHfi0QQl8dWFMUzBI8Ly7iiVlwm4CwDmw.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190404%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190404T151755Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=d4581fd01139636f603c5fcfb33cd8d4daff71d3f411ddba8531a15b86037c97",
-            "thumbnail_url": "https://notrehistoire.imgix.net/photos/S/S/SSaXwkZtHfi0QQl8dWFMUzBI8Ly7iiVlwm4CwDmw.jpeg?fm=jpg&sharp=3&w=770&s=8435b1469ae381986590238a326ac958",
-            "is_processed": true,
-            "created_at": "2012-11-07T19:53:52+00:00",
-            "updated_at": "2019-02-08T11:25:12+00:00"
-        }
+    "location": "Vevey, place du Marché",
+    "media": {
+      "id": 24538,
+      "user_id": 139,
+      "created_at": "2012-04-12T14:34:28+00:00",
+      "updated_at": "2019-02-05T17:27:28+00:00",
+      "path": "photos/h/n/hnfJWqCd3Fgn73TE1ym2lCkzYYghdYPsObOxxkhi.jpg",
+      "width": 728,
+      "height": 1000,
+      "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/h/n/hnfJWqCd3Fgn73TE1ym2lCkzYYghdYPsObOxxkhi.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190404%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190404T152628Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=29aefe17f3aa4247224215bf6b8e1d12fe4458d6c013fd636906518cf9268003",
+      "thumbnail_url": "https://notrehistoire.imgix.net/photos/h/n/hnfJWqCd3Fgn73TE1ym2lCkzYYghdYPsObOxxkhi.jpeg?fm=jpg&sharp=3&w=770&s=7f9b2e29ab9ed974953e72262f532102",
+      "is_processed": true
     },
-    {
-        "id": 14678,
-        "titre": "Cascade du torrent de la Taouna",
-        "author": "Sylvie Bazzanella",
-        "license": "all_rights_reserved",
-        "date": {
-            "year": 2010,
-            "month": 6,
-            "day": 1
-        },
-        "location": "1666 Grandvillard, Suisse",
-        "media": {
-            "id": 9599,
-            "user_id": 108,
-            "path": "photos/V/q/VqbjfLMsnGTHcnIFgOC1Rd81GvJac4CBlCdzqHon.jpg",
-            "width": 1080,
-            "height": 1920,
-            "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/V/q/VqbjfLMsnGTHcnIFgOC1Rd81GvJac4CBlCdzqHon.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190404%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190404T152052Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=b29ac3475960b94b508a7ff98e285709ab3c5a9bf0dafdcec5e7779891214ed6",
-            "thumbnail_url": "https://notrehistoire.imgix.net/photos/V/q/VqbjfLMsnGTHcnIFgOC1Rd81GvJac4CBlCdzqHon.jpeg?fm=jpg&sharp=3&w=770&s=f323cb9879b0cfff9a65f7da9c6487b3",
-            "is_processed": true,
-            "created_at": "2010-07-02T22:03:48+00:00",
-            "updated_at": "2019-02-08T09:33:13+00:00"
-        }
+    "license": "all_rights_reserved"
+  },
+  {
+    "id": 18716,
+    "titre": "Première Messe",
+    "author": "© Collection, Abbé  Michel Massy",
+    "license": "all_rights_reserved",
+    "date": {
+      "year": 1968,
+      "month": 7,
+      "day": 7
     },
-    {
-        "id": 47606,
-        "titre": "Fontaine de la Justice - Lausanne",
-        "author": "Sylvie Bazzanella",
-        "license": "all_rights_reserved",
-        "date": {
-            "year": 2013,
-            "month": 11,
-            "day": 17
-        },
-        "location": "Place de la Palud, Lausanne",
-        "media": {
-            "id": 42241,
-            "user_id": 108,
-            "path": "photos/D/Q/DQVwsd5VQoXG0ZvTAVAyb15lKgX77h5PINzPnieG.jpg",
-            "width": 1944,
-            "height": 2173,
-            "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/D/Q/DQVwsd5VQoXG0ZvTAVAyb15lKgX77h5PINzPnieG.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190404%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190404T152052Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=31fc32d9c936bc5eb63c988a20da195557af42a399b43ac6a47b1b6b71eae010",
-            "thumbnail_url": "https://notrehistoire.imgix.net/photos/D/Q/DQVwsd5VQoXG0ZvTAVAyb15lKgX77h5PINzPnieG.jpeg?fm=jpg&sharp=3&w=770&s=b78e461a8ef8d2f328ab896788b8403e",
-            "is_processed": true,
-            "created_at": "2014-05-24T18:49:37+00:00",
-            "updated_at": "2019-02-08T15:13:27+00:00"
-        }
+    "location": "Vissoie, anniviers",
+    "media": {
+      "id": 13581,
+      "user_id": 27,
+      "path": "photos/3/E/3EKksZrWDzM1M3G5cJUfZd9k0mL2H0lQl577ewoQ.jpg",
+      "width": 960,
+      "height": 961,
+      "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/3/E/3EKksZrWDzM1M3G5cJUfZd9k0mL2H0lQl577ewoQ.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190404%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190404T152628Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=cbe82ad65932fa06674fd9f9b4430de1ca25b3f1ed4d536aa8dd9debcc14a008",
+      "thumbnail_url": "https://notrehistoire.imgix.net/photos/3/E/3EKksZrWDzM1M3G5cJUfZd9k0mL2H0lQl577ewoQ.jpeg?fm=jpg&sharp=3&w=770&s=5c63930b91a1fd621f0dff7d7b1ae38c",
+      "is_processed": true,
+      "created_at": "2011-01-22T13:53:38+00:00",
+      "updated_at": "2019-02-08T13:03:12+00:00"
+    }
+  },
+  {
+    "id": 71620,
+    "titre": "Barbu de la Gruyère",
+    "author": "Richard Mesot",
+    "license": "all_rights_reserved",
+    "date": {
+      "year": 2016,
+      "month": 9,
+      "day": 19
     },
-    {
-        "id": 29856,
-        "titre": "Promotions Bellevue 2010 dragon de l'armée suisse",
-        "author": null,
-        "license": "all_rights_reserved",
-        "date": {
-            "year": 2010,
-            "month": 7,
-            "day": 3
-        },
-        "location": "Chemin de la Mojonne 28, 1293 Bellevue, Suisse",
-        "media": {
-            "id": 24655,
-            "user_id": 1631,
-            "path": "photos/W/C/WCuDRGx5A7QlWJMP66bLGNxbJqBknXfsAZhBwKio.jpg",
-            "width": 2505,
-            "height": 2594,
-            "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/W/C/WCuDRGx5A7QlWJMP66bLGNxbJqBknXfsAZhBwKio.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190404%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190404T152052Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=c944e08c7762d230090ab388d3312ab2c58321cc7635cc9ff9f0c6988316c40a",
-            "thumbnail_url": "https://notrehistoire.imgix.net/photos/W/C/WCuDRGx5A7QlWJMP66bLGNxbJqBknXfsAZhBwKio.jpeg?fm=jpg&sharp=3&w=770&s=2ab2f15c0db104c092362424b5390bc3",
-            "is_processed": true,
-            "created_at": "2012-04-13T14:58:29+00:00",
-            "updated_at": "2019-02-08T12:49:03+00:00"
-        }
+    "location": "Hauptstrasse 394-398, 1656 Jaun, Suisse",
+    "media": {
+      "id": 53974,
+      "user_id": 139,
+      "path": "photos/1/f/1feEhcH50OnJ7D0YtByJ10R41LekZfuGFJaqzdIL.jpg",
+      "width": 1900,
+      "height": 2850,
+      "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/1/f/1feEhcH50OnJ7D0YtByJ10R41LekZfuGFJaqzdIL.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190404%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190404T152930Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=2d97e76491d061e0d208bee4138cdde0005e07f5ef182eeb6cda352b3af0b5fa",
+      "thumbnail_url": "https://notrehistoire.imgix.net/photos/1/f/1feEhcH50OnJ7D0YtByJ10R41LekZfuGFJaqzdIL.jpeg?fm=jpg&sharp=3&w=770&s=a32f6f8688d08e999183ee6a021f8e5f",
+      "is_processed": true,
+      "created_at": "2016-09-19T17:26:59+00:00",
+      "updated_at": "2019-02-08T16:53:46+00:00"
+    }
+  },
+  {
+    "id": 53485,
+    "titre": "Rudolf Grossenbacher, gardien de la fosse aux ours de Berne",
+    "author": "A. Bonafini Phot., Mattenhofstr. 20, Berne",
+    "license": "all_rights_reserved",
+    "date": {
+      "year": 1924,
+      "month": 1,
+      "day": 1
     },
-    {
-        "id": 29737,
-        "titre": "Silène",
-        "author": "C. Mesot",
-        "date": {
-            "year": 1999,
-            "month": 8,
-            "day": 1
-        },
-        "location": "Vevey, place du Marché",
-        "media": {
-            "id": 24538,
-            "user_id": 139,
-            "created_at": "2012-04-12T14:34:28+00:00",
-            "updated_at": "2019-02-05T17:27:28+00:00",
-            "path": "photos/h/n/hnfJWqCd3Fgn73TE1ym2lCkzYYghdYPsObOxxkhi.jpg",
-            "width": 728,
-            "height": 1000,
-            "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/h/n/hnfJWqCd3Fgn73TE1ym2lCkzYYghdYPsObOxxkhi.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190404%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190404T152628Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=29aefe17f3aa4247224215bf6b8e1d12fe4458d6c013fd636906518cf9268003",
-            "thumbnail_url": "https://notrehistoire.imgix.net/photos/h/n/hnfJWqCd3Fgn73TE1ym2lCkzYYghdYPsObOxxkhi.jpeg?fm=jpg&sharp=3&w=770&s=7f9b2e29ab9ed974953e72262f532102",
-            "is_processed": true
-        },
-        "license": "all_rights_reserved"
+    "location": "Grosser Muristalden 6, 3006 Berne, Suisse",
+    "media": {
+      "id": 48075,
+      "user_id": 108,
+      "created_at": "2015-04-29T15:19:05+00:00",
+      "updated_at": "2019-02-07T23:12:13+00:00",
+      "path": "photos/U/9/U9PTP2rID6e6EjvEvVFgfWuqVPSJHcDR8LCqDeEP.jpg",
+      "width": 950,
+      "height": 1543,
+      "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/U/9/U9PTP2rID6e6EjvEvVFgfWuqVPSJHcDR8LCqDeEP.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190404%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190404T153523Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=d0644f33aa3527bcc867a8c245da3b46ead149b3b623ed683f1255586c584b41",
+      "thumbnail_url": "https://notrehistoire.imgix.net/photos/U/9/U9PTP2rID6e6EjvEvVFgfWuqVPSJHcDR8LCqDeEP.jpeg?fm=jpg&sharp=3&w=770&s=d5968008f86a442406db99d86ea9b4c7",
+      "is_processed": true
+    }
+  },
+  {
+    "id": 48899,
+    "titre": "Victor Desarzens et Derrik Olsen.",
+    "author": "Jacques Thévoz, Copyright, reproduction interdite",
+    "license": "all_rights_reserved",
+    "date": {
+      "year": 1964,
+      "month": 1,
+      "day": 1
     },
-    {
-        "id": 18716,
-        "titre": "Première Messe",
-        "author": "© Collection, Abbé  Michel Massy",
-        "license": "all_rights_reserved",
-        "date": {
-            "year": 1968,
-            "month": 7,
-            "day": 7
-        },
-        "location": "Vissoie, anniviers",
-        "media": {
-            "id": 13581,
-            "user_id": 27,
-            "path": "photos/3/E/3EKksZrWDzM1M3G5cJUfZd9k0mL2H0lQl577ewoQ.jpg",
-            "width": 960,
-            "height": 961,
-            "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/3/E/3EKksZrWDzM1M3G5cJUfZd9k0mL2H0lQl577ewoQ.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190404%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190404T152628Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=cbe82ad65932fa06674fd9f9b4430de1ca25b3f1ed4d536aa8dd9debcc14a008",
-            "thumbnail_url": "https://notrehistoire.imgix.net/photos/3/E/3EKksZrWDzM1M3G5cJUfZd9k0mL2H0lQl577ewoQ.jpeg?fm=jpg&sharp=3&w=770&s=5c63930b91a1fd621f0dff7d7b1ae38c",
-            "is_processed": true,
-            "created_at": "2011-01-22T13:53:38+00:00",
-            "updated_at": "2019-02-08T13:03:12+00:00"
-        }
+    "location": "Théâtre Municipal, av. du Théâtre 12, 1002 Lausanne",
+    "media": {
+      "id": 43525,
+      "user_id": 189,
+      "path": "photos/p/I/pI2Oofq09yHzl175fTho79wJfLanbAA9ajxbQijU.jpg",
+      "width": 2908,
+      "height": 4054,
+      "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/p/I/pI2Oofq09yHzl175fTho79wJfLanbAA9ajxbQijU.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190404%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190404T155323Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=7f280597443a6c9b209765876eaa818928dd37b17a8cba9af63f8322cf178b90",
+      "thumbnail_url": "https://notrehistoire.imgix.net/photos/p/I/pI2Oofq09yHzl175fTho79wJfLanbAA9ajxbQijU.jpeg?fm=jpg&sharp=3&w=770&s=2148bf0e7a381fa3fc960eff966cbf0a",
+      "is_processed": true,
+      "created_at": "2014-07-20T15:48:46+00:00",
+      "updated_at": "2019-02-07T01:51:15+00:00"
+    }
+  },
+  {
+    "id": 38141,
+    "titre": "Edith Cotter",
+    "author": "Semo",
+    "license": "all_rights_reserved",
+    "date": {
+      "year": 1950,
+      "month": 1,
+      "day": 1
     },
-    {
-        "id": 39236,
-        "titre": "Tombe de Charles Ferdinand Ramuz",
-        "author": "Martine Desarzens",
-        "license": "all_rights_reserved",
-        "date": {
-            "year": 2013,
-            "month": 5,
-            "day": 14
-        },
-        "location": "Cimetière de Chamblandes. Av. C.F.- Ramuz,  1009 Pully",
-        "media": {
-            "id": 33933,
-            "user_id": 189,
-            "path": "photos/j/O/jOkuemAJEnXP48eg4tnAPVdXrccdXmgtgc1oguCH.jpg",
-            "width": 2448,
-            "height": 3264,
-            "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/j/O/jOkuemAJEnXP48eg4tnAPVdXrccdXmgtgc1oguCH.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190404%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190404T152930Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=c8f548e7d06023addb10a1d595ecca523de72fb65309f2d3dcd5540bbb4b9e02",
-            "thumbnail_url": "https://notrehistoire.imgix.net/photos/j/O/jOkuemAJEnXP48eg4tnAPVdXrccdXmgtgc1oguCH.jpeg?fm=jpg&sharp=3&w=770&s=afaa1f9394e8e53ee677689a9af0fe1e",
-            "is_processed": true,
-            "created_at": "2013-05-14T15:22:08+00:00",
-            "updated_at": "2019-02-08T05:06:16+00:00"
-        }
+    "location": "Mexico",
+    "media": {
+      "id": 32853,
+      "user_id": 1082,
+      "created_at": "2013-04-02T10:03:10+00:00",
+      "updated_at": "2019-02-06T19:03:28+00:00",
+      "path": "photos/O/G/OG3JOAi5jJepCCDb2jPCyVLmq0HtM0OIgAStft3e.jpg",
+      "width": 2639,
+      "height": 3669,
+      "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/O/G/OG3JOAi5jJepCCDb2jPCyVLmq0HtM0OIgAStft3e.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190404%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190404T155435Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=8003737ce558d6dee7c0317e463e3c3089c73a3352e257236a665a62d3a56aec",
+      "thumbnail_url": "https://notrehistoire.imgix.net/photos/O/G/OG3JOAi5jJepCCDb2jPCyVLmq0HtM0OIgAStft3e.jpeg?fm=jpg&sharp=3&w=770&s=88aa3b3f302356838bc633a66486f106",
+      "is_processed": true
+    }
+  },
+  {
+    "id": 6433,
+    "titre": "Ma poussette à moi",
+    "author": "Rudhard",
+    "license": "all_rights_reserved",
+    "date": {
+      "year": 1961,
+      "month": 6,
+      "day": 1
     },
-    {
-        "id": 20360,
-        "titre": "Chantier de Confédération-Centre, Genève, 1980",
-        "author": "Jean-Georges Mallet",
-        "license": "all_rights_reserved",
-        "date": {
-            "year": 1980,
-            "month": 4,
-            "day": 1
-        },
-        "location": "Rue de la Confédération, Genève",
-        "media": {
-            "id": 15219,
-            "user_id": 932,
-            "path": "photos/4/q/4qjhKRAH41xDCfXelp8XzO8y9CTJ9Kldevi8UC0h.jpg",
-            "width": 592,
-            "height": 800,
-            "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/4/q/4qjhKRAH41xDCfXelp8XzO8y9CTJ9Kldevi8UC0h.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190404%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190404T152930Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=0a1012ff660f07cc6aed7735438b860d263839e271f7fd192fbe5d2ac94cdc8f",
-            "thumbnail_url": "https://notrehistoire.imgix.net/photos/4/q/4qjhKRAH41xDCfXelp8XzO8y9CTJ9Kldevi8UC0h.jpeg?fm=jpg&sharp=3&w=770&s=a6d9cc68495648448d7c41ec90cd2666",
-            "is_processed": true,
-            "created_at": "2011-04-27T14:59:45+00:00",
-            "updated_at": "2019-02-07T15:14:49+00:00"
-        }
+    "location": "1 1-3, 1204 Genève, Suisse",
+    "media": {
+      "id": 1644,
+      "user_id": 15,
+      "path": "photos/U/W/UW5uTx5SjMAFNTKpgB9CJeWrot5gMzq0XfsJUwIU.jpg",
+      "width": 759,
+      "height": 768,
+      "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/U/W/UW5uTx5SjMAFNTKpgB9CJeWrot5gMzq0XfsJUwIU.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190404%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190404T155435Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=e5787b0620460d20eefe8951d7e250965ba18b3af40ba68913676393a3c01ac3",
+      "thumbnail_url": "https://notrehistoire.imgix.net/photos/U/W/UW5uTx5SjMAFNTKpgB9CJeWrot5gMzq0XfsJUwIU.jpeg?fm=jpg&sharp=3&w=770&s=2a99e8b19675b004b6e19c14a4987cc8",
+      "is_processed": true,
+      "created_at": "2009-11-22T19:40:12+00:00",
+      "updated_at": "2019-02-01T11:54:24+00:00"
+    }
+  },
+  {
+    "id": 103050,
+    "titre": "Porteur de montagne ou aspirant guide de montagne",
+    "author": "Marcel Maurice Demont",
+    "license": "all_rights_reserved",
+    "date": {
+      "year": 2017,
+      "month": 5,
+      "day": 19
     },
-    {
-        "id": 71620,
-        "titre": "Barbu de la Gruyère",
-        "author": "Richard Mesot",
-        "license": "all_rights_reserved",
-        "date": {
-            "year": 2016,
-            "month": 9,
-            "day": 19
-        },
-        "location": "Hauptstrasse 394-398, 1656 Jaun, Suisse",
-        "media": {
-            "id": 53974,
-            "user_id": 139,
-            "path": "photos/1/f/1feEhcH50OnJ7D0YtByJ10R41LekZfuGFJaqzdIL.jpg",
-            "width": 1900,
-            "height": 2850,
-            "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/1/f/1feEhcH50OnJ7D0YtByJ10R41LekZfuGFJaqzdIL.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190404%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190404T152930Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=2d97e76491d061e0d208bee4138cdde0005e07f5ef182eeb6cda352b3af0b5fa",
-            "thumbnail_url": "https://notrehistoire.imgix.net/photos/1/f/1feEhcH50OnJ7D0YtByJ10R41LekZfuGFJaqzdIL.jpeg?fm=jpg&sharp=3&w=770&s=a32f6f8688d08e999183ee6a021f8e5f",
-            "is_processed": true,
-            "created_at": "2016-09-19T17:26:59+00:00",
-            "updated_at": "2019-02-08T16:53:46+00:00"
-        }
+    "location": "Combin de Corbassière",
+    "media": {
+      "id": 72209,
+      "user_id": 1934,
+      "path": "photos/H/5/H5kzv7iPgefVdVnzL542jEgFGMgbXcpnvQwokM3Q.jpg",
+      "width": 491,
+      "height": 903,
+      "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/H/5/H5kzv7iPgefVdVnzL542jEgFGMgbXcpnvQwokM3Q.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190404%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190404T155612Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=3334810ffeb83dbaacce15b6dbb6bcb4ee7cdb9356149f2d23b14181590ef9f5",
+      "thumbnail_url": "https://notrehistoire.imgix.net/photos/H/5/H5kzv7iPgefVdVnzL542jEgFGMgbXcpnvQwokM3Q.jpeg?fm=jpg&sharp=3&w=770&s=403838343ec14c174bc9d473aaefae0b",
+      "is_processed": true,
+      "created_at": "2017-05-19T09:36:39+00:00",
+      "updated_at": "2019-02-03T04:04:21+00:00"
+    }
+  },
+  {
+    "id": 18645,
+    "titre": "Armaillis de la Gruyère",
+    "author": "Inconnu",
+    "license": "all_rights_reserved",
+    "date": {
+      "year": 1917,
+      "month": 1,
+      "day": 1
     },
-    {
-        "id": 49495,
-        "titre": "Lausanne UNIL Oeuvre de Zaric",
-        "author": "A.M. Martin",
-        "license": "all_rights_reserved",
-        "date": {
-            "year": 2014,
-            "month": 8,
-            "day": 9
-        },
-        "location": "1 16-18, Université de Lausanne, 1015 Ecublens, Suisse",
-        "media": {
-            "id": 44119,
-            "user_id": 1280,
-            "path": "photos/6/6/664gG2feHffCSrlNKC8xphKDLK2R7t4OcYNTx4rx.jpg",
-            "width": 3240,
-            "height": 4320,
-            "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/6/6/664gG2feHffCSrlNKC8xphKDLK2R7t4OcYNTx4rx.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190404%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190404T152930Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=06efba161cbee7f253dde8103a8d3d0f93b6015aa8bd1bcc6bc6a3601cb72083",
-            "thumbnail_url": "https://notrehistoire.imgix.net/photos/6/6/664gG2feHffCSrlNKC8xphKDLK2R7t4OcYNTx4rx.jpeg?fm=jpg&sharp=3&w=770&s=1ba20bcbdac5109859486b4893aae8f2",
-            "is_processed": true,
-            "created_at": "2014-08-10T00:39:35+00:00",
-            "updated_at": "2019-02-07T14:22:23+00:00"
-        }
+    "location": "Commune de Broc",
+    "media": {
+      "id": 13511,
+      "user_id": 869,
+      "path": "photos/v/N/vNP0bJtYa5QGKO8UJKrj23uuYMLVgDYbgEMnujW7.jpg",
+      "width": 961,
+      "height": 1556,
+      "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/v/N/vNP0bJtYa5QGKO8UJKrj23uuYMLVgDYbgEMnujW7.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190404%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190404T155612Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=5ec04886805ea73be2b70009a95e4ee0e485a126c34c393bb0a3e950141954a6",
+      "thumbnail_url": "https://notrehistoire.imgix.net/photos/v/N/vNP0bJtYa5QGKO8UJKrj23uuYMLVgDYbgEMnujW7.jpeg?fm=jpg&sharp=3&w=770&s=778b98aa09c3557ad57ba528a82b2441",
+      "is_processed": true,
+      "created_at": "2011-01-14T21:41:51+00:00",
+      "updated_at": "2019-02-08T02:53:12+00:00"
+    }
+  },
+  {
+    "id": 12554,
+    "titre": "Pierre Pont Hôtel Bella Tola",
+    "author": "archives familiales",
+    "license": "all_rights_reserved",
+    "date": {
+      "year": 1892,
+      "month": 1,
+      "day": 1
     },
-    {
-        "id": 53485,
-        "titre": "Rudolf Grossenbacher, gardien de la fosse aux ours de Berne",
-        "author": "A. Bonafini Phot., Mattenhofstr. 20, Berne",
-        "license": "all_rights_reserved",
-        "date": {
-            "year": 1924,
-            "month": 1,
-            "day": 1
-        },
-        "location": "Grosser Muristalden 6, 3006 Berne, Suisse",
-        "media": {
-            "id": 48075,
-            "user_id": 108,
-            "created_at": "2015-04-29T15:19:05+00:00",
-            "updated_at": "2019-02-07T23:12:13+00:00",
-            "path": "photos/U/9/U9PTP2rID6e6EjvEvVFgfWuqVPSJHcDR8LCqDeEP.jpg",
-            "width": 950,
-            "height": 1543,
-            "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/U/9/U9PTP2rID6e6EjvEvVFgfWuqVPSJHcDR8LCqDeEP.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190404%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190404T153523Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=d0644f33aa3527bcc867a8c245da3b46ead149b3b623ed683f1255586c584b41",
-            "thumbnail_url": "https://notrehistoire.imgix.net/photos/U/9/U9PTP2rID6e6EjvEvVFgfWuqVPSJHcDR8LCqDeEP.jpeg?fm=jpg&sharp=3&w=770&s=d5968008f86a442406db99d86ea9b4c7",
-            "is_processed": true
-        }
+    "location": "Saint-Luc, Valais",
+    "media": {
+      "id": 7736,
+      "user_id": 18,
+      "path": "photos/m/Q/mQq1WrlNtPEg1vguWcLIVGmARTKq9fSV50nzh3UJ.jpg",
+      "width": 664,
+      "height": 1024,
+      "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/m/Q/mQq1WrlNtPEg1vguWcLIVGmARTKq9fSV50nzh3UJ.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190404%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190404T155613Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=89337c964cb51ebca5c37713ef3298e6a168e7ad3797d6eea3567ff4731f77f9",
+      "thumbnail_url": "https://notrehistoire.imgix.net/photos/m/Q/mQq1WrlNtPEg1vguWcLIVGmARTKq9fSV50nzh3UJ.jpeg?fm=jpg&sharp=3&w=770&s=2b929c7ded3005b3289b0a0d053b7381",
+      "is_processed": true,
+      "created_at": "2010-04-21T14:43:27+00:00",
+      "updated_at": "2019-02-07T21:00:11+00:00"
+    }
+  },
+  {
+    "id": 31904,
+    "titre": "Victor Desarzens et Alfred Cortot",
+    "author": "ASL lausanne DR reproduction interdite",
+    "license": "all_rights_reserved",
+    "date": {
+      "year": 1957,
+      "month": 2,
+      "day": 11
     },
-    {
-        "id": 54728,
-        "titre": "Scène de la vie valaisanne : Isérables",
-        "author": "Jullien frères, photo éditeurs, Genève, no 9696, collection Médard Arnold",
-        "license": "all_rights_reserved",
-        "date": {
-            "year": 1900,
-            "month": 1,
-            "day": 1
-        },
-        "location": "Route des Moulins 11, 1914 Isérables, Suisse",
-        "media": {
-            "id": 49298,
-            "user_id": 620,
-            "path": "photos/9/t/9t7yIO40DURiWNgCtmJzYjkiBHSRXSFJnErscDLC.jpg",
-            "width": 2084,
-            "height": 3265,
-            "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/9/t/9t7yIO40DURiWNgCtmJzYjkiBHSRXSFJnErscDLC.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190404%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190404T153523Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=9c920561666f792f1b1ea8751b82dde9a29f04b901287734d840c77520120a79",
-            "thumbnail_url": "https://notrehistoire.imgix.net/photos/9/t/9t7yIO40DURiWNgCtmJzYjkiBHSRXSFJnErscDLC.jpeg?fm=jpg&sharp=3&w=770&s=7fbfec2b414d66e304654ee297a464d5",
-            "is_processed": true,
-            "created_at": "2015-08-08T16:17:01+00:00",
-            "updated_at": "2019-02-08T10:31:44+00:00"
-        }
+    "location": "Théâtre Municipal Av. du Théâtre Lausanne",
+    "media": {
+      "id": 26702,
+      "user_id": 189,
+      "path": "photos/g/q/gqNKE0gRPJ85OIrGFQ09t1EEjoQDEgpFLTwk3JGt.jpg",
+      "width": 1577,
+      "height": 1945,
+      "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/g/q/gqNKE0gRPJ85OIrGFQ09t1EEjoQDEgpFLTwk3JGt.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190404%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190404T160042Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=628fb71eafb9140eb3798ab1b80abd1ad030311998e0b9961e9a60df17b87b69",
+      "thumbnail_url": "https://notrehistoire.imgix.net/photos/g/q/gqNKE0gRPJ85OIrGFQ09t1EEjoQDEgpFLTwk3JGt.jpeg?fm=jpg&sharp=3&w=770&s=a1a21c1ea4707ed91788f9964de27703",
+      "is_processed": true,
+      "created_at": "2012-07-06T17:22:00+00:00",
+      "updated_at": "2019-02-07T04:01:06+00:00"
+    }
+  },
+  {
+    "id": 50719,
+    "titre": "Clown dimitri kurzbiographi",
+    "author": "Erica Humbert-Droz",
+    "license": "all_rights_reserved",
+    "date": {
+      "year": 1973,
+      "month": 1,
+      "day": 1
     },
-    {
-        "id": 42700,
-        "titre": "VMCV - Le Premier Trolleybus de 1958",
-        "author": "Jean-Paul Crisinel",
-        "license": "all_rights_reserved",
-        "date": {
-            "year": 2013,
-            "month": 10,
-            "day": 4
-        },
-        "location": "1815 Clarens",
-        "media": {
-            "id": 37361,
-            "user_id": 91,
-            "path": "photos/l/K/lKWviDacdkEIRjElQnuy45saMqtpkud2jt3GjVaM.jpg",
-            "width": 488,
-            "height": 603,
-            "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/l/K/lKWviDacdkEIRjElQnuy45saMqtpkud2jt3GjVaM.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190404%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190404T154311Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=33da25a122703048ba39675b5735f99f3e1600fb2ba88f576d39c78c33351d81",
-            "thumbnail_url": "https://notrehistoire.imgix.net/photos/l/K/lKWviDacdkEIRjElQnuy45saMqtpkud2jt3GjVaM.jpeg?fm=jpg&sharp=3&w=770&s=42177ce176d1e29714212eb4882df58f",
-            "is_processed": true,
-            "created_at": "2013-10-04T17:44:33+00:00",
-            "updated_at": "2019-02-08T15:05:19+00:00"
-        }
+    "location": "Via Cantonale 1, 6655 Intragna, Suisse",
+    "media": {
+      "id": 45317,
+      "user_id": 958,
+      "path": "photos/v/g/vgKKOkrRUiXhfR1oflBxrXMpcD8ytj96G8y6HlFi.jpg",
+      "width": 320,
+      "height": 447,
+      "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/v/g/vgKKOkrRUiXhfR1oflBxrXMpcD8ytj96G8y6HlFi.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190404%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190404T160042Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=caf1caebe318ed38d4b789fe4059b3ae37b1a44d9918efa0bb83dd0a23821652",
+      "thumbnail_url": "https://notrehistoire.imgix.net/photos/v/g/vgKKOkrRUiXhfR1oflBxrXMpcD8ytj96G8y6HlFi.jpeg?fm=jpg&sharp=3&w=770&s=05022652b8d4d10bc5a971c1eb31d4d8",
+      "is_processed": true,
+      "created_at": "2014-10-11T12:53:05+00:00",
+      "updated_at": "2019-02-05T13:12:35+00:00"
+    }
+  },
+  {
+    "id": 12358,
+    "titre": "Portrait Henri Guisan",
+    "author": "Sylvie",
+    "license": "all_rights_reserved",
+    "date": {
+      "year": 2010,
+      "month": 4,
+      "day": 11
     },
-    {
-        "id": 48899,
-        "titre": "Victor Desarzens et Derrik Olsen.",
-        "author": "Jacques Thévoz, Copyright, reproduction interdite",
-        "license": "all_rights_reserved",
-        "date": {
-            "year": 1964,
-            "month": 1,
-            "day": 1
-        },
-        "location": "Théâtre Municipal, av. du Théâtre 12, 1002 Lausanne",
-        "media": {
-            "id": 43525,
-            "user_id": 189,
-            "path": "photos/p/I/pI2Oofq09yHzl175fTho79wJfLanbAA9ajxbQijU.jpg",
-            "width": 2908,
-            "height": 4054,
-            "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/p/I/pI2Oofq09yHzl175fTho79wJfLanbAA9ajxbQijU.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190404%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190404T155323Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=7f280597443a6c9b209765876eaa818928dd37b17a8cba9af63f8322cf178b90",
-            "thumbnail_url": "https://notrehistoire.imgix.net/photos/p/I/pI2Oofq09yHzl175fTho79wJfLanbAA9ajxbQijU.jpeg?fm=jpg&sharp=3&w=770&s=2148bf0e7a381fa3fc960eff966cbf0a",
-            "is_processed": true,
-            "created_at": "2014-07-20T15:48:46+00:00",
-            "updated_at": "2019-02-07T01:51:15+00:00"
-        }
+    "location": "Auberge Communale du Lion d'Or, 1083 Mézières",
+    "media": {
+      "id": 7540,
+      "user_id": 108,
+      "path": "photos/1/X/1XslO73j72fA7z4rqYokInwoevaVa4uXz5ZfGNUN.jpg",
+      "width": 2306,
+      "height": 3077,
+      "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/1/X/1XslO73j72fA7z4rqYokInwoevaVa4uXz5ZfGNUN.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190404%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190404T160215Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=3508da3df856d2bc1746845bdc7c1fe62f36fc21168acdfd624c59f6f3ec0d4d",
+      "thumbnail_url": "https://notrehistoire.imgix.net/photos/1/X/1XslO73j72fA7z4rqYokInwoevaVa4uXz5ZfGNUN.jpeg?fm=jpg&sharp=3&w=770&s=0153bacd5766b99ff4a130e6c321d07c",
+      "is_processed": true,
+      "created_at": "2010-04-11T15:58:59+00:00",
+      "updated_at": "2019-02-06T15:53:53+00:00"
+    }
+  },
+  {
+    "id": 31906,
+    "titre": "Armin Jordan",
+    "author": "DR. Propriété de l'OCL, archives Ville de Lausanne",
+    "license": "all_rights_reserved",
+    "date": {
+      "year": 1973,
+      "month": 1,
+      "day": 1
     },
-    {
-        "id": 38141,
-        "titre": "Edith Cotter",
-        "author": "Semo",
-        "license": "all_rights_reserved",
-        "date": {
-            "year": 1950,
-            "month": 1,
-            "day": 1
-        },
-        "location": "Mexico",
-        "media": {
-            "id": 32853,
-            "user_id": 1082,
-            "created_at": "2013-04-02T10:03:10+00:00",
-            "updated_at": "2019-02-06T19:03:28+00:00",
-            "path": "photos/O/G/OG3JOAi5jJepCCDb2jPCyVLmq0HtM0OIgAStft3e.jpg",
-            "width": 2639,
-            "height": 3669,
-            "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/O/G/OG3JOAi5jJepCCDb2jPCyVLmq0HtM0OIgAStft3e.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190404%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190404T155435Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=8003737ce558d6dee7c0317e463e3c3089c73a3352e257236a665a62d3a56aec",
-            "thumbnail_url": "https://notrehistoire.imgix.net/photos/O/G/OG3JOAi5jJepCCDb2jPCyVLmq0HtM0OIgAStft3e.jpeg?fm=jpg&sharp=3&w=770&s=88aa3b3f302356838bc633a66486f106",
-            "is_processed": true
-        }
-    },
-    {
-        "id": 60210,
-        "titre": "A Arolla",
-        "author": "Julien frères, éditeurs-photographes à Genève, no 7115; coll PM Epiney",
-        "license": "all_rights_reserved",
-        "date": {
-            "year": 1911,
-            "month": 5,
-            "day": 22
-        },
-        "location": "Arolla",
-        "media": {
-            "id": 53756,
-            "user_id": 620,
-            "path": "photos/0/v/0vMVDB7h5H4HkuG9ycg2lvbjsq8Pe92vg4h1Vgj6.jpg",
-            "width": 1056,
-            "height": 1628,
-            "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/0/v/0vMVDB7h5H4HkuG9ycg2lvbjsq8Pe92vg4h1Vgj6.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190404%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190404T155435Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=d8a0ac1541652abe6f1fd07c8ac404563137e824e5f60a2323383e48324216c9",
-            "thumbnail_url": "https://notrehistoire.imgix.net/photos/0/v/0vMVDB7h5H4HkuG9ycg2lvbjsq8Pe92vg4h1Vgj6.jpeg?fm=jpg&sharp=3&w=770&s=b90a1474754e78b59bda809482a1b0ab",
-            "is_processed": true,
-            "created_at": "2016-08-12T18:11:09+00:00",
-            "updated_at": "2019-02-04T06:55:39+00:00"
-        }
-    },
-    {
-        "id": 6433,
-        "titre": "Ma poussette à moi",
-        "author": "Rudhard",
-        "license": "all_rights_reserved",
-        "date": {
-            "year": 1961,
-            "month": 6,
-            "day": 1
-        },
-        "location": "1 1-3, 1204 Genève, Suisse",
-        "media": {
-            "id": 1644,
-            "user_id": 15,
-            "path": "photos/U/W/UW5uTx5SjMAFNTKpgB9CJeWrot5gMzq0XfsJUwIU.jpg",
-            "width": 759,
-            "height": 768,
-            "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/U/W/UW5uTx5SjMAFNTKpgB9CJeWrot5gMzq0XfsJUwIU.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190404%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190404T155435Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=e5787b0620460d20eefe8951d7e250965ba18b3af40ba68913676393a3c01ac3",
-            "thumbnail_url": "https://notrehistoire.imgix.net/photos/U/W/UW5uTx5SjMAFNTKpgB9CJeWrot5gMzq0XfsJUwIU.jpeg?fm=jpg&sharp=3&w=770&s=2a99e8b19675b004b6e19c14a4987cc8",
-            "is_processed": true,
-            "created_at": "2009-11-22T19:40:12+00:00",
-            "updated_at": "2019-02-01T11:54:24+00:00"
-        }
-    },
-    {
-        "id": 45032,
-        "titre": "Fête des vignerons 1955",
-        "author": "Inconnu",
-        "license": "all_rights_reserved",
-        "date": {
-            "year": 1955,
-            "month": 8,
-            "day": 1
-        },
-        "location": "Grande Place 1, 1800 Vevey, Suisse",
-        "media": {
-            "id": 39684,
-            "user_id": 1899,
-            "path": "photos/K/k/KkWFqgZR0BQ7Y97fiJltYLTsmyYsvauTqNJkqAAY.jpg",
-            "width": 1634,
-            "height": 2059,
-            "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/K/k/KkWFqgZR0BQ7Y97fiJltYLTsmyYsvauTqNJkqAAY.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190404%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190404T155435Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=b5c251cbd90c099992e895a9d470dda325667acb50cc670ea1b7fbd3629fea13",
-            "thumbnail_url": "https://notrehistoire.imgix.net/photos/K/k/KkWFqgZR0BQ7Y97fiJltYLTsmyYsvauTqNJkqAAY.jpeg?fm=jpg&sharp=3&w=770&s=6c9b22941ebb64528fe43e58d058a849",
-            "is_processed": true,
-            "created_at": "2014-01-10T15:19:29+00:00",
-            "updated_at": "2019-02-07T05:02:02+00:00"
-        }
-    },
-    {
-        "id": 18925,
-        "titre": "Expo 64 Gulliver",
-        "author": "Jean Ammon",
-        "license": "all_rights_reserved",
-        "date": {
-            "year": 1964,
-            "month": 1,
-            "day": 1
-        },
-        "location": "Lausanne",
-        "media": {
-            "id": 13790,
-            "user_id": 919,
-            "path": "photos/e/Z/eZ8eVroiKnL0qvAWfQM8c6tHuZUSb9tC2jXYGAcf.jpg",
-            "width": 713,
-            "height": 1070,
-            "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/e/Z/eZ8eVroiKnL0qvAWfQM8c6tHuZUSb9tC2jXYGAcf.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190404%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190404T155435Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=9989dc6fc14681cb15d7d0652a15abe3ded20efabb4de31c32468e3f0c37cb0a",
-            "thumbnail_url": "https://notrehistoire.imgix.net/photos/e/Z/eZ8eVroiKnL0qvAWfQM8c6tHuZUSb9tC2jXYGAcf.jpeg?fm=jpg&sharp=3&w=770&s=bbf1b142746332b14bb78be624d1dedd",
-            "is_processed": true,
-            "created_at": "2011-01-30T10:20:56+00:00",
-            "updated_at": "2019-02-04T21:46:11+00:00"
-        }
-    },
-    {
-        "id": 28843,
-        "titre": "Lausanne Ouchy statue du Général Guisan",
-        "author": "A.M. Martin",
-        "license": "all_rights_reserved",
-        "date": {
-            "year": 2012,
-            "month": 3,
-            "day": 10
-        },
-        "location": "Place de la Navigation 4, 1006 Lausanne, Suisse",
-        "media": {
-            "id": 23647,
-            "user_id": 1280,
-            "path": "photos/V/V/VVEOaySLMrHpADMDfcofXLZU4jsEE6OZT9Lab8Kg.jpg",
-            "width": 2338,
-            "height": 3240,
-            "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/V/V/VVEOaySLMrHpADMDfcofXLZU4jsEE6OZT9Lab8Kg.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190404%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190404T155435Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=b584b63ed9de1506f579dab830979ee7a37b40e626dd0e35002d86f3ceefbbda",
-            "thumbnail_url": "https://notrehistoire.imgix.net/photos/V/V/VVEOaySLMrHpADMDfcofXLZU4jsEE6OZT9Lab8Kg.jpeg?fm=jpg&sharp=3&w=770&s=db46b8c3f6cefff20494559dca28b659",
-            "is_processed": true,
-            "created_at": "2012-03-12T17:40:51+00:00",
-            "updated_at": "2019-02-06T21:07:12+00:00"
-        }
-    },
-    {
-        "id": 41091,
-        "titre": "Le Pont bhoutanais",
-        "author": "A. Salamin",
-        "license": "all_rights_reserved",
-        "date": {
-            "year": 2013,
-            "month": 7,
-            "day": 21
-        },
-        "location": "Pletschen 41, 3952 Loèche, Suisse",
-        "media": {
-            "id": 35772,
-            "user_id": 8,
-            "path": "photos/b/8/b8ATfVN1hHAurcZHsVKdOej5QEPqFocN7jGbiwtH.jpg",
-            "width": 1512,
-            "height": 2016,
-            "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/b/8/b8ATfVN1hHAurcZHsVKdOej5QEPqFocN7jGbiwtH.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190404%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190404T155435Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=b10398127f84a203f7e2a5c89aaeb4ddad88ec5592640585fdc00155e97195bc",
-            "thumbnail_url": "https://notrehistoire.imgix.net/photos/b/8/b8ATfVN1hHAurcZHsVKdOej5QEPqFocN7jGbiwtH.jpeg?fm=jpg&sharp=3&w=770&s=255aeb51941bb39a62547cc01874dd1c",
-            "is_processed": true,
-            "created_at": "2013-08-03T17:05:51+00:00",
-            "updated_at": "2019-02-08T10:00:17+00:00"
-        }
-    },
-    {
-        "id": 43672,
-        "titre": "Vitrail de Marcel Poncet à la Cathédrale de Lausanne",
-        "author": "Martine Desarzens",
-        "license": "all_rights_reserved",
-        "date": {
-            "year": 2013,
-            "month": 11,
-            "day": 10
-        },
-        "location": "Musée Historique de Lausanne, place de la Cathédrale 4 1005 Lausanne",
-        "media": {
-            "id": 38330,
-            "user_id": 189,
-            "path": "photos/L/5/L5HgBKZ3m4jtnGPiJfgqfPIOfzmBCGjB0VRclnlv.jpg",
-            "width": 2448,
-            "height": 3264,
-            "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/L/5/L5HgBKZ3m4jtnGPiJfgqfPIOfzmBCGjB0VRclnlv.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190404%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190404T155435Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=cb25d2084baa04c8b628e66dda7416a3a9ef6b5896134b1c0fd982a8c69f70e5",
-            "thumbnail_url": "https://notrehistoire.imgix.net/photos/L/5/L5HgBKZ3m4jtnGPiJfgqfPIOfzmBCGjB0VRclnlv.jpeg?fm=jpg&sharp=3&w=770&s=cda340d09b6c1db6f5845449d91cb3b1",
-            "is_processed": true,
-            "created_at": "2013-11-10T16:55:03+00:00",
-            "updated_at": "2019-02-07T17:50:46+00:00"
-        }
-    },
-    {
-        "id": 19992,
-        "titre": "Henri Koenig : Adolescent_153",
-        "author": "Claire Bärtschi-Flohr",
-        "license": "all_rights_reserved",
-        "date": {
-            "year": 2011,
-            "month": 1,
-            "day": 3
-        },
-        "location": "Genève, aux Délices",
-        "media": {
-            "id": 14851,
-            "user_id": 197,
-            "path": "photos/i/W/iWVSKN0exdA5xg46OATP8ijCgBBMV7IAT1owDQKi.jpg",
-            "width": 1536,
-            "height": 2048,
-            "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/i/W/iWVSKN0exdA5xg46OATP8ijCgBBMV7IAT1owDQKi.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190404%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190404T155612Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=e17098bc93e7e53bf6458e73bd42e76eb79e94d8c76af638b0d68e36a336bd82",
-            "thumbnail_url": "https://notrehistoire.imgix.net/photos/i/W/iWVSKN0exdA5xg46OATP8ijCgBBMV7IAT1owDQKi.jpeg?fm=jpg&sharp=3&w=770&s=6d08960efd15f7f2480a85e8973fb602",
-            "is_processed": true,
-            "created_at": "2011-04-04T07:20:08+00:00",
-            "updated_at": "2019-02-07T18:33:44+00:00"
-        }
-    },
-    {
-        "id": 48258,
-        "titre": "Lausanne Mutant héraldique Gaspard Delachaux",
-        "author": "A.M. Martin",
-        "license": "all_rights_reserved",
-        "date": {
-            "year": 2014,
-            "month": 6,
-            "day": 22
-        },
-        "location": "Avenue du Mont-Blanc 9, 1018 Lausanne, Suisse",
-        "media": {
-            "id": 42884,
-            "user_id": 1280,
-            "path": "photos/N/n/NnQ1DZLjglVfpUU6heJiqZUAL5HyC4uimrJGDdPn.jpg",
-            "width": 2891,
-            "height": 4004,
-            "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/N/n/NnQ1DZLjglVfpUU6heJiqZUAL5HyC4uimrJGDdPn.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190404%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190404T155612Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=c271f0d6d4d1e7461d1782024c06efdf3f25b36b5949f3c985dfb31c323b2e28",
-            "thumbnail_url": "https://notrehistoire.imgix.net/photos/N/n/NnQ1DZLjglVfpUU6heJiqZUAL5HyC4uimrJGDdPn.jpeg?fm=jpg&sharp=3&w=770&s=009f57b1402e0789f627597ae649f654",
-            "is_processed": true,
-            "created_at": "2014-06-22T19:44:22+00:00",
-            "updated_at": "2019-02-08T07:44:54+00:00"
-        }
-    },
-    {
-        "id": 59853,
-        "titre": "Carouge, le Temple",
-        "author": "A. Salamin",
-        "license": "all_rights_reserved",
-        "date": {
-            "year": 2014,
-            "month": 3,
-            "day": 10
-        },
-        "location": "Temple de Carouge, Place du Temple, 1227 Carouge, Suisse",
-        "media": {
-            "id": 53416,
-            "user_id": 8,
-            "path": "photos/m/l/mluaObzXOYARUW8LclGukSg4dalyBWVccb7lu63e.jpg",
-            "width": 3240,
-            "height": 4248,
-            "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/m/l/mluaObzXOYARUW8LclGukSg4dalyBWVccb7lu63e.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190404%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190404T155612Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=f0173e2e204eadb393e514342ed475bcb3695fb8efd7190e52f25ddc8813bd48",
-            "thumbnail_url": "https://notrehistoire.imgix.net/photos/m/l/mluaObzXOYARUW8LclGukSg4dalyBWVccb7lu63e.jpeg?fm=jpg&sharp=3&w=770&s=776bdbdbfc48de160becb773d464a72e",
-            "is_processed": true,
-            "created_at": "2016-06-27T11:06:33+00:00",
-            "updated_at": "2019-02-07T22:08:36+00:00"
-        }
-    },
-    {
-        "id": 103050,
-        "titre": "Porteur de montagne ou aspirant guide de montagne",
-        "author": "Marcel Maurice Demont",
-        "license": "all_rights_reserved",
-        "date": {
-            "year": 2017,
-            "month": 5,
-            "day": 19
-        },
-        "location": "Combin de Corbassière",
-        "media": {
-            "id": 72209,
-            "user_id": 1934,
-            "path": "photos/H/5/H5kzv7iPgefVdVnzL542jEgFGMgbXcpnvQwokM3Q.jpg",
-            "width": 491,
-            "height": 903,
-            "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/H/5/H5kzv7iPgefVdVnzL542jEgFGMgbXcpnvQwokM3Q.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190404%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190404T155612Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=3334810ffeb83dbaacce15b6dbb6bcb4ee7cdb9356149f2d23b14181590ef9f5",
-            "thumbnail_url": "https://notrehistoire.imgix.net/photos/H/5/H5kzv7iPgefVdVnzL542jEgFGMgbXcpnvQwokM3Q.jpeg?fm=jpg&sharp=3&w=770&s=403838343ec14c174bc9d473aaefae0b",
-            "is_processed": true,
-            "created_at": "2017-05-19T09:36:39+00:00",
-            "updated_at": "2019-02-03T04:04:21+00:00"
-        }
-    },
-    {
-        "id": 18645,
-        "titre": "Armaillis de la Gruyère",
-        "author": "Inconnu",
-        "license": "all_rights_reserved",
-        "date": {
-            "year": 1917,
-            "month": 1,
-            "day": 1
-        },
-        "location": "Commune de Broc",
-        "media": {
-            "id": 13511,
-            "user_id": 869,
-            "path": "photos/v/N/vNP0bJtYa5QGKO8UJKrj23uuYMLVgDYbgEMnujW7.jpg",
-            "width": 961,
-            "height": 1556,
-            "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/v/N/vNP0bJtYa5QGKO8UJKrj23uuYMLVgDYbgEMnujW7.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190404%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190404T155612Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=5ec04886805ea73be2b70009a95e4ee0e485a126c34c393bb0a3e950141954a6",
-            "thumbnail_url": "https://notrehistoire.imgix.net/photos/v/N/vNP0bJtYa5QGKO8UJKrj23uuYMLVgDYbgEMnujW7.jpeg?fm=jpg&sharp=3&w=770&s=778b98aa09c3557ad57ba528a82b2441",
-            "is_processed": true,
-            "created_at": "2011-01-14T21:41:51+00:00",
-            "updated_at": "2019-02-08T02:53:12+00:00"
-        }
-    },
-    {
-        "id": 12554,
-        "titre": "Pierre Pont Hôtel Bella Tola",
-        "author": "archives familiales",
-        "license": "all_rights_reserved",
-        "date": {
-            "year": 1892,
-            "month": 1,
-            "day": 1
-        },
-        "location": "Saint-Luc, Valais",
-        "media": {
-            "id": 7736,
-            "user_id": 18,
-            "path": "photos/m/Q/mQq1WrlNtPEg1vguWcLIVGmARTKq9fSV50nzh3UJ.jpg",
-            "width": 664,
-            "height": 1024,
-            "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/m/Q/mQq1WrlNtPEg1vguWcLIVGmARTKq9fSV50nzh3UJ.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190404%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190404T155613Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=89337c964cb51ebca5c37713ef3298e6a168e7ad3797d6eea3567ff4731f77f9",
-            "thumbnail_url": "https://notrehistoire.imgix.net/photos/m/Q/mQq1WrlNtPEg1vguWcLIVGmARTKq9fSV50nzh3UJ.jpeg?fm=jpg&sharp=3&w=770&s=2b929c7ded3005b3289b0a0d053b7381",
-            "is_processed": true,
-            "created_at": "2010-04-21T14:43:27+00:00",
-            "updated_at": "2019-02-07T21:00:11+00:00"
-        }
-    },
-    
-    {
-        "id": 31904,
-        "titre": "Victor Desarzens et Alfred Cortot",
-        "author": "ASL lausanne DR reproduction interdite",
-        "license": "all_rights_reserved",
-        "date": {
-            "year": 1957,
-            "month": 2,
-            "day": 11
-        },
-        "location": "Théâtre Municipal Av. du Théâtre Lausanne",
-        "media": {
-            "id": 26702,
-            "user_id": 189,
-            "path": "photos/g/q/gqNKE0gRPJ85OIrGFQ09t1EEjoQDEgpFLTwk3JGt.jpg",
-            "width": 1577,
-            "height": 1945,
-            "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/g/q/gqNKE0gRPJ85OIrGFQ09t1EEjoQDEgpFLTwk3JGt.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190404%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190404T160042Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=628fb71eafb9140eb3798ab1b80abd1ad030311998e0b9961e9a60df17b87b69",
-            "thumbnail_url": "https://notrehistoire.imgix.net/photos/g/q/gqNKE0gRPJ85OIrGFQ09t1EEjoQDEgpFLTwk3JGt.jpeg?fm=jpg&sharp=3&w=770&s=a1a21c1ea4707ed91788f9964de27703",
-            "is_processed": true,
-            "created_at": "2012-07-06T17:22:00+00:00",
-            "updated_at": "2019-02-07T04:01:06+00:00"
-        }
-    },
-    {
-        "id": 36094,
-        "titre": "Grand bisse de Vex",
-        "author": "famille",
-        "license": "all_rights_reserved",
-        "date": {
-            "year": 1999,
-            "month": 8,
-            "day": 1
-        },
-        "location": "Route des Mayens de l'Ours, 1992 Les Agettes, Suisse",
-        "media": {
-            "id": 30882,
-            "user_id": 1899,
-            "path": "photos/Z/6/Z60JwsLoN4rZwfSbRNZU2XijDfhHfXsB3HZtaNhJ.jpg",
-            "width": 1174,
-            "height": 1776,
-            "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/Z/6/Z60JwsLoN4rZwfSbRNZU2XijDfhHfXsB3HZtaNhJ.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190404%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190404T160042Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=a2b1d1afc7feac4efdd715b7e2c47c700201e8cba0b73e2be5c9f13853c8951e",
-            "thumbnail_url": "https://notrehistoire.imgix.net/photos/Z/6/Z60JwsLoN4rZwfSbRNZU2XijDfhHfXsB3HZtaNhJ.jpeg?fm=jpg&sharp=3&w=770&s=a15a5cb960298315067864f6b6c47309",
-            "is_processed": true,
-            "created_at": "2013-01-25T18:13:27+00:00",
-            "updated_at": "2019-02-06T22:57:54+00:00"
-        }
-    },
-    {
-        "id": 28687,
-        "titre": "Morges le temple",
-        "author": "A.M. Martin",
-        "license": "all_rights_reserved",
-        "date": {
-            "year": 2009,
-            "month": 5,
-            "day": 1
-        },
-        "location": "Rue Louis de Savoie 38, 1110 Morges, Suisse",
-        "media": {
-            "id": 23489,
-            "user_id": 1280,
-            "path": "photos/B/I/BILifSWLIOsESAy5DLLbx4HVtOUgtzN1u2bAFcTz.jpg",
-            "width": 1704,
-            "height": 2272,
-            "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/B/I/BILifSWLIOsESAy5DLLbx4HVtOUgtzN1u2bAFcTz.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190404%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190404T160042Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=24c71c6b8eeb5233119996e98dfbcac6a2c73cf3da903b4902763d9736e02e17",
-            "thumbnail_url": "https://notrehistoire.imgix.net/photos/B/I/BILifSWLIOsESAy5DLLbx4HVtOUgtzN1u2bAFcTz.jpeg?fm=jpg&sharp=3&w=770&s=d66d197f485bdd6a1ac7a655ad7ee4bc",
-            "is_processed": true,
-            "created_at": "2012-03-07T16:08:09+00:00",
-            "updated_at": "2019-02-07T15:54:05+00:00"
-        }
-    },
-    {
-        "id": 33364,
-        "titre": "Lutry Tour Bertholod",
-        "author": "A.M. Martin",
-        "license": "all_rights_reserved",
-        "date": {
-            "year": 2010,
-            "month": 11,
-            "day": 1
-        },
-        "location": "Chemin des Terrasses 28, 1095 Lutry, Suisse",
-        "media": {
-            "id": 28160,
-            "user_id": 1280,
-            "path": "photos/f/c/fcPvWfR7iONemG3qZVxGqDi9mLkxK9w7E0J1noTA.jpg",
-            "width": 2232,
-            "height": 3090,
-            "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/f/c/fcPvWfR7iONemG3qZVxGqDi9mLkxK9w7E0J1noTA.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190404%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190404T160042Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=2c9a9175c4c403573c38195f4b43f26beab7e912b6dbb3028cb28807c4ca2574",
-            "thumbnail_url": "https://notrehistoire.imgix.net/photos/f/c/fcPvWfR7iONemG3qZVxGqDi9mLkxK9w7E0J1noTA.jpeg?fm=jpg&sharp=3&w=770&s=607348c4c7a99ee6c07b3ece68171a47",
-            "is_processed": true,
-            "created_at": "2012-09-24T20:10:44+00:00",
-            "updated_at": "2019-02-07T18:07:41+00:00"
-        }
-    },
-    {
-        "id": 50719,
-        "titre": "Clown dimitri kurzbiographi",
-        "author": "Erica Humbert-Droz",
-        "license": "all_rights_reserved",
-        "date": {
-            "year": 1973,
-            "month": 1,
-            "day": 1
-        },
-        "location": "Via Cantonale 1, 6655 Intragna, Suisse",
-        "media": {
-            "id": 45317,
-            "user_id": 958,
-            "path": "photos/v/g/vgKKOkrRUiXhfR1oflBxrXMpcD8ytj96G8y6HlFi.jpg",
-            "width": 320,
-            "height": 447,
-            "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/v/g/vgKKOkrRUiXhfR1oflBxrXMpcD8ytj96G8y6HlFi.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190404%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190404T160042Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=caf1caebe318ed38d4b789fe4059b3ae37b1a44d9918efa0bb83dd0a23821652",
-            "thumbnail_url": "https://notrehistoire.imgix.net/photos/v/g/vgKKOkrRUiXhfR1oflBxrXMpcD8ytj96G8y6HlFi.jpeg?fm=jpg&sharp=3&w=770&s=05022652b8d4d10bc5a971c1eb31d4d8",
-            "is_processed": true,
-            "created_at": "2014-10-11T12:53:05+00:00",
-            "updated_at": "2019-02-05T13:12:35+00:00"
-        }
-    },
-    {
-        "id": 12358,
-        "titre": "Portrait Henri Guisan",
-        "author": "Sylvie",
-        "license": "all_rights_reserved",
-        "date": {
-            "year": 2010,
-            "month": 4,
-            "day": 11
-        },
-        "location": "Auberge Communale du Lion d'Or, 1083 Mézières",
-        "media": {
-            "id": 7540,
-            "user_id": 108,
-            "path": "photos/1/X/1XslO73j72fA7z4rqYokInwoevaVa4uXz5ZfGNUN.jpg",
-            "width": 2306,
-            "height": 3077,
-            "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/1/X/1XslO73j72fA7z4rqYokInwoevaVa4uXz5ZfGNUN.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190404%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190404T160215Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=3508da3df856d2bc1746845bdc7c1fe62f36fc21168acdfd624c59f6f3ec0d4d",
-            "thumbnail_url": "https://notrehistoire.imgix.net/photos/1/X/1XslO73j72fA7z4rqYokInwoevaVa4uXz5ZfGNUN.jpeg?fm=jpg&sharp=3&w=770&s=0153bacd5766b99ff4a130e6c321d07c",
-            "is_processed": true,
-            "created_at": "2010-04-11T15:58:59+00:00",
-            "updated_at": "2019-02-06T15:53:53+00:00"
-        }
-    },
-    {
-        "id": 19886,
-        "titre": "Le cimetière des pestiférés au Boêchet",
-        "author": "Deseyegn",
-        "license": "all_rights_reserved",
-        "date": {
-            "year": 2011,
-            "month": 2,
-            "day": 1
-        },
-        "location": "Sous-les-Rangs 35, 2336 Les Bois, Suisse",
-        "media": {
-            "id": 14745,
-            "user_id": 560,
-            "path": "photos/E/o/EoUhaobzD1izOSMr1vgkk1iJ3udvCqVZFbW64j17.jpg",
-            "width": 1536,
-            "height": 2048,
-            "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/E/o/EoUhaobzD1izOSMr1vgkk1iJ3udvCqVZFbW64j17.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190404%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190404T160215Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=d65ba5b027875f28c8b9c180ed41c679cbd06788c18ef2ac7eefed308f0fb428",
-            "thumbnail_url": "https://notrehistoire.imgix.net/photos/E/o/EoUhaobzD1izOSMr1vgkk1iJ3udvCqVZFbW64j17.jpeg?fm=jpg&sharp=3&w=770&s=ce35bc226ee3da828a842524420675e9",
-            "is_processed": true,
-            "created_at": "2011-03-30T15:21:23+00:00",
-            "updated_at": "2019-02-08T09:48:18+00:00"
-        }
-    },
-    {
-        "id": 60103,
-        "titre": "Fritz Jeanneret_Gignac_693",
-        "author": "Claire Bärtschi-Flohr",
-        "license": "all_rights_reserved",
-        "date": {
-            "year": 2016,
-            "month": 7,
-            "day": 8
-        },
-        "location": "84400, Gignac, France",
-        "media": {
-            "id": 53655,
-            "user_id": 197,
-            "path": "photos/m/7/m7lwwhhz1xR25EGgNEswmIkvon4Rpxl3ph8GKGMe.jpg",
-            "width": 1920,
-            "height": 2560,
-            "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/m/7/m7lwwhhz1xR25EGgNEswmIkvon4Rpxl3ph8GKGMe.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190404%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190404T160215Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=0d2a23fae11562b641d8892806b06b360cfaa0b4cab1b1fc3e53771c237362d9",
-            "thumbnail_url": "https://notrehistoire.imgix.net/photos/m/7/m7lwwhhz1xR25EGgNEswmIkvon4Rpxl3ph8GKGMe.jpeg?fm=jpg&sharp=3&w=770&s=6c77d2203a7a9d4b13042d7c9e2e51b0",
-            "is_processed": true,
-            "created_at": "2016-08-04T08:44:01+00:00",
-            "updated_at": "2019-02-08T11:45:13+00:00"
-        }
-    },
-    {
-        "id": 12090,
-        "titre": "pont de Brot / Gorges de l'Areuse",
-        "author": "V. Demierre",
-        "license": "all_rights_reserved",
-        "date": {
-            "year": 2009,
-            "month": 7,
-            "day": 27
-        },
-        "location": "Sur le Vau 7, 2105 Val-de-Travers, Suisse",
-        "media": {
-            "id": 7274,
-            "user_id": 53,
-            "path": "photos/S/d/Sd6nCC2Sw4nhsG70Ak3rgmClh0iD4Unwb0ot4XKM.jpg",
-            "width": 2296,
-            "height": 3056,
-            "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/S/d/Sd6nCC2Sw4nhsG70Ak3rgmClh0iD4Unwb0ot4XKM.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190404%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190404T160502Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=5bec7919f9b4ce43c447f958cbf5aee5c4db3dffb3b16778b44eac82fcd757cc",
-            "thumbnail_url": "https://notrehistoire.imgix.net/photos/S/d/Sd6nCC2Sw4nhsG70Ak3rgmClh0iD4Unwb0ot4XKM.jpeg?fm=jpg&sharp=3&w=770&s=e77d787f5c199447ffdee64f98804e4b",
-            "is_processed": true,
-            "created_at": "2010-04-02T19:18:07+00:00",
-            "updated_at": "2019-02-07T01:50:12+00:00"
-        }
-    },
-    {
-        "id": 7068,
-        "titre": "Le château Ashbourne",
-        "author": "Mauro Bernardi",
-        "license": "all_rights_reserved",
-        "date": {
-            "year": 1987,
-            "month": 1,
-            "day": 1
-        },
-        "location": "Avenue de Beau Séjour 20, 1206 Genève, Suisse",
-        "media": {
-            "id": 2275,
-            "user_id": 198,
-            "path": "photos/c/G/cGd8slXCFHgyN9czJdp00JWqukM030SyA7auvC8m.jpg",
-            "width": 479,
-            "height": 707,
-            "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/c/G/cGd8slXCFHgyN9czJdp00JWqukM030SyA7auvC8m.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190404%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190404T160502Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=48e5245289739ca8c20f0fd9038b75d7b9728ae211f4686253f45668b390dee4",
-            "thumbnail_url": "https://notrehistoire.imgix.net/photos/c/G/cGd8slXCFHgyN9czJdp00JWqukM030SyA7auvC8m.jpeg?fm=jpg&sharp=3&w=770&s=2280246a33a7bd262ab146ff6fb7230d",
-            "is_processed": true,
-            "created_at": "2009-12-10T17:17:44+00:00",
-            "updated_at": "2019-02-08T03:35:18+00:00"
-        }
-    },
-    {
-        "id": 12909,
-        "titre": "Neige à Genève 17.02.1985",
-        "author": "G.Plomb",
-        "license": "all_rights_reserved",
-        "date": {
-            "year": 1985,
-            "month": 2,
-            "day": 17
-        },
-        "location": "Genève St-Jean",
-        "media": {
-            "id": 8090,
-            "user_id": 511,
-            "path": "photos/h/g/hgtEYJJSUmRxlBVFsomM2LcHHnUhjg3n160FFa6O.jpg",
-            "width": 2406,
-            "height": 3600,
-            "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/h/g/hgtEYJJSUmRxlBVFsomM2LcHHnUhjg3n160FFa6O.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190404%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190404T160502Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=4afda0204c51ac2fe8740224af845527db7ba54621770c06bfe5c8996d3ad889",
-            "thumbnail_url": "https://notrehistoire.imgix.net/photos/h/g/hgtEYJJSUmRxlBVFsomM2LcHHnUhjg3n160FFa6O.jpeg?fm=jpg&sharp=3&w=770&s=6cd0a7946286807cc2f07bb9437d70c1",
-            "is_processed": true,
-            "created_at": "2010-05-02T16:43:43+00:00",
-            "updated_at": "2019-02-08T03:50:00+00:00"
-        }
-    },
-    {
-        "id": 49609,
-        "titre": "Lausanne le Rôtillon",
-        "author": "A.M. Martin",
-        "license": "all_rights_reserved",
-        "date": {
-            "year": 2014,
-            "month": 6,
-            "day": 25
-        },
-        "location": "Rue du Rôtillon 10, 1003 Lausanne, Suisse",
-        "media": {
-            "id": 44232,
-            "user_id": 1280,
-            "path": "photos/Y/h/YhPJxv9FpFuZnGL2xWag5ik5IXAPmubmqb3kyPHh.jpg",
-            "width": 3240,
-            "height": 4320,
-            "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/Y/h/YhPJxv9FpFuZnGL2xWag5ik5IXAPmubmqb3kyPHh.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190405%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190405T100345Z&X-Amz-SignedHeaders=host&X-Amz-Expires=301&X-Amz-Signature=0d9e20f48c6170a460e778827437be67c3b82f88180e9130bdba07aa28c54126",
-            "thumbnail_url": "https://notrehistoire.imgix.net/photos/Y/h/YhPJxv9FpFuZnGL2xWag5ik5IXAPmubmqb3kyPHh.jpeg?fm=jpg&sharp=3&w=770&s=6ef73ca73a81b3d74518c08bd3ef51a4",
-            "is_processed": true,
-            "created_at": "2014-08-14T20:36:56+00:00",
-            "updated_at": "2019-02-08T13:10:09+00:00"
-        }
-    },
-    {
-        "id": 31906,
-        "titre": "Armin Jordan",
-        "author": "DR. Propriété de l'OCL, archives Ville de Lausanne",
-        "license": "all_rights_reserved",
-        "date": {
-            "year": 1973,
-            "month": 1,
-            "day": 1
-        },
-        "location": "Théâtre Municipal, av. du Théâtre Lausanne",
-        "media": {
-            "id": 26704,
-            "user_id": 189,
-            "path": "photos/i/u/iuMTmpop2gFSPNpFM0H7Vmh0FthJJ50cSNMY5VJa.jpg",
-            "width": 902,
-            "height": 1408,
-            "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/i/u/iuMTmpop2gFSPNpFM0H7Vmh0FthJJ50cSNMY5VJa.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190405%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190405T100623Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=8656eb03131393b6eed6a979bb2933116840db2fa857af3e0232c5a7c081eb99",
-            "thumbnail_url": "https://notrehistoire.imgix.net/photos/i/u/iuMTmpop2gFSPNpFM0H7Vmh0FthJJ50cSNMY5VJa.jpeg?fm=jpg&sharp=3&w=770&s=cd76952fca7d4a27fc98e894d2105235",
-            "is_processed": true,
-            "created_at": "2012-07-06T17:33:40+00:00",
-            "updated_at": "2019-02-05T18:56:41+00:00"
-        }
-    },
-    {
-        "id": 49400,
-        "titre": "Uniforme tl des années 80",
-        "author": "Marie-Antoinette Aubert",
-        "license": "all_rights_reserved",
-        "date": {
-            "year": 1987,
-            "month": 4,
-            "day": 1
-        },
-        "location": "Terminus \"Le Désert\"",
-        "media": {
-            "id": 44024,
-            "user_id": 2624,
-            "created_at": "2014-08-06T15:20:41+00:00",
-            "updated_at": "2019-02-07T13:30:39+00:00",
-            "path": "photos/h/B/hBjx7qswmEgZAUJeSw3JU40SzkpRPVW9oxoik8x6.jpg",
-            "width": 864,
-            "height": 1284,
-            "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/h/B/hBjx7qswmEgZAUJeSw3JU40SzkpRPVW9oxoik8x6.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190405%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190405T100623Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=e927d060f2b64126dbf43ad4c5ac0c3ac8a71a34fb99cd6f39d95544ce1bfdcf",
-            "thumbnail_url": "https://notrehistoire.imgix.net/photos/h/B/hBjx7qswmEgZAUJeSw3JU40SzkpRPVW9oxoik8x6.jpeg?fm=jpg&sharp=3&w=770&s=483c2a4d674f22ecd7c44c906fafe959",
-            "is_processed": true
-        }
-    },
-    {
-        "id": 102193,
-        "titre": "La tombe de Gustave Doret",
-        "author": "Sylvie Bazzanella",
-        "license": "cc_by_nc_nd",
-        "date": {
-            "year": 2017,
-            "month": 2,
-            "day": 22
-        },
-        "location": "La Combe, 1095 Lutry",
-        "media": {
-            "id": 71582,
-            "user_id": 108,
-            "path": "photos/v/I/vIyFUU1fm1GpuMpOU5d3r8QZHRJSTRGnxGiBCyAH.jpg",
-            "width": 880,
-            "height": 1430,
-            "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/v/I/vIyFUU1fm1GpuMpOU5d3r8QZHRJSTRGnxGiBCyAH.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190405%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190405T100623Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=01529e7f075d40bd15c232b65256f0128f3328d8ff91f6c8236c999c39ab9b21",
-            "thumbnail_url": "https://notrehistoire.imgix.net/photos/v/I/vIyFUU1fm1GpuMpOU5d3r8QZHRJSTRGnxGiBCyAH.jpeg?fm=jpg&sharp=3&w=770&s=17c94ecb48bb9a4d23bb45e69806941d",
-            "is_processed": true,
-            "created_at": "2017-02-22T16:25:56+00:00",
-            "updated_at": "2019-02-04T21:52:41+00:00"
-        }
-    },
-    {
-        "id": 30127,
-        "titre": "Canal de Versoix",
-        "author": "Georges Savary",
-        "license": "all_rights_reserved",
-        "date": {
-            "year": 2012,
-            "month": 4,
-            "day": 20
-        },
-        "location": "Route de Saint-Loup 95, 1290 Versoix, Suisse",
-        "media": {
-            "id": 24927,
-            "user_id": 1354,
-            "path": "photos/v/K/vKZqQueIkOv5tPFCFMn7aDoEPELhfgEAtpNecJ4M.jpg",
-            "width": 3000,
-            "height": 4000,
-            "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/v/K/vKZqQueIkOv5tPFCFMn7aDoEPELhfgEAtpNecJ4M.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190405%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190405T100623Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=088efdb0eb6ef58fa054bff4f927f35574906111606a14f35997e4dcc2df1f2c",
-            "thumbnail_url": "https://notrehistoire.imgix.net/photos/v/K/vKZqQueIkOv5tPFCFMn7aDoEPELhfgEAtpNecJ4M.jpeg?fm=jpg&sharp=3&w=770&s=19d22dd7d7ee7940d9f92b70c03fff83",
-            "is_processed": true,
-            "created_at": "2012-04-22T17:15:08+00:00",
-            "updated_at": "2019-02-08T13:16:49+00:00"
-        }
-    },
-    {
-        "id": 40291,
-        "titre": "Hameau de Sierne - Veyrier",
-        "author": "Laurent Berger",
-        "license": "all_rights_reserved",
-        "date": {
-            "year": 2007,
-            "month": 2,
-            "day": 17
-        },
-        "location": "Chemin de Sierne 19-23, 1255 Veyrier, Suisse",
-        "media": {
-            "id": 34981,
-            "user_id": 1423,
-            "path": "photos/s/u/suIEkNEYO1HDfvRNxHV5yxIAFeS4SpxLPCyY2abx.jpg",
-            "width": 2136,
-            "height": 2848,
-            "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/s/u/suIEkNEYO1HDfvRNxHV5yxIAFeS4SpxLPCyY2abx.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190405%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190405T100623Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=720efca51c7a26cfa8c8542c6ddde11502b9ef644afe7defd618e3c78ca99a89",
-            "thumbnail_url": "https://notrehistoire.imgix.net/photos/s/u/suIEkNEYO1HDfvRNxHV5yxIAFeS4SpxLPCyY2abx.jpeg?fm=jpg&sharp=3&w=770&s=50f8f3f548c600bf8a6cbcc4d701fa49",
-            "is_processed": true,
-            "created_at": "2013-07-03T00:00:47+00:00",
-            "updated_at": "2019-02-07T09:12:27+00:00"
-        }
-    },
-    {
-
+    "location": "Théâtre Municipal, av. du Théâtre Lausanne",
+    "media": {
+      "id": 26704,
+      "user_id": 189,
+      "path": "photos/i/u/iuMTmpop2gFSPNpFM0H7Vmh0FthJJ50cSNMY5VJa.jpg",
+      "width": 902,
+      "height": 1408,
+      "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/i/u/iuMTmpop2gFSPNpFM0H7Vmh0FthJJ50cSNMY5VJa.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190405%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190405T100623Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=8656eb03131393b6eed6a979bb2933116840db2fa857af3e0232c5a7c081eb99",
+      "thumbnail_url": "https://notrehistoire.imgix.net/photos/i/u/iuMTmpop2gFSPNpFM0H7Vmh0FthJJ50cSNMY5VJa.jpeg?fm=jpg&sharp=3&w=770&s=cd76952fca7d4a27fc98e894d2105235",
+      "is_processed": true,
+      "created_at": "2012-07-06T17:33:40+00:00",
+      "updated_at": "2019-02-05T18:56:41+00:00"
+    }
+  },
+  {
     "id": 59807,
     "titre": "Une si belle rencontre....avec des photographes",
     "author": "Christian Rossier photographe. © , reproduction interdite",
@@ -1226,30 +456,6 @@
     }
   },
   {
-    "id": 34491,
-    "titre": "Eglise d'Eysins",
-    "author": "Edith Nicoud",
-    "license": "all_rights_reserved",
-    "date": {
-      "year": 2011,
-      "month": 6,
-      "day": 5
-    },
-    "location": "Eysins VD",
-    "media": {
-      "id": 29288,
-      "user_id": 454,
-      "path": "photos/6/1/615QUf2WlCtWG2hYjVVCpIhyBpq5x0U2AuSiYNed.jpg",
-      "width": 768,
-      "height": 1024,
-      "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/6/1/615QUf2WlCtWG2hYjVVCpIhyBpq5x0U2AuSiYNed.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190405%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190405T101200Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=b5ef1fa55b4ee4ae7023ebe1df1498152e4c02a7d5568b53a88fb5fde3225851",
-      "thumbnail_url": "https://notrehistoire.imgix.net/photos/6/1/615QUf2WlCtWG2hYjVVCpIhyBpq5x0U2AuSiYNed.jpeg?fm=jpg&sharp=3&w=770&s=81f7d7409850c2e6e464fd7b46de58c4",
-      "is_processed": true,
-      "created_at": "2012-11-19T08:29:34+00:00",
-      "updated_at": "2019-02-08T11:54:49+00:00"
-    }
-  },
-  {
     "id": 60106,
     "titre": "Paysannes d'Evolène",
     "author": "J.J. 1553, coll PM Epiney",
@@ -1295,54 +501,6 @@
       "is_processed": true,
       "created_at": "2014-01-10T14:19:58+00:00",
       "updated_at": "2019-02-08T07:59:26+00:00"
-    }
-  },
-  {
-    "id": 32114,
-    "titre": "Chapelle de St-Jean, Sembrancher",
-    "author": "Daniel A. Kissling",
-    "license": "all_rights_reserved",
-    "date": {
-      "year": 2012,
-      "month": 7,
-      "day": 27
-    },
-    "location": "Route de la Garde 9-13, 1933 Sembrancher, Switzerland",
-    "media": {
-      "id": 26911,
-      "user_id": 1281,
-      "path": "photos/W/d/WdWtmyxJcdcRoNSlBqC7t0VmwpM71lTbTw1gF5Zz.jpg",
-      "width": 1200,
-      "height": 1600,
-      "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/W/d/WdWtmyxJcdcRoNSlBqC7t0VmwpM71lTbTw1gF5Zz.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190405%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190405T105739Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=46c2edbffe1dcbdbf99222ae63695ac3889b3a14a3088317d66a998141b5b8ca",
-      "thumbnail_url": "https://notrehistoire.imgix.net/photos/W/d/WdWtmyxJcdcRoNSlBqC7t0VmwpM71lTbTw1gF5Zz.jpeg?fm=jpg&sharp=3&w=770&s=788ead2ecff15ebf9887aa067adc1883",
-      "is_processed": true,
-      "created_at": "2012-07-28T11:28:13+00:00",
-      "updated_at": "2019-02-07T12:19:22+00:00"
-    }
-  },
-  {
-    "id": 18589,
-    "titre": "Illgraben, Chandolin",
-    "author": "Muriel Salamin",
-    "license": "all_rights_reserved",
-    "date": {
-      "year": 2010,
-      "month": 7,
-      "day": 1
-    },
-    "location": "Chandolin, Vals d'Anniviers",
-    "media": {
-      "id": 13455,
-      "user_id": 871,
-      "path": "photos/i/v/ivei3H18lyWvsGvXWmzYTFGbPK2ut7ASVporJWLv.jpg",
-      "width": 3456,
-      "height": 5184,
-      "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/i/v/ivei3H18lyWvsGvXWmzYTFGbPK2ut7ASVporJWLv.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190405%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190405T105739Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=45b9314a56881700edcce7056ea4135f812cbc5f5d5a75e9f9e40847979e260a",
-      "thumbnail_url": "https://notrehistoire.imgix.net/photos/i/v/ivei3H18lyWvsGvXWmzYTFGbPK2ut7ASVporJWLv.jpeg?fm=jpg&sharp=3&w=770&s=67bd28a33730f4875fb7ea3a84a75164",
-      "is_processed": true,
-      "created_at": "2011-01-10T14:24:47+00:00",
-      "updated_at": "2019-02-07T16:13:02+00:00"
     }
   },
   {
@@ -1466,54 +624,6 @@
     }
   },
   {
-    "id": 117862,
-    "titre": "Les armoiries du Valais et de ses districts, le district de Conthey",
-    "author": "Adam Bauer",
-    "license": "all_rights_reserved",
-    "date": {
-      "year": 1920,
-      "month": null,
-      "day": null
-    },
-    "location": "Conthey",
-    "media": {
-      "id": 78391,
-      "user_id": 511,
-      "created_at": "2019-02-08T06:10:27+00:00",
-      "updated_at": "2019-02-08T15:52:56+00:00",
-      "path": "photos/n/u/nu1mujBhSDQN0n7AX4swopMxTTRIZ5Iu28Z5OQiR.jpg",
-      "width": 469,
-      "height": 722,
-      "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/n/u/nu1mujBhSDQN0n7AX4swopMxTTRIZ5Iu28Z5OQiR.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190405%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190405T110517Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=023c3f6f1bd64aaf1df89acd0ca8c2e5bc90b760e1ae69f05820109718859174",
-      "thumbnail_url": "https://notrehistoire.imgix.net/photos/n/u/nu1mujBhSDQN0n7AX4swopMxTTRIZ5Iu28Z5OQiR.jpeg?fm=jpg&sharp=3&w=770&s=8be07996d3b7af0793a8beda56743704",
-      "is_processed": true
-    }
-  },
-  {
-    "id": 20395,
-    "titre": "Rue Jean-Calvin 2, Genève, 1978",
-    "author": "Jean-Georges Mallet",
-    "license": "all_rights_reserved",
-    "date": {
-      "year": 1978,
-      "month": 6,
-      "day": 1
-    },
-    "location": "Rue Jean-Calvin 2, Genève",
-    "media": {
-      "id": 15254,
-      "user_id": 932,
-      "path": "photos/V/h/Vh6K864LasXDGOLYFx9DTnExWaPVwuR6yqCuHUfB.jpg",
-      "width": 515,
-      "height": 700,
-      "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/V/h/Vh6K864LasXDGOLYFx9DTnExWaPVwuR6yqCuHUfB.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190405%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190405T110745Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=409c39c1fb1e1fa591c0ca49fd52ca902f4bc848180d2efcd5bff432834a5bb2",
-      "thumbnail_url": "https://notrehistoire.imgix.net/photos/V/h/Vh6K864LasXDGOLYFx9DTnExWaPVwuR6yqCuHUfB.jpeg?fm=jpg&sharp=3&w=770&s=a6825618017a03223eb959d3428e2506",
-      "is_processed": true,
-      "created_at": "2011-04-28T16:54:21+00:00",
-      "updated_at": "2019-02-08T12:29:50+00:00"
-    }
-  },
-  {
     "id": 15116,
     "titre": "Oscar",
     "author": "© Collection Michel Savioz",
@@ -1634,54 +744,6 @@
     }
   },
   {
-    "id": 22782,
-    "titre": "Carte postale Chapelle de Sainte-Apolline, Posieux (FR)",
-    "author": null,
-    "license": "all_rights_reserved",
-    "date": {
-      "year": 1906,
-      "month": 1,
-      "day": 1
-    },
-    "location": "Impasse de Froideville, 1725 Villars-sur-Glâne, Suisse",
-    "media": {
-      "id": 17635,
-      "user_id": 758,
-      "path": "photos/t/f/tfcD8K5dZIvBaZtBFCFXwY7yxcXTeyztTuVnMybp.jpg",
-      "width": 1046,
-      "height": 1625,
-      "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/t/f/tfcD8K5dZIvBaZtBFCFXwY7yxcXTeyztTuVnMybp.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190405%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190405T110745Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=8594f0afc2262568bb21fab687242d78e40e3d870ba1e8c84a73f87c2c54a27f",
-      "thumbnail_url": "https://notrehistoire.imgix.net/photos/t/f/tfcD8K5dZIvBaZtBFCFXwY7yxcXTeyztTuVnMybp.jpeg?fm=jpg&sharp=3&w=770&s=60e77e3b70fef97cd22b15749cf0e803",
-      "is_processed": true,
-      "created_at": "2011-08-19T17:00:36+00:00",
-      "updated_at": "2019-02-02T15:26:18+00:00"
-    }
-  },
-  {
-    "id": 21086,
-    "titre": "Rue Louis-Favre 1984",
-    "author": "Jean-Georges Mallet",
-    "license": "all_rights_reserved",
-    "date": {
-      "year": 1984,
-      "month": 6,
-      "day": 1
-    },
-    "location": "rue Louis-Favre, Genève",
-    "media": {
-      "id": 15945,
-      "user_id": 932,
-      "path": "photos/2/5/25E24PR0iHXT2HdtCvSIemozGEzMmFFHLnYO2hSL.jpg",
-      "width": 466,
-      "height": 600,
-      "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/2/5/25E24PR0iHXT2HdtCvSIemozGEzMmFFHLnYO2hSL.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190405%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190405T111810Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=f207230c7994156315afc0a011f92aa96514ffff538beb34afc8df5d4a6d9965",
-      "thumbnail_url": "https://notrehistoire.imgix.net/photos/2/5/25E24PR0iHXT2HdtCvSIemozGEzMmFFHLnYO2hSL.jpeg?fm=jpg&sharp=3&w=770&s=2f02603a0419a365c38ae1ccb901c929",
-      "is_processed": true,
-      "created_at": "2011-05-30T12:15:56+00:00",
-      "updated_at": "2019-02-05T08:06:03+00:00"
-    }
-  },
-  {
     "id": 11201,
     "titre": "Mon grand-père, apiculteur_19",
     "author": "famille",
@@ -1778,30 +840,6 @@
     }
   },
   {
-    "id": 54379,
-    "titre": "Le Cervin vu d'avion",
-    "author": "André Groux",
-    "license": "all_rights_reserved",
-    "date": {
-      "year": 1986,
-      "month": 1,
-      "day": 1
-    },
-    "location": "Segnavia 13EE, 11028 Valtournenche AO, Italie",
-    "media": {
-      "id": 48950,
-      "user_id": 8,
-      "path": "photos/C/V/CVW6ALGzNFiyJG4NaheIbM9pLujdmlEl0DOcDHjE.jpg",
-      "width": 1060,
-      "height": 1533,
-      "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/C/V/CVW6ALGzNFiyJG4NaheIbM9pLujdmlEl0DOcDHjE.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190405%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190405T112030Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=d673f6d52d2457592c394af59d1afc16a58904f867997ad31d7730ff4b386ffa",
-      "thumbnail_url": "https://notrehistoire.imgix.net/photos/C/V/CVW6ALGzNFiyJG4NaheIbM9pLujdmlEl0DOcDHjE.jpeg?fm=jpg&sharp=3&w=770&s=d64df3ef8ebe5b3db64c00de186be841",
-      "is_processed": true,
-      "created_at": "2015-06-29T20:48:10+00:00",
-      "updated_at": "2019-02-05T04:05:44+00:00"
-    }
-  },
-  {
     "id": 38097,
     "titre": "Passage des Spahis à Veyrier (19)",
     "author": "inconnu",
@@ -1850,102 +888,6 @@
     }
   },
   {
-    "id": 12734,
-    "titre": "Davel au Château à Lausanne",
-    "author": "Gérard",
-    "license": "all_rights_reserved",
-    "date": {
-      "year": 2010,
-      "month": 4,
-      "day": 25
-    },
-    "location": "Place du Château 4, 1005 Lausanne, Suisse",
-    "media": {
-      "id": 7914,
-      "user_id": 397,
-      "path": "photos/K/U/KUUZ5BLIWdhxr9OJ6wRB4N44WGooVaDot4LK3hJx.jpg",
-      "width": 634,
-      "height": 845,
-      "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/K/U/KUUZ5BLIWdhxr9OJ6wRB4N44WGooVaDot4LK3hJx.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190405%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190405T112252Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=04880769ae5edcd47c9fd1e222d3eccace1ebd6f6005202ca4fbd4a9bbca3d07",
-      "thumbnail_url": "https://notrehistoire.imgix.net/photos/K/U/KUUZ5BLIWdhxr9OJ6wRB4N44WGooVaDot4LK3hJx.jpeg?fm=jpg&sharp=3&w=770&s=9f6c2b0466b9960a1ec67337700beb84",
-      "is_processed": true,
-      "created_at": "2010-04-25T19:56:04+00:00",
-      "updated_at": "2019-02-07T23:10:01+00:00"
-    }
-  },
-  {
-    "id": 38593,
-    "titre": "Le bisse de Trient",
-    "author": "André Groux",
-    "license": "all_rights_reserved",
-    "date": {
-      "year": 1981,
-      "month": 6,
-      "day": 2
-    },
-    "location": "203, 1929 Trient, Suisse",
-    "media": {
-      "id": 33301,
-      "user_id": 8,
-      "path": "photos/I/w/IwfdViXfCKWpY9q2mEdnDTbTB4V3aSz2tUj9e3K2.jpg",
-      "width": 1009,
-      "height": 1446,
-      "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/I/w/IwfdViXfCKWpY9q2mEdnDTbTB4V3aSz2tUj9e3K2.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190405%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190405T112252Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=d15580389c4293628f4eb328c607dce1816e3415cf156191ef4e6fc60b8da439",
-      "thumbnail_url": "https://notrehistoire.imgix.net/photos/I/w/IwfdViXfCKWpY9q2mEdnDTbTB4V3aSz2tUj9e3K2.jpeg?fm=jpg&sharp=3&w=770&s=0a0e59e6583e3bcbc33002c2295ab2af",
-      "is_processed": true,
-      "created_at": "2013-04-22T20:42:33+00:00",
-      "updated_at": "2019-02-04T19:26:52+00:00"
-    }
-  },
-  {
-    "id": 40189,
-    "titre": "Rue de la Corraterie Genève",
-    "author": "Laurent Berger",
-    "license": "all_rights_reserved",
-    "date": {
-      "year": 2010,
-      "month": 4,
-      "day": 12
-    },
-    "location": "Rue de la Corraterie 22, 1204 Genève, Suisse",
-    "media": {
-      "id": 34878,
-      "user_id": 1423,
-      "path": "photos/W/F/WFQWzARhoLByQLJdyWIYbDrbeYwvLpdyDL1PW66k.jpg",
-      "width": 3000,
-      "height": 4000,
-      "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/W/F/WFQWzARhoLByQLJdyWIYbDrbeYwvLpdyDL1PW66k.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190405%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190405T112441Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=067e35fe53d1620840a65798be8428ea9c82b2f587a5040fdda845b0f9d4010a",
-      "thumbnail_url": "https://notrehistoire.imgix.net/photos/W/F/WFQWzARhoLByQLJdyWIYbDrbeYwvLpdyDL1PW66k.jpeg?fm=jpg&sharp=3&w=770&s=59b40916109f441a7d29cb10ed2bd9dd",
-      "is_processed": true,
-      "created_at": "2013-06-28T00:36:24+00:00",
-      "updated_at": "2019-02-07T00:46:26+00:00"
-    }
-  },
-  {
-    "id": 52899,
-    "titre": "Site Cardinal",
-    "author": "Chantal Codourey",
-    "license": "all_rights_reserved",
-    "date": {
-      "year": 2015,
-      "month": 3,
-      "day": 5
-    },
-    "location": "Passage du Cardinal 1, 1700 Fribourg, Suisse",
-    "media": {
-      "id": 47491,
-      "user_id": 1984,
-      "path": "photos/R/Y/RYIl3LvnW1x6t3gguJ0wJOo5f7luuZlZrxjCTBGk.jpg",
-      "width": 1000,
-      "height": 1500,
-      "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/R/Y/RYIl3LvnW1x6t3gguJ0wJOo5f7luuZlZrxjCTBGk.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190405%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190405T112441Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=af3250a48139a211dcd195eb2854161c4d2017259d47c9beb7a41672a0f5235b",
-      "thumbnail_url": "https://notrehistoire.imgix.net/photos/R/Y/RYIl3LvnW1x6t3gguJ0wJOo5f7luuZlZrxjCTBGk.jpeg?fm=jpg&sharp=3&w=770&s=c031e45e352930fdf8788959d2a4eedf",
-      "is_processed": true,
-      "created_at": "2015-03-11T11:06:29+00:00",
-      "updated_at": "2019-02-05T18:00:47+00:00"
-    }
-  },
-  {
     "id": 7605,
     "titre": "Guisan 51929",
     "author": "Hermann König",
@@ -1967,54 +909,6 @@
       "is_processed": true,
       "created_at": "2009-12-15T16:00:11+00:00",
       "updated_at": "2019-02-04T20:10:10+00:00"
-    }
-  },
-  {
-    "id": 38714,
-    "titre": "Train des Rochers-de-Naye",
-    "author": "Inconnu",
-    "license": "all_rights_reserved",
-    "date": {
-      "year": 1947,
-      "month": 9,
-      "day": 23
-    },
-    "location": "Rafevex, 1844 Veytaux, Suisse",
-    "media": {
-      "id": 33422,
-      "user_id": 1280,
-      "path": "photos/h/C/hCbUdun6NhlCs1COD8secYoRud59td8mdzJe8TmY.jpg",
-      "width": 596,
-      "height": 896,
-      "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/h/C/hCbUdun6NhlCs1COD8secYoRud59td8mdzJe8TmY.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190405%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190405T112441Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=641d79e1efc74a55fa67c8adad67052433c15a8e06533d7dea8fda7c65b75a15",
-      "thumbnail_url": "https://notrehistoire.imgix.net/photos/h/C/hCbUdun6NhlCs1COD8secYoRud59td8mdzJe8TmY.jpeg?fm=jpg&sharp=3&w=770&s=f7af65d6ae7cdf2d2400dfa23a2adf9c",
-      "is_processed": true,
-      "created_at": "2013-04-28T17:10:55+00:00",
-      "updated_at": "2019-02-04T02:57:53+00:00"
-    }
-  },
-  {
-    "id": 48503,
-    "titre": "Montée à l'alpage de Marchissy",
-    "author": "Rachel Luthi",
-    "license": "all_rights_reserved",
-    "date": {
-      "year": 2013,
-      "month": 5,
-      "day": 13
-    },
-    "location": "Marchissy",
-    "media": {
-      "id": 43129,
-      "user_id": 108,
-      "path": "photos/n/E/nEjvPRMgJ2u06YLMEj3x4nslPwXEpquUfhVbp3Ga.jpg",
-      "width": 1361,
-      "height": 2048,
-      "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/n/E/nEjvPRMgJ2u06YLMEj3x4nslPwXEpquUfhVbp3Ga.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190405%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190405T112712Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=0153411da5b2775bfddc3dcb68f5c3ea7a8bd5a113ee7d4f54575cc7d0177f84",
-      "thumbnail_url": "https://notrehistoire.imgix.net/photos/n/E/nEjvPRMgJ2u06YLMEj3x4nslPwXEpquUfhVbp3Ga.jpeg?fm=jpg&sharp=3&w=770&s=ddd922168315fa56ad1e97dfba83be27",
-      "is_processed": true,
-      "created_at": "2014-06-30T21:12:42+00:00",
-      "updated_at": "2019-02-03T00:07:28+00:00"
     }
   },
   {
@@ -2042,54 +936,6 @@
     }
   },
   {
-    "id": 5216,
-    "titre": "Le petit tonneau",
-    "author": "Albin",
-    "license": "all_rights_reserved",
-    "date": {
-      "year": 1968,
-      "month": 3,
-      "day": 1
-    },
-    "location": "Ruelle du Nord 25, 3960 Sierre, Suisse",
-    "media": {
-      "id": 492,
-      "user_id": 8,
-      "path": "photos/U/y/UyPfcuTxxXdusyrjkTGCQjU8KnxbQTIoyX8n9Tjc.jpg",
-      "width": 998,
-      "height": 1521,
-      "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/U/y/UyPfcuTxxXdusyrjkTGCQjU8KnxbQTIoyX8n9Tjc.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190405%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190405T112712Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=446fc3411cfbd328227254239a34a8f8eeba4a7eb1d7057054209a20fba42b28",
-      "thumbnail_url": "https://notrehistoire.imgix.net/photos/U/y/UyPfcuTxxXdusyrjkTGCQjU8KnxbQTIoyX8n9Tjc.jpeg?fm=jpg&sharp=3&w=770&s=a0074805161b2b8ae59688f97fc16eb4",
-      "is_processed": true,
-      "created_at": "2009-11-02T11:35:16+00:00",
-      "updated_at": "2019-02-07T18:44:13+00:00"
-    }
-  },
-  {
-    "id": 45093,
-    "titre": "Pierre-fendue, Lavey",
-    "author": "Daniel A. Kissling",
-    "license": "all_rights_reserved",
-    "date": {
-      "year": 2013,
-      "month": 11,
-      "day": 13
-    },
-    "location": "Route des Teches 25, 1892 Lavey-Morcles, Suisse",
-    "media": {
-      "id": 39744,
-      "user_id": 1281,
-      "path": "photos/x/U/xUFUcjQYR9XkfJOp8Y7EcIt8CZ3odzDUs3Y9g2Ug.jpg",
-      "width": 1500,
-      "height": 2000,
-      "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/x/U/xUFUcjQYR9XkfJOp8Y7EcIt8CZ3odzDUs3Y9g2Ug.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190405%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190405T112712Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=d0aa4680340fa7a239de7d824c96b82a0d2fa921547f65452943840b4bab0c90",
-      "thumbnail_url": "https://notrehistoire.imgix.net/photos/x/U/xUFUcjQYR9XkfJOp8Y7EcIt8CZ3odzDUs3Y9g2Ug.jpeg?fm=jpg&sharp=3&w=770&s=756e1c189476784c38fd6a0ef9e1ea4b",
-      "is_processed": true,
-      "created_at": "2014-01-14T19:26:09+00:00",
-      "updated_at": "2019-02-07T12:37:03+00:00"
-    }
-  },
-  {
     "id": 25963,
     "titre": "Taper la faux 2",
     "author": null,
@@ -2114,30 +960,6 @@
     }
   },
   {
-    "id": 106511,
-    "titre": "Valaisanne au chalet",
-    "author": "Edition Art. Perrochet Matile, Lausanne",
-    "license": "cc_by_nc_nd",
-    "date": {
-      "year": 1931,
-      "month": 1,
-      "day": 15
-    },
-    "location": "Valais",
-    "media": {
-      "id": 73848,
-      "user_id": 620,
-      "path": "photos/3/L/3LpexwqxmNSkGqRG3aKdeX2IH7VqyNmkn3Z9wHyV.jpg",
-      "width": 1072,
-      "height": 1613,
-      "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/3/L/3LpexwqxmNSkGqRG3aKdeX2IH7VqyNmkn3Z9wHyV.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190405%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190405T112712Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=75d8b7a65ffb1b48c0df31ee5f08e9284da5021f694c6a8d8f4bd564dfa89091",
-      "thumbnail_url": "https://notrehistoire.imgix.net/photos/3/L/3LpexwqxmNSkGqRG3aKdeX2IH7VqyNmkn3Z9wHyV.jpeg?fm=jpg&sharp=3&w=770&s=29bcfa63940ae1ed697db8e9c32da140",
-      "is_processed": true,
-      "created_at": "2017-10-11T14:56:56+00:00",
-      "updated_at": "2019-02-08T10:18:46+00:00"
-    }
-  },
-  {
     "id": 45162,
     "titre": "Cabane du Petit Mountet",
     "author": "Ed.Franco-Suisse ,Berne  Coll. Max Maurice Grun  (C)",
@@ -2159,54 +981,6 @@
       "is_processed": true,
       "created_at": "2014-01-18T15:30:33+00:00",
       "updated_at": "2019-02-01T21:18:22+00:00"
-    }
-  },
-  {
-    "id": 6739,
-    "titre": "Les Seigneurs de la Tour",
-    "author": "Albin",
-    "license": "all_rights_reserved",
-    "date": {
-      "year": 1968,
-      "month": 8,
-      "day": 1
-    },
-    "location": "Route de Saint-Luc 2, 3961 Anniviers, Suisse",
-    "media": {
-      "id": 1946,
-      "user_id": 8,
-      "path": "photos/0/E/0E4bo6ZHVzIO0bnGcYzMjE2Ug63FLHX5bxfGT3yb.jpg",
-      "width": 820,
-      "height": 1046,
-      "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/0/E/0E4bo6ZHVzIO0bnGcYzMjE2Ug63FLHX5bxfGT3yb.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190405%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190405T112712Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=49071eedad6abdf22bd397221e80ace4dc9431dd72b1a76d130c7cef2a7e6cd7",
-      "thumbnail_url": "https://notrehistoire.imgix.net/photos/0/E/0E4bo6ZHVzIO0bnGcYzMjE2Ug63FLHX5bxfGT3yb.jpeg?fm=jpg&sharp=3&w=770&s=d36862f207623aba485f3cce87c8cff2",
-      "is_processed": true,
-      "created_at": "2009-11-30T11:55:52+00:00",
-      "updated_at": "2019-02-08T07:29:13+00:00"
-    }
-  },
-  {
-    "id": 19165,
-    "titre": "Château de Valère, Sion",
-    "author": "Photo : Edmond Bégard / Tirage : son arrière petite fille",
-    "license": "all_rights_reserved",
-    "date": {
-      "year": 1935,
-      "month": 1,
-      "day": 1
-    },
-    "location": "Sion",
-    "media": {
-      "id": 14030,
-      "user_id": 846,
-      "path": "photos/2/Y/2Y78GCyQEEHqinC9DUHyYYP2BRWJLtcQ3dSz63z6.jpg",
-      "width": 659,
-      "height": 1024,
-      "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/2/Y/2Y78GCyQEEHqinC9DUHyYYP2BRWJLtcQ3dSz63z6.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190405%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190405T112955Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=6060034c4188fcffa93f2b26a5c954cd701638a6c516e1363900ea7252800715",
-      "thumbnail_url": "https://notrehistoire.imgix.net/photos/2/Y/2Y78GCyQEEHqinC9DUHyYYP2BRWJLtcQ3dSz63z6.jpeg?fm=jpg&sharp=3&w=770&s=736763685dbb03e61c395b435b9ae5f6",
-      "is_processed": true,
-      "created_at": "2011-02-10T15:26:32+00:00",
-      "updated_at": "2019-02-07T12:44:14+00:00"
     }
   },
   {
@@ -2258,30 +1032,6 @@
     }
   },
   {
-    "id": 38652,
-    "titre": "Magirus 1922 en 1970",
-    "author": "Robert Collet",
-    "license": "all_rights_reserved",
-    "date": {
-      "year": 1970,
-      "month": 5,
-      "day": 9
-    },
-    "location": "Boulevard Helvétique 14BIS, 1207 Genève, Suisse",
-    "media": {
-      "id": 33360,
-      "user_id": 1856,
-      "path": "photos/X/w/XwWeNJ058ywWu3H9HUU0f4Th26LIODmUsBKIJkAx.jpg",
-      "width": 1429,
-      "height": 1672,
-      "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/X/w/XwWeNJ058ywWu3H9HUU0f4Th26LIODmUsBKIJkAx.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190405%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190405T113130Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=2ce1009362dc9d559799347e04796125f45568d3f07bf16630cad48863237526",
-      "thumbnail_url": "https://notrehistoire.imgix.net/photos/X/w/XwWeNJ058ywWu3H9HUU0f4Th26LIODmUsBKIJkAx.jpeg?fm=jpg&sharp=3&w=770&s=af5adfbb335987f45cbb9b22088f9cd5",
-      "is_processed": true,
-      "created_at": "2013-04-25T08:47:56+00:00",
-      "updated_at": "2019-02-03T01:26:24+00:00"
-    }
-  },
-  {
     "id": 26090,
     "titre": "Marguerite et Henri",
     "author": "Inconnu",
@@ -2303,30 +1053,6 @@
       "is_processed": true,
       "created_at": "2011-11-28T11:51:39+00:00",
       "updated_at": "2019-02-07T15:34:10+00:00"
-    }
-  },
-  {
-    "id": 39312,
-    "titre": "Fribourg - entre passé et présent",
-    "author": "Chantal Codourey Piguet",
-    "license": "all_rights_reserved",
-    "date": {
-      "year": 2012,
-      "month": 1,
-      "day": 1
-    },
-    "location": "Grand-Places 10, 1700 Fribourg, Suisse",
-    "media": {
-      "id": 34008,
-      "user_id": 1984,
-      "path": "photos/l/9/l9aRD37t7WGDMfhzH3ZQKeZ22SC2gvhfE8ysnKQu.jpg",
-      "width": 662,
-      "height": 1000,
-      "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/l/9/l9aRD37t7WGDMfhzH3ZQKeZ22SC2gvhfE8ysnKQu.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190405%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190405T113130Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=bd429a1896a4c55edcb02a2455cef619a79f3731038aa66bd93ab1e88f08be91",
-      "thumbnail_url": "https://notrehistoire.imgix.net/photos/l/9/l9aRD37t7WGDMfhzH3ZQKeZ22SC2gvhfE8ysnKQu.jpeg?fm=jpg&sharp=3&w=770&s=adbc1be8b1d8fd99184846fd2d466934",
-      "is_processed": true,
-      "created_at": "2013-05-17T18:58:49+00:00",
-      "updated_at": "2019-02-02T09:02:42+00:00"
     }
   },
   {
@@ -2354,30 +1080,6 @@
     }
   },
   {
-    "id": 36064,
-    "titre": "Pont de Peney",
-    "author": "Louis Guillermin",
-    "license": "all_rights_reserved",
-    "date": {
-      "year": 1940,
-      "month": 9,
-      "day": 1
-    },
-    "location": "Route d'Aire-la-Ville 132, 1242 Satigny, Suisse",
-    "media": {
-      "id": 30852,
-      "user_id": 1360,
-      "path": "photos/E/f/Ef10VkdIFauTkDctMQybBtr6rKroEV7Y59RQ6J1b.jpg",
-      "width": 1680,
-      "height": 2520,
-      "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/E/f/Ef10VkdIFauTkDctMQybBtr6rKroEV7Y59RQ6J1b.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190405%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190405T113351Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=906d8b492113731c21d3001829fe9f2d59e156bdfa5685a638795604bc9aaa13",
-      "thumbnail_url": "https://notrehistoire.imgix.net/photos/E/f/Ef10VkdIFauTkDctMQybBtr6rKroEV7Y59RQ6J1b.jpeg?fm=jpg&sharp=3&w=770&s=daf10c2688e78456af005cea92fca6a0",
-      "is_processed": true,
-      "created_at": "2013-01-22T17:51:56+00:00",
-      "updated_at": "2019-01-30T04:17:16+00:00"
-    }
-  },
-  {
     "id": 40514,
     "titre": "Les liaisons dangereuses - 2008",
     "author": null,
@@ -2402,30 +1104,6 @@
     }
   },
   {
-    "id": 27914,
-    "titre": "Versoix  les glaces",
-    "author": "Nicolas Aubry",
-    "license": "all_rights_reserved",
-    "date": {
-      "year": 2005,
-      "month": 1,
-      "day": 25
-    },
-    "location": "Versoix",
-    "media": {
-      "id": 22716,
-      "user_id": 1518,
-      "path": "photos/5/U/5UWuZw5oZSJ6SLFzlM1wdwaKyRxHybClQmle8mK5.jpg",
-      "width": 372,
-      "height": 640,
-      "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/5/U/5UWuZw5oZSJ6SLFzlM1wdwaKyRxHybClQmle8mK5.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190405%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190405T113351Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=5c3a76de1efa0d0d2d0ccefd80905be0f09562193c7ecb0d8100b9030c18d26b",
-      "thumbnail_url": "https://notrehistoire.imgix.net/photos/5/U/5UWuZw5oZSJ6SLFzlM1wdwaKyRxHybClQmle8mK5.jpeg?fm=jpg&sharp=3&w=770&s=2980531a5383355fbd146443265608a4",
-      "is_processed": true,
-      "created_at": "2012-02-02T09:51:44+00:00",
-      "updated_at": "2019-02-08T03:13:57+00:00"
-    }
-  },
-  {
     "id": 43413,
     "titre": "Dominique Favarger (1942-1975)",
     "author": "Schoepflin, Neuchâtel",
@@ -2447,54 +1125,6 @@
       "is_processed": true,
       "created_at": "2013-10-29T09:58:35+00:00",
       "updated_at": "2019-02-06T12:19:08+00:00"
-    }
-  },
-  {
-    "id": 25589,
-    "titre": "Expo 64, le cheval",
-    "author": "©Collection particulière de Nelly et Marcel Morel",
-    "license": "all_rights_reserved",
-    "date": {
-      "year": 1964,
-      "month": 1,
-      "day": 1
-    },
-    "location": "Allée du Bornan 8, 1007 Lausanne, Suisse",
-    "media": {
-      "id": 20430,
-      "user_id": 953,
-      "created_at": "2011-11-08T16:20:52+00:00",
-      "updated_at": "2019-02-06T21:25:37+00:00",
-      "path": "photos/1/f/1fw7SAsJ9gD3P3HHEw0Wkjw2jioMAArqJRmSUYdN.jpg",
-      "width": 768,
-      "height": 775,
-      "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/1/f/1fw7SAsJ9gD3P3HHEw0Wkjw2jioMAArqJRmSUYdN.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190405%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190405T114252Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=f8fd1357f5ac5b668053ca357aeb4c14f4766ae5b3a8796044785d6548bf3d07",
-      "thumbnail_url": "https://notrehistoire.imgix.net/photos/1/f/1fw7SAsJ9gD3P3HHEw0Wkjw2jioMAArqJRmSUYdN.jpeg?fm=jpg&sharp=3&w=770&s=98105846a1e937e733b22ab6ed725b7d",
-      "is_processed": true
-    }
-  },
-  {
-    "id": 40147,
-    "titre": "Le Comptoir Suisse 1972",
-    "author": "famille",
-    "license": "all_rights_reserved",
-    "date": {
-      "year": 1972,
-      "month": 9,
-      "day": 1
-    },
-    "location": "Avenue Bergières 17, 1004 Lausanne, Suisse",
-    "media": {
-      "id": 34836,
-      "user_id": 1899,
-      "path": "photos/4/U/4UVealefBzySI9KFiE41trVYHsvawWAErtNvPlct.jpg",
-      "width": 1013,
-      "height": 1016,
-      "file_url": "https://notrehistoirech.s3.eu-west-1.amazonaws.com/photos/4/U/4UVealefBzySI9KFiE41trVYHsvawWAErtNvPlct.jpeg?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISU7U5Z6HXTQIYIQ%2F20190405%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20190405T114252Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Signature=452fe7b3e8b9815b53e43cc6647eee280ee1860f1cb0f2c134cd5b4780ed8fb6",
-      "thumbnail_url": "https://notrehistoire.imgix.net/photos/4/U/4UVealefBzySI9KFiE41trVYHsvawWAErtNvPlct.jpeg?fm=jpg&sharp=3&w=770&s=429ab29b662e00b5012ab7d82d65fe49",
-      "is_processed": true,
-      "created_at": "2013-06-26T16:37:07+00:00",
-      "updated_at": "2019-02-06T08:15:58+00:00"
     }
   }
 ]

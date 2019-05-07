@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import Webcam, { FACING_MODES, IMAGE_TYPES } from 'react-html5-camera-photo';
-import 'react-html5-camera-photo/build/css/index.css';
+import Webcam, { FACING_MODES, IMAGE_TYPES } from 'react-webcam';
 import "./WebcamCapture.css";
 
 
@@ -9,29 +8,34 @@ class WebcamCapture extends Component {
     setRef = webcam => {
         this.webcam = webcam;
     };
-     
-    onTakePhoto = (img) => {
-        // const imageSrc = this.webcam.getScreenshot();
+
+    capture = () => {
+        let img = this.webcam.getScreenshot();
         this.props.takeSelfie(img);
     };
-    
-    
-    
+
     render() {
-    return (
-        <div className="camera">
-            <Webcam
-                ref={this.webcam}
-                onTakePhoto = { (dataUri) => { this.onTakePhoto(dataUri); } }
-                idealFacingMode={FACING_MODES.USER}
-                imageType = {IMAGE_TYPES.JPG}
-                isImageMirror={false}
-            />
-        </div>
-    );
+        const videoConstraints = {
+            width: 720,
+            height: 1280,
+            facingMode: "user"
+        };
+
+        return (
+            <div>
+                <Webcam
+                    audio={false}
+                    height={350}
+                    ref={this.setRef}
+                    screenshotFormat="image/jpeg"
+                    width={350}
+                    videoConstraints={videoConstraints}
+                />
+                <button onClick={this.capture}>Capture photo</button>
+            </div>
+        );
     }
 }
 
 
 export default WebcamCapture;
-  
