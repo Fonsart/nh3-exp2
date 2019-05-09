@@ -22,7 +22,7 @@
     "babel-preset-flow": "^6.23.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "set NODE_ENV=production&&react-scripts start",
     "dev":"set HTTPS=true&&npm start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",

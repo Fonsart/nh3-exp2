@@ -6,6 +6,8 @@ import Game from "./components/Game/Game"
 import About from "./components/About/About" 
 import Home from "./components/HomePage/Home" 
 
+import registerServiceWorker from "./registerServiceWorker";
+
 export default class App extends Component {
   componentWillMount() {
 
@@ -26,3 +28,4 @@ export default class App extends Component {
 
 const rootElement = document.getElementById("root");
 render(<App />, rootElement);
+registerServiceWorker();
