@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { render } from "react-dom";
 import "./styles.css";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import Game from "./components/Game/Game"
 import About from "./components/About/About" 
 import Home from "./components/HomePage/Home" 

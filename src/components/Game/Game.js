@@ -1,20 +1,9 @@
 import React, { Component, useState } from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import "./Game.css";
 import Images from "../../assets/images.json";
 import WebcamCapture from "./WebcamCapture/WebcamCapture";
 import ImageDescription from "./ImageDescription/ImageDescription";
 import Mosaic from "./Mosaic/Mosaic";
-
-const btnStyle = {
-  height: '40px',
-  backgroundColor: 'rgb(178, 202, 255)',
-  textAlign: 'center',
-  border: 'none',
-  width: '40px',
-  borderRadius: '5px',
-  fontSize: '16px',
-}
 
 class Game extends Component {
   constructor(props) {
@@ -34,6 +23,7 @@ class Game extends Component {
       img_id: null,
       img_place: null,
     };
+
 
     this.imgRef = React.createRef();
 
@@ -91,6 +81,7 @@ class Game extends Component {
 
   clickedImage() {
     this.setState({
+      imgTransition:false,
       initialState: !this.state.initialState,
     })
   }
@@ -114,7 +105,7 @@ class Game extends Component {
     return typeof img === "string" ? img : img.src;
   }
 
-  clickedCanvas(data){
+  clickedCanvas(data) {
     console.log(this.getImgObjectFromSrc(this.getImgSrc(data.image)));
     console.log(this.getImgSrc(data.image));
 
@@ -122,15 +113,15 @@ class Game extends Component {
     this.updateImageData(imgObject);
 
     this.setState({
-      target:data.image,
-      initialState:!this.state.initialState
+      target: data.image,
+      initialState: !this.state.initialState
     })
-}
+  }
 
   getImgObjectFromSrc(src) {
 
     let imgPath = src.split("/");
-    let index = imgPath.length-1;
+    let index = imgPath.length - 1;
 
     let currentImg = Images.filter(img => {
       let targetPath = img.media.path.split("/");
@@ -140,46 +131,43 @@ class Game extends Component {
     return currentImg[0];
   }
 
-  onLoadProgress(progress){
+  onLoadProgress(progress) {
     this.setState({
-      loadProgress:progress
+      loadProgress: progress
     })
   }
 
   render() {
     return (
-      <div className="Game">
-        <div id="intro">
-          {Math.round(this.state.loadProgress * 100)}
-          <button onClick={this.openCamera} id="openCamera" style={btnStyle}><i className="fas fa-camera"></i></button>
-        </div>
+      <div className="fullBG flex flex-col justify-center" id="game">
 
         {this.state.isCamera ? (<WebcamCapture takeSelfie={this.takeSelfie} />) : null}
+        <main className="flex justify-center relative">
 
-        <Mosaic
-          onClick={this.clickedCanvas.bind(this)}
-          loadProgress={this.onLoadProgress.bind(this)}
-          hidden={this.state.initialState}
-          height={this.state.dimensions.height}
-          width={this.state.dimensions.width}
-          target={this.state.target}
-          sources={this.state.sources}
-          selfie={this.state.isCamera}
-        />
-
-        <div id="target" className={this.state.initialState ? "" : "hidden"}>
-          <img onLoad={this.handleImageLoaded.bind(this)} onClick={this.clickedImage.bind(this)} className="target" src={this.getImgSrc(this.state.target)} ref={this.imgRef} alt="" />
-        </div>
-
-        {this.state.initialState ?
-          <ImageDescription
-            id={this.state.img_id}
-            titre={this.state.img_title}
-            auteur={this.state.img_author}
-            date={this.state.img_date}
-            lieu={this.state.img_place}
-          /> : ""}
-
+          <Mosaic
+            onClick={this.clickedCanvas.bind(this)}
+            loadProgress={this.onLoadProgress.bind(this)}
+            hidden={this.state.initialState}
+            height={this.state.dimensions.height}
+            width={this.state.dimensions.width}
+            target={this.state.target}
+            sources={this.state.sources}
+            selfie={this.state.isCamera}
+          />
+          <div id="target" className={this.state.initialState ? "" : "hidden"}>
+            <img onLoad={this.handleImageLoaded.bind(this)} onClick={this.clickedImage.bind(this)} className="target" src={this.getImgSrc(this.state.target)} ref={this.imgRef} alt="" />
+          </div>
+          {this.state.initialState ?
+                <ImageDescription 
+                  id={this.state.img_id}
+                  titre={this.state.img_title}
+                  auteur={this.state.img_author}
+                  date={this.state.img_date}
+                  lieu={this.state.img_place}
+                />
+            : ""}           
+          
+        </main>
       </div >
     );
   }

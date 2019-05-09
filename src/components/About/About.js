@@ -13,7 +13,7 @@ class About extends Component {
                     <h1 className="normal-case text-2xl">Une expérience du Lab de notrehistoire.ch</h1>
                 </header>
 
-                <aside >
+                <aside>
                     <h2>Conçu et développé par:</h2>
                     <p><a href="https://mei.heig-vd.ch/" target="_blank">Media Engineering Institute</a><br/><a href="https://heig-vd.ch" target="_blank">HEIG-VD</a></p>
                     <p>2019</p>

@@ -1,22 +1,21 @@
-#target, #target img, #mosaic canvas,
-#mosaic{
-  position:absolute;
+
+#target img{
   width:100%;
   height:auto;
-  left:0;
+  max-height: 100%;
 }
 
-#mosaic{
-  z-index:10;
+#mosaic {
+  z-index: 10;
 }
 
-#intro{
+#intro {
   text-align: center;
   padding: 10px 0 20px 0;
   background: rgb(73, 127, 245);
   margin: 0 0 1px 0;
-} 
+}
 
 .hidden {
-  display:none;
+  display: none;
 }

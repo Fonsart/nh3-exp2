@@ -1,4 +1,4 @@
-import React, { Component, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import ReactImageMosaic from "react-image-mosaic";
 import Images from "../../../assets/images.json";
 
@@ -12,7 +12,7 @@ const Mosaic = (props) => {
 
     useEffect(() => {
         if (!props.hidden) {
-            var zoomTimer = setTimeout(() => zooming(), 100);
+            setTimeout(() => zooming(), 100);
         }else{
             setZoom(ZOOM_MAX);
         }
