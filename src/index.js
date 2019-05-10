@@ -14,12 +14,17 @@ export default class App extends Component {
   }
 
   render() {
+
+    // Dynamically determine the base path.
+    const publicUrl = process.env.PUBLIC_URL
+    const basename = publicUrl !== '' && publicUrl !== '/' ? new URL(publicUrl).pathname : '';
+
     return (
-    <Router >
-      <div basename={`${process.env.PUBLIC_URL}`} id="App">
-        <Route exact path={`${process.env.PUBLIC_URL}/`} component={Home} />
-        <Route exact path={`${process.env.PUBLIC_URL}/about`} component={About} />
-        <Route exact path={`${process.env.PUBLIC_URL}/game`} component={Game} />
+    <Router basename={basename}>
+      <div id="App">
+        <Route exact path={'/'} component={Home} />
+        <Route exact path={'/about'} component={About} />
+        <Route exact path={'/game'} component={Game} />
       </div>
     </Router>
     );
