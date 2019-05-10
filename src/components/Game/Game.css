@@ -1,19 +1,4 @@
-.mainNav {
-    top: 0px;
-    position: relative;
-    height: 64px;
-    width: 100%;
-    padding: 30px;
-}
 
-.navbar-right {
-    float: right;
-    right: 10px;
-}
-
-.navbar-left {
-    float: left;
-}
 
 #target img {
     width: 100%;

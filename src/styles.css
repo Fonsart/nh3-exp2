@@ -2,10 +2,7 @@
     font-size: calc(15px + 6*(100vw - 320px)/680);
 }
 
-#App,
-#root,
-body,
-html {
+#App, #root, body, html {
     margin: 0;
     padding: 0;
     width: 100%;
@@ -25,9 +22,7 @@ h1 {
     font-size: 2.8em;
 }
 
-h1,
-h2,
-h3 {
+h1, h2, h3 {
     font-family: 'PT Serif', serif;
     letter-spacing: 0.05em;
     margin-bottom: 1rem;
@@ -68,7 +63,7 @@ html {
     background-attachment: fixed;
     background-size: 100% auto;
     background-image: linear-gradient(0deg, #145185, #1868AC);
-    height:100%;
+    height: 100%;
 }
 
 .nh3-univers {
@@ -101,12 +96,16 @@ html {
 }
 
 .btn__secondary {
-    border: 2px solid #fff;
-    padding: .5em 0.5em;
+    padding: 5px;
+    width: 42px;
+    height: 42px;
 }
 
-a.btn__primary,
-.btn {
+.btn{
+    text-decoration:none;
+}
+
+a.btn__primary{
     font-size: 100%;
     line-height: 1.15;
     margin: 0;
@@ -114,13 +113,38 @@ a.btn__primary,
     text-decoration: none;
 }
 
+a.btn__secondary {
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    height: 42px;
+    width: 42px;
+}
+
 a {
     color: #fff;
 }
 
-*,
- ::after,
- ::before {
+.mainNav {
+    top: 0px;
+    position: relative;
+    width: 100%;
+    padding: 30px;
+}
+
+.navbar-right {
+    float: right;
+    right: 10px;
+}
+
+.navbar-left {
+    float: left;
+}
+
+*, ::after, ::before {
     box-sizing: inherit;
 }
 

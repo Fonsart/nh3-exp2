@@ -152,10 +152,10 @@ class Game extends Component {
       <div className="game blue-bg">
       <nav className="mainNav">
           <div className="btn_back navbar-left">                    
-            <Link to={`/`} className="btn btn__secondary">retour</Link>
+            <Link to={`/`} className="btn btn__secondary"><i className="fas fa-chevron-left"></i></Link>
             </div>
           <div className="navbar-right">
-            <a onClick={this.openCamera} id="openCamera" className="btn "><i className="fas fa-camera"></i></a>
+            <a onClick={this.openCamera} id="openCamera" className="btn btn__secondary"><i className="fas fa-camera"></i></a>
           </div>
       </nav>
       <div className="fullBG flex flex-col " id="game">
