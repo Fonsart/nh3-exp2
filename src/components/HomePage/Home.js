@@ -5,7 +5,7 @@ import "./Home.css";
 
 function Home(){
         return (
-            <div className="fullBG flex flex-col" id="home">
+            <div className="fullBG blue-bg flex flex-col" id="home">
                 <header className="mt-auto">
                     <h1>PixPlorer</h1>
                 </header>

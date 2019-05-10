@@ -7,7 +7,7 @@ class About extends Component {
 
     render() {
         return (
-            <div className="fullBG flex flex-col justify-between text-center">
+            <div className="fullBG blue-bg flex flex-col justify-between text-center">
                 <nav className="relative"><Link to={`/`} className="btn btn--close router-link-active"></Link></nav>
                 <header>
                     <h1 className="normal-case text-2xl">Une expérience du Lab de notrehistoire.ch</h1>

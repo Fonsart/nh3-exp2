@@ -1,9 +1,21 @@
 import React, { Component, useState } from "react";
+import { Link } from "react-router-dom";
 import "./Game.css";
 import Images from "../../assets/images.json";
 import WebcamCapture from "./WebcamCapture/WebcamCapture";
 import ImageDescription from "./ImageDescription/ImageDescription";
 import Mosaic from "./Mosaic/Mosaic";
+
+const btnStyle = {
+  height: '40px',
+  backgroundColor: 'rgb(178, 202, 255)',
+  textAlign: 'center',
+  border: 'none',
+  width: '40px',
+  borderRadius: '5px',
+  fontSize: '16px',
+}
+
 
 class Game extends Component {
   constructor(props) {
@@ -137,8 +149,17 @@ class Game extends Component {
 
   render() {
     return (
-      <div className="fullBG flex flex-col justify-center" id="game">
-
+      <div className="game blue-bg">
+      <nav className="mainNav">
+          <div className="btn_back navbar-left">                    
+            <Link to={`/`} className="btn btn__secondary">retour</Link>
+            </div>
+          <div className="navbar-right">
+            <a onClick={this.openCamera} id="openCamera" className="btn "><i className="fas fa-camera"></i></a>
+          </div>
+      </nav>
+      <div className="fullBG flex flex-col " id="game">
+        
         {this.state.isCamera ? (<WebcamCapture takeSelfie={this.takeSelfie} />) : null}
         <main className="flex justify-center relative">
 
@@ -167,6 +188,7 @@ class Game extends Component {
           
         </main>
       </div >
+      </div>
     );
   }
 }
