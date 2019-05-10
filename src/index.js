@@ -16,10 +16,10 @@ export default class App extends Component {
   render() {
     return (
     <Router >
-      <div basename={process.env.PUBLIC_URL} id="App">
-        <Route path="/" component={Home} />
-        <Route path="/about" component={About} />
-        <Route path="/game" component={Game} />
+      <div basename={`${process.env.PUBLIC_URL}`} id="App">
+        <Route exact path={`${process.env.PUBLIC_URL}/`} component={Home} />
+        <Route exact path={`${process.env.PUBLIC_URL}/about`} component={About} />
+        <Route exact path={`${process.env.PUBLIC_URL}/game`} component={Game} />
       </div>
     </Router>
     );
