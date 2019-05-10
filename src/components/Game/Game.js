@@ -24,9 +24,7 @@ class Game extends Component {
       img_place: null,
     };
 
-
     this.imgRef = React.createRef();
-
     this.indexFirstImage = Math.floor(Math.random() * Object.keys(Images).length);
   }
 
