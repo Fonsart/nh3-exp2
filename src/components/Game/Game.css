@@ -1,5 +1,3 @@
-
-
 #target img {
     width: 100%;
     height: auto;
@@ -19,4 +17,26 @@
 
 .hidden {
     display: none;
+}
+
+.desc-img-enter {
+    opacity: 0;
+}
+
+.desc-img-enter-active {
+    opacity: 1;
+    transition: opacity 300ms;
+}
+
+.desc-img-exit {
+    opacity: 1;
+}
+
+.desc-img-exit-active {
+    opacity: 0;
+    transition: opacity 300ms;
+}
+
+.desc-img-exit-done {
+    opacity: 0;
 }

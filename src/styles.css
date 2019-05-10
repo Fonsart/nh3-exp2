@@ -132,7 +132,7 @@ a {
     top: 0px;
     position: relative;
     width: 100%;
-    padding: 30px;
+    padding: 20px 30px 30px 30px;
 }
 
 .navbar-right {

@@ -5,16 +5,7 @@ import Images from "../../assets/images.json";
 import WebcamCapture from "./WebcamCapture/WebcamCapture";
 import ImageDescription from "./ImageDescription/ImageDescription";
 import Mosaic from "./Mosaic/Mosaic";
-
-const btnStyle = {
-  height: '40px',
-  backgroundColor: 'rgb(178, 202, 255)',
-  textAlign: 'center',
-  border: 'none',
-  width: '40px',
-  borderRadius: '5px',
-  fontSize: '16px',
-}
+import { CSSTransition } from "react-transition-group";
 
 
 class Game extends Component {
@@ -34,6 +25,7 @@ class Game extends Component {
       img_author: null,
       img_id: null,
       img_place: null,
+      imgLoaded:false
     };
 
     this.imgRef = React.createRef();
@@ -91,8 +83,9 @@ class Game extends Component {
 
   clickedImage() {
     this.setState({
-      imgTransition:false,
+      imgTransition: false,
       initialState: !this.state.initialState,
+      imgLoaded:false
     })
   }
 
@@ -107,7 +100,8 @@ class Game extends Component {
       dimensions: {
         height: this.imgRef.current.offsetHeight,
         width: this.imgRef.current.offsetWidth,
-      }
+      },
+      imgLoaded:true
     });
   }
 
@@ -116,8 +110,6 @@ class Game extends Component {
   }
 
   clickedCanvas(data) {
-    console.log(this.getImgObjectFromSrc(this.getImgSrc(data.image)));
-    console.log(this.getImgSrc(data.image));
 
     let imgObject = this.getImgObjectFromSrc(this.getImgSrc(data.image));
     this.updateImageData(imgObject);
@@ -150,44 +142,47 @@ class Game extends Component {
   render() {
     return (
       <div className="game blue-bg">
-      <nav className="mainNav">
-          <div className="btn_back navbar-left">                    
-            <Link to={`/`} className="btn btn__secondary"><i className="fas fa-chevron-left"></i></Link>
-            </div>
+        <nav className="mainNav">
+          <div className="btn_back navbar-left">
+            <Link to={`${process.env.PUBLIC_URL}/`} className="btn btn__secondary"><i className="fas fa-chevron-left"></i></Link>
+          </div>
           <div className="navbar-right">
             <a onClick={this.openCamera} id="openCamera" className="btn btn__secondary"><i className="fas fa-camera"></i></a>
           </div>
-      </nav>
-      <div className="fullBG flex flex-col " id="game">
-        
-        {this.state.isCamera ? (<WebcamCapture takeSelfie={this.takeSelfie} />) : null}
-        <main className="flex justify-center relative">
+        </nav>
+        <div className="fullBG flex flex-col " id="game">
 
-          <Mosaic
-            onClick={this.clickedCanvas.bind(this)}
-            loadProgress={this.onLoadProgress.bind(this)}
-            hidden={this.state.initialState}
-            height={this.state.dimensions.height}
-            width={this.state.dimensions.width}
-            target={this.state.target}
-            sources={this.state.sources}
-            selfie={this.state.isCamera}
-          />
-          <div id="target" className={this.state.initialState ? "" : "hidden"}>
-            <img onLoad={this.handleImageLoaded.bind(this)} onClick={this.clickedImage.bind(this)} className="target" src={this.getImgSrc(this.state.target)} ref={this.imgRef} alt="" />
-          </div>
-          {this.state.initialState ?
-                <ImageDescription 
-                  id={this.state.img_id}
-                  titre={this.state.img_title}
-                  auteur={this.state.img_author}
-                  date={this.state.img_date}
-                  lieu={this.state.img_place}
-                />
-            : ""}           
-          
-        </main>
-      </div >
+          {this.state.isCamera ? (<WebcamCapture takeSelfie={this.takeSelfie} />) : null}
+          <main className="flex justify-center relative">
+
+            <Mosaic
+              onClick={this.clickedCanvas.bind(this)}
+              loadProgress={this.onLoadProgress.bind(this)}
+              hidden={this.state.initialState}
+              height={this.state.dimensions.height}
+              width={this.state.dimensions.width}
+              target={this.state.target}
+              sources={this.state.sources}
+              selfie={this.state.isCamera}
+            />
+
+            <CSSTransition in={this.state.initialState && this.state.imgLoaded} timeout={500} classNames="desc-img">
+              <div id="target">
+                <img onLoad={this.handleImageLoaded.bind(this)} onClick={this.clickedImage.bind(this)} className="target" src={this.getImgSrc(this.state.target)} ref={this.imgRef} alt="" />
+              </div>
+            </CSSTransition>
+
+            <ImageDescription
+              id={this.state.img_id}
+              titre={this.state.img_title}
+              auteur={this.state.img_author}
+              date={this.state.img_date}
+              lieu={this.state.img_place}
+              show={this.state.initialState}
+            />
+
+          </main>
+        </div >
       </div>
     );
   }
