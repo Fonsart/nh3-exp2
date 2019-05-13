@@ -146,7 +146,7 @@ class Game extends Component {
       <div className="game blue-bg">
         <nav className="mainNav">
           <div className="btn_back navbar-left">
-            <Link to={`${process.env.PUBLIC_URL}/`} className="btn btn__secondary"><i className="fas fa-chevron-left"></i></Link>
+            <Link to={'/'} className="btn btn__secondary"><i className="fas fa-chevron-left"></i></Link>
           </div>
           <div className="navbar-right">
             <a href="#" onClick={this.openCamera} id="openCamera" className="btn btn__secondary"><i className="fas fa-camera"></i></a>
