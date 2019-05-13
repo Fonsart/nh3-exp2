@@ -55,7 +55,7 @@ class WebcamCapture extends Component {
                     screenshotFormat="image/jpeg"
                     videoConstraints={videoConstraints}
                 />
-                <button onClick={this.capture}>Capture photo</button>
+            <a onClick={this.capture} id="openCamera" className="btn btn__secondary btn_capture"><i className="fas fa-camera"></i></a>
             </div>
         );
     }

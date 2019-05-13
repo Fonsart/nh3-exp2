@@ -14,3 +14,15 @@
     left:0;
     margin:auto;
 }
+
+.btn_capture {
+    position: absolute;
+    z-index: 1000;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    margin: auto!important;
+    border:2px white solid;
+    border-radius:50%;
+    padding-top:10px;
+}

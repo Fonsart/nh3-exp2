@@ -15,7 +15,7 @@ class ImageDescription extends Component {
     }
 
     componentDidMount = () => {
-        this.setState({ mounted: true });
+            this.setState({ mounted: true });
     }
 
 

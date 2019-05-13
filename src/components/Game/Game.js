@@ -116,10 +116,17 @@ class Game extends Component {
     let imgObject = this.getImgObjectFromSrc(this.getImgSrc(data.image));
     this.updateImageData(imgObject);
 
+    if(data.image!=this.state.target){
     this.setState({
       target: data.image,
       initialState: !this.state.initialState
-    })
+    })}
+    else{
+      this.setState({
+        imgLoaded:true,
+        initialState: !this.state.initialState
+      })
+    }
   }
 
   getImgObjectFromSrc(src) {
@@ -149,11 +156,11 @@ class Game extends Component {
             <Link to={'/'} className="btn btn__secondary"><i className="fas fa-chevron-left"></i></Link>
           </div>
           <div className="navbar-right">
-            <a href="#" onClick={this.openCamera} id="openCamera" className="btn btn__secondary"><i className="fas fa-camera"></i></a>
+            <a onClick={this.openCamera} id="openCamera" className="btn btn__secondary"><i className="fas fa-camera"></i></a>
           </div>
         </nav>
         {this.state.isCamera ? (<WebcamCapture takeSelfie={this.takeSelfie} />) : null}
-        
+
         <div className="fullBG flex flex-col " id="game">
           <main className="flex justify-center relative">
             <Mosaic
@@ -167,7 +174,7 @@ class Game extends Component {
               selfie={this.state.isCamera}
             />
 
-            <CSSTransition in={this.state.initialState && this.state.imgLoaded} timeout={500} classNames="desc-img">
+            <CSSTransition in={this.state.initialState && this.state.imgLoaded} timeout={1000} classNames="desc-img">
               <div id="target">
                 <img onLoad={this.handleImageLoaded.bind(this)} onClick={this.clickedImage.bind(this)} className="target" src={this.getImgSrc(this.state.target)} ref={this.imgRef} alt="" />
               </div>
