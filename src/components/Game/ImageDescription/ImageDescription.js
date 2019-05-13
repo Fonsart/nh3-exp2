@@ -1,4 +1,6 @@
-import React, { Component, useState, useEffect } from "react";
+/* eslint-disable */
+
+import React, { Component } from "react";
 import { CSSTransition } from "react-transition-group";
 import './ImageDescription.css';
 

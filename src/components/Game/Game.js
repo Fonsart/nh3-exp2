@@ -1,4 +1,6 @@
-import React, { Component, useState } from "react";
+/* eslint-disable */
+
+import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./Game.css";
 import Images from "../../assets/images.json";
@@ -147,14 +149,13 @@ class Game extends Component {
             <Link to={`${process.env.PUBLIC_URL}/`} className="btn btn__secondary"><i className="fas fa-chevron-left"></i></Link>
           </div>
           <div className="navbar-right">
-            <a onClick={this.openCamera} id="openCamera" className="btn btn__secondary"><i className="fas fa-camera"></i></a>
+            <a href="#" onClick={this.openCamera} id="openCamera" className="btn btn__secondary"><i className="fas fa-camera"></i></a>
           </div>
         </nav>
+        {this.state.isCamera ? (<WebcamCapture takeSelfie={this.takeSelfie} />) : null}
+        
         <div className="fullBG flex flex-col " id="game">
-
-          {this.state.isCamera ? (<WebcamCapture takeSelfie={this.takeSelfie} />) : null}
           <main className="flex justify-center relative">
-
             <Mosaic
               onClick={this.clickedCanvas.bind(this)}
               loadProgress={this.onLoadProgress.bind(this)}

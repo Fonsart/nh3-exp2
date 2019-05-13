@@ -1,9 +1,28 @@
 import React, { Component } from "react";
-import Webcam, { FACING_MODES, IMAGE_TYPES } from 'react-webcam';
+import Webcam from 'react-webcam';
 import "./WebcamCapture.css";
 
 
 class WebcamCapture extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = { width: 0, height: 0 };
+        this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+    }
+
+    componentDidMount() {
+        this.updateWindowDimensions();
+        window.addEventListener('resize', this.updateWindowDimensions);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.updateWindowDimensions);
+    }
+
+    updateWindowDimensions() {
+        this.setState({ width: window.innerWidth, height: window.innerHeight });
+    }
 
     setRef = webcam => {
         this.webcam = webcam;
@@ -16,19 +35,24 @@ class WebcamCapture extends Component {
 
     render() {
         const videoConstraints = {
-            width: 720,
-            height: 1280,
+            width: this.state.width,
+            height: this.state.height,
             facingMode: "user"
+            
         };
 
+        const containerStyles = {
+            width:this.state.width,
+            height:this.state.height
+        }
         return (
-            <div>
+            <div className="camera" style={containerStyles}>
                 <Webcam
+                    width={this.state.width}
+                    height={this.state.height}
                     audio={false}
-                    height={1280}
                     ref={this.setRef}
                     screenshotFormat="image/jpeg"
-                    width={720}
                     videoConstraints={videoConstraints}
                 />
                 <button onClick={this.capture}>Capture photo</button>
