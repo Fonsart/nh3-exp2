@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { Component } from "react";
 import Webcam from 'react-webcam';
 import "./WebcamCapture.css";
@@ -7,17 +8,16 @@ class WebcamCapture extends Component {
 
     constructor(props) {
         super(props);
-        this.state = { width: 0, height: 0 };
+        this.state = {
+            width: 0,
+            height: 0,
+            showBtn: false
+        };
         this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
     }
 
     componentDidMount() {
         this.updateWindowDimensions();
-        window.addEventListener('resize', this.updateWindowDimensions);
-    }
-
-    componentWillUnmount() {
-        window.removeEventListener('resize', this.updateWindowDimensions);
     }
 
     updateWindowDimensions() {
@@ -33,17 +33,21 @@ class WebcamCapture extends Component {
         this.props.takeSelfie(img);
     };
 
+    showButton() {
+        this.setState({
+            showBtn: true,
+        })
+    }
     render() {
         const videoConstraints = {
             width: this.state.width,
             height: this.state.height,
             facingMode: "user"
-            
         };
 
         const containerStyles = {
-            width:this.state.width,
-            height:this.state.height
+            width: this.state.width,
+            height: this.state.height
         }
         return (
             <div className="camera" style={containerStyles}>
@@ -52,10 +56,14 @@ class WebcamCapture extends Component {
                     height={this.state.height}
                     audio={false}
                     ref={this.setRef}
-                    screenshotFormat="image/jpeg"
+                    screenshotFormat="image/png"
+                    screenshotQuality={1}
+                    onUserMedia={this.showButton.bind(this)}
                     videoConstraints={videoConstraints}
                 />
-            <a onClick={this.capture} id="openCamera" className="btn btn__secondary btn_capture"><i className="fas fa-camera"></i></a>
+                {this.state.showBtn ? (
+                    <a onClick={this.capture} id="openCamera" className="btn btn__secondary btn_capture"><i className="fas fa-camera"></i></a>
+                ) : ""}
             </div>
         );
     }
