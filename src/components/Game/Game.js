@@ -67,7 +67,6 @@ class Game extends Component {
 
   openCamera = () => {
     this.setState({
-      isEmptyState: false,
       isCamera: true
     })
   }
@@ -78,7 +77,6 @@ class Game extends Component {
       target: selfie,
       selfie: selfie,
       isCamera: false,
-      isEmptyState: true,
     })
 
   }
@@ -159,6 +157,7 @@ class Game extends Component {
             <a onClick={this.openCamera} id="openCamera" className="btn btn__secondary"><i className="fas fa-camera"></i></a>
           </div>
         </nav>
+
         {this.state.isCamera ? (<WebcamCapture takeSelfie={this.takeSelfie} />) : null}
 
         <div className="fullBG flex flex-col " id="game">
@@ -171,7 +170,6 @@ class Game extends Component {
               width={this.state.dimensions.width}
               target={this.state.target}
               sources={this.state.sources}
-              selfie={this.state.isCamera}
             />
 
             <CSSTransition in={this.state.initialState && this.state.imgLoaded} timeout={1000} classNames="desc-img">
