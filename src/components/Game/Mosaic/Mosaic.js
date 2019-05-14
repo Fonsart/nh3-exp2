@@ -13,7 +13,7 @@ const Mosaic = (props) => {
     useEffect(() => {
         if (!props.hidden) {
             setTimeout(() => zooming(), 100);
-        }else{
+        } else {
             setZoom(ZOOM_MAX);
         }
     })
@@ -24,7 +24,7 @@ const Mosaic = (props) => {
         }
     }
 
-    function clickedCanvas(data){
+    function clickedCanvas(data) {
         setZoom(ZOOM_MAX);
         props.onClick(data);
     }
@@ -44,7 +44,6 @@ const Mosaic = (props) => {
             />
         </div>
     )
-
 
 }
 

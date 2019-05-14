@@ -2,16 +2,12 @@ import React, { Component } from "react";
 import { render } from "react-dom";
 import "./styles.css";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import Game from "./components/Game/Game"
-import About from "./components/About/About" 
-import Home from "./components/HomePage/Home" 
-
+import Game from "./components/Game/Game";
+import About from "./components/About/About";
+import Home from "./components/HomePage/Home" ;
 import registerServiceWorker from "./registerServiceWorker";
 
 export default class App extends Component {
-  componentWillMount() {
-
-  }
 
   render() {
 

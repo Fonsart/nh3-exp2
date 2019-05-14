@@ -8,6 +8,11 @@ import WebcamCapture from "./WebcamCapture/WebcamCapture";
 import ImageDescription from "./ImageDescription/ImageDescription";
 import Mosaic from "./Mosaic/Mosaic";
 import { CSSTransition } from "react-transition-group";
+import {
+  isFirefox,
+  isChrome,
+  isIOS
+} from "react-device-detect"; 
 
 
 class Game extends Component {
@@ -17,11 +22,11 @@ class Game extends Component {
     this.updateImageData = this.updateImageData.bind(this);
 
     this.state = {
-      initialState: true,
+      initialState: false,
       loadProgress: 0,
       target: null,
       dimensions: { height: {}, width: {} },
-      selfie: null,
+      selfie: false,
       img_title: null,
       img_date: null,
       img_author: null,
@@ -39,6 +44,12 @@ class Game extends Component {
       || nextProps.target !== this.state.target);
   }
 
+  componentDidMount(){
+    
+    this.setState({
+      initialState:true
+    })
+  }
 
   componentWillMount() {
     //get a random starting image
@@ -50,6 +61,13 @@ class Game extends Component {
     });
 
     this.updateImageData(Images[this.indexFirstImage]);
+  }
+
+  componentWillUnmount(){
+    this.setState({
+      initialState:false,
+      imgLoaded:false
+    })
   }
 
   updateImageData(img) {
@@ -67,7 +85,8 @@ class Game extends Component {
 
   openCamera = () => {
     this.setState({
-      isCamera: true
+      isCamera: true,
+      selfie: true
     })
   }
 
@@ -75,13 +94,18 @@ class Game extends Component {
     this.setState({
       initialState: true,
       target: selfie,
-      selfie: selfie,
+
       isCamera: false,
     })
 
   }
 
   clickedImage() {
+    if(this.state.selfie){
+      this.setState({
+        selfie:!this.state.selfie
+      })
+    }
     this.setState({
       imgTransition: false,
       initialState: !this.state.initialState,
@@ -153,9 +177,9 @@ class Game extends Component {
           <div className="btn_back navbar-left">
             <Link to={'/'} className="btn btn__secondary"><i className="fas fa-chevron-left"></i></Link>
           </div>
-          <div className="navbar-right">
+          {isIOS && isFirefox || isIOS && isChrome ? "":(<div className="navbar-right">
             <a onClick={this.openCamera} id="openCamera" className="btn btn__secondary"><i className="fas fa-camera"></i></a>
-          </div>
+          </div>)}
         </nav>
 
         {this.state.isCamera ? (<WebcamCapture takeSelfie={this.takeSelfie} />) : null}
@@ -184,7 +208,7 @@ class Game extends Component {
               auteur={this.state.img_author}
               date={this.state.img_date}
               lieu={this.state.img_place}
-              show={this.state.initialState}
+              show={this.state.initialState && !this.state.selfie}
             />
 
           </main>
