@@ -4,15 +4,15 @@ import Images from "../../../assets/images.json";
 
 const Mosaic = (props) => {
 
-    const colorBlending = 0.6;
+    const colorBlending = 0;
     const ZOOM_STEPS = 4;
     const ZOOM_MIN = 5;
-    const ZOOM_MAX = 29;
+    const ZOOM_MAX = 45;
     const [zoom, setZoom] = useState(ZOOM_MAX);
 
     useEffect(() => {
         if (!props.hidden) {
-            setTimeout(() => zooming(), 100);
+            setTimeout(() => zooming(), 300);
         } else {
             setZoom(ZOOM_MAX);
         }

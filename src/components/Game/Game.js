@@ -172,7 +172,7 @@ class Game extends Component {
 
   render() {
     return (
-      <div className="game blue-bg">
+      <div className="game">
         <nav className="mainNav">
           <div className="btn_back navbar-left">
             <Link to={'/'} className="btn btn__secondary"><i className="fas fa-chevron-left"></i></Link>

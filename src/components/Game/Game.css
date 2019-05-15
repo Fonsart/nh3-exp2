@@ -16,6 +16,15 @@
     margin: 0 0 1px 0;
 }
 
+.game{
+    height:100%;
+    background-color:black;
+}
+
+.game > .fullBG{
+    padding:1rem 0 0 0;
+    background-color:black;
+}
 .hidden {
     display: none;
 }

@@ -24,10 +24,10 @@ class ImageDescription extends Component {
         return (
             <CSSTransition in={this.props.show && this.state.mounted} timeout={200} classNames="desc-node">
                 <div className="description">
-                    <a href={"https://www.notrehistoire.ch/medias/" + this.props.id} target="_blank">Voir sur notreHistoire.ch</a>
                     <h2>{this.props.titre}</h2>
-                    <h4>{this.props.date} - {this.props.lieu} </h4>
+                    <h3>{this.props.date} - {this.props.lieu} </h3>
                     <p>Auteur·e : {this.props.auteur}</p>
+                    <a href={"https://www.notrehistoire.ch/medias/" + this.props.id} target="_blank">Voir sur notreHistoire.ch</a>
                 </div>
             </CSSTransition>
         )
