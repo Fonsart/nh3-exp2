@@ -13,12 +13,13 @@ import {
   isChrome,
   isIOS
 } from "react-device-detect";
+import Modal from 'react-responsive-modal';
+import { GridLoader } from 'react-spinners';
 
 
 class Game extends Component {
   constructor(props) {
     super(props);
-    this.loadProgressChanged = this.loadProgressChanged.bind(this);
     this.updateImageData = this.updateImageData.bind(this);
 
     this.state = {
@@ -34,6 +35,7 @@ class Game extends Component {
       img_id: null,
       img_place: null,
       imgLoaded: false,
+      mosaicLoading: true,
     };
 
     this.imgRef = React.createRef();
@@ -86,7 +88,8 @@ class Game extends Component {
   openCamera = () => {
     this.setState({
       isCamera: true,
-      selfie: true
+      selfie: true,
+      mosaicLoading:true,
     })
   }
 
@@ -106,6 +109,14 @@ class Game extends Component {
       imgLoaded: false,
     })
 
+    if(this.state.loadProgress === 1){
+      setTimeout(() => {
+        this.setState({
+          mosaicLoading: false
+        })
+      }, 2000);
+    }
+    
   }
 
   clickedImage() {
@@ -120,12 +131,6 @@ class Game extends Component {
       imgLoaded: false
     })
 
-  }
-
-  loadProgressChanged(progress) {
-    this.setState({
-      loadProgress: progress,
-    });
   }
 
   handleImageLoaded() {
@@ -178,6 +183,14 @@ class Game extends Component {
     this.setState({
       loadProgress: progress
     })
+
+    if (this.state.loadProgress === 1) {
+      setTimeout(() => {
+        this.setState({
+          mosaicLoading: false
+        })
+      }, 2000);
+    }
   }
 
   render() {
@@ -207,6 +220,12 @@ class Game extends Component {
               target={this.state.target}
             />) : null}
 
+            <GridLoader
+              sizeUnit={"px"}
+              size={20}
+              color={'#145185'}
+              loading={this.state.mosaicLoading}
+            />
             <CSSTransition in={this.state.initialState && this.state.imgLoaded} timeout={500} classNames="desc-img" >
               <div id="target">
                 <img onLoad={this.handleImageLoaded.bind(this)} onClick={this.clickedImage.bind(this)} className="target" src={this.state.target ? this.getImgSrc(this.state.target) : null} ref={this.imgRef} alt="" />
@@ -219,7 +238,7 @@ class Game extends Component {
               auteur={this.state.img_author}
               date={this.state.img_date}
               lieu={this.state.img_place}
-              show={(this.state.initialState && this.state.imgLoaded)}
+              show={(this.state.initialState && this.state.imgLoaded && !this.state.mosaicLoading)}
               isSelfie={this.state.selfie}
             />
 

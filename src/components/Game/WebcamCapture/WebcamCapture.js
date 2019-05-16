@@ -2,7 +2,8 @@
 import React, { Component } from "react";
 import Webcam from 'react-webcam';
 import "./WebcamCapture.css";
-
+import Modal from 'react-responsive-modal';
+import {PulseLoader} from 'react-spinners';
 
 class WebcamCapture extends Component {
 

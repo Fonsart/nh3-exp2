@@ -18,11 +18,10 @@ class ImageDescription extends Component {
             this.setState({ mounted: true });
     }
 
-
     render() {
 
         return (
-            <CSSTransition in={(this.props.show && this.state.mounted)} timeout={500} classNames="desc-node" unmountOnExit="true">
+            <CSSTransition in={(this.props.show && this.state.mounted)} timeout={500} classNames="desc-node" unmountOnExit>
                 <div className="description">
                     <h2>{this.props.titre}</h2>
                     <h3>{this.props.date} {this.props.lieu ? "- " + this.props.lieu :null}</h3>
@@ -34,6 +33,5 @@ class ImageDescription extends Component {
     }
 
 }
-
 
 export default ImageDescription;
