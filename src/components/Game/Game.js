@@ -12,7 +12,7 @@ import {
   isFirefox,
   isChrome,
   isIOS
-} from "react-device-detect"; 
+} from "react-device-detect";
 
 
 class Game extends Component {
@@ -22,17 +22,18 @@ class Game extends Component {
     this.updateImageData = this.updateImageData.bind(this);
 
     this.state = {
+      isCamera: true,
       initialState: false,
       loadProgress: 0,
       target: null,
       dimensions: { height: {}, width: {} },
-      selfie: false,
+      selfie: true,
       img_title: null,
       img_date: null,
       img_author: null,
       img_id: null,
       img_place: null,
-      imgLoaded:false
+      imgLoaded: false,
     };
 
     this.imgRef = React.createRef();
@@ -44,15 +45,14 @@ class Game extends Component {
       || nextProps.target !== this.state.target);
   }
 
-  componentDidMount(){
-    
+  componentDidMount() {
     this.setState({
-      initialState:true
+      initialState: true
     })
   }
 
   componentWillMount() {
-    //get a random starting image
+    /*//get a random starting image
     let imgPath = Images[this.indexFirstImage].media.path;
     let imgName = imgPath.split("/");
 
@@ -60,13 +60,13 @@ class Game extends Component {
       target: process.env.PUBLIC_URL + "/images/" + imgName[3],
     });
 
-    this.updateImageData(Images[this.indexFirstImage]);
+    this.updateImageData(Images[this.indexFirstImage]);*/
   }
 
-  componentWillUnmount(){
+  componentWillUnmount() {
     this.setState({
-      initialState:false,
-      imgLoaded:false
+      initialState: false,
+      imgLoaded: false
     })
   }
 
@@ -91,26 +91,35 @@ class Game extends Component {
   }
 
   takeSelfie = (selfie) => {
+    let date = new Date().getFullYear();
+
     this.setState({
       initialState: true,
       target: selfie,
-
+      selfie: true,
       isCamera: false,
+      img_title: "Vous-même",
+      img_date: date,
+      img_author: "Vous",
+      img_id: null,
+      img_place: null,
+      imgLoaded: false,
     })
 
   }
 
   clickedImage() {
-    if(this.state.selfie){
+    if (this.state.selfie) {
       this.setState({
-        selfie:!this.state.selfie
+        selfie: !this.state.selfie,
       })
     }
+
     this.setState({
-      imgTransition: false,
       initialState: !this.state.initialState,
-      imgLoaded:false
+      imgLoaded: false
     })
+
   }
 
   loadProgressChanged(progress) {
@@ -125,7 +134,7 @@ class Game extends Component {
         height: this.imgRef.current.offsetHeight,
         width: this.imgRef.current.offsetWidth,
       },
-      imgLoaded:true
+      imgLoaded: true
     });
   }
 
@@ -138,14 +147,15 @@ class Game extends Component {
     let imgObject = this.getImgObjectFromSrc(this.getImgSrc(data.image));
     this.updateImageData(imgObject);
 
-    if(data.image!=this.state.target){
-    this.setState({
-      target: data.image,
-      initialState: !this.state.initialState
-    })}
-    else{
+    if (data.image != this.state.target) {
       this.setState({
-        imgLoaded:true,
+        target: data.image,
+        initialState: !this.state.initialState
+      })
+    }
+    else {
+      this.setState({
+        imgLoaded: true,
         initialState: !this.state.initialState
       })
     }
@@ -177,28 +187,29 @@ class Game extends Component {
           <div className="btn_back navbar-left">
             <Link to={'/'} className="btn btn__secondary"><i className="fas fa-chevron-left"></i></Link>
           </div>
-          {isIOS && isFirefox || isIOS && isChrome ? "":(<div className="navbar-right">
-            <a onClick={this.openCamera} id="openCamera" className="btn btn__secondary"><i className="fas fa-camera"></i></a>
-          </div>)}
+          {isIOS && isFirefox || isIOS && isChrome ? "" : (
+            <div className="navbar-right">
+              <a onClick={this.openCamera} id="openCamera" className="btn btn__secondary"><i className="fas fa-camera"></i></a>
+            </div>
+          )}
         </nav>
 
         {this.state.isCamera ? (<WebcamCapture takeSelfie={this.takeSelfie} />) : null}
 
         <div className="fullBG flex flex-col " id="game">
           <main className="flex justify-center relative">
-            <Mosaic
+            {this.state.target ? (<Mosaic
               onClick={this.clickedCanvas.bind(this)}
               loadProgress={this.onLoadProgress.bind(this)}
               hidden={this.state.initialState}
               height={this.state.dimensions.height}
               width={this.state.dimensions.width}
               target={this.state.target}
-              sources={this.state.sources}
-            />
+            />) : null}
 
-            <CSSTransition in={this.state.initialState && this.state.imgLoaded} timeout={1000} classNames="desc-img">
+            <CSSTransition in={this.state.initialState && this.state.imgLoaded} timeout={500} classNames="desc-img" >
               <div id="target">
-                <img onLoad={this.handleImageLoaded.bind(this)} onClick={this.clickedImage.bind(this)} className="target" src={this.getImgSrc(this.state.target)} ref={this.imgRef} alt="" />
+                <img onLoad={this.handleImageLoaded.bind(this)} onClick={this.clickedImage.bind(this)} className="target" src={this.state.target ? this.getImgSrc(this.state.target) : null} ref={this.imgRef} alt="" />
               </div>
             </CSSTransition>
 
@@ -208,11 +219,12 @@ class Game extends Component {
               auteur={this.state.img_author}
               date={this.state.img_date}
               lieu={this.state.img_place}
-              show={this.state.initialState && !this.state.selfie}
+              show={(this.state.initialState && this.state.imgLoaded)}
+              isSelfie={this.state.selfie}
             />
 
           </main>
-        </div >
+        </div>
       </div>
     );
   }

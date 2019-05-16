@@ -22,12 +22,12 @@ class ImageDescription extends Component {
     render() {
 
         return (
-            <CSSTransition in={this.props.show && this.state.mounted} timeout={200} classNames="desc-node">
+            <CSSTransition in={(this.props.show && this.state.mounted)} timeout={500} classNames="desc-node" unmountOnExit="true">
                 <div className="description">
                     <h2>{this.props.titre}</h2>
-                    <h3>{this.props.date} - {this.props.lieu} </h3>
+                    <h3>{this.props.date} {this.props.lieu ? "- " + this.props.lieu :null}</h3>
                     <p>Auteur·e : {this.props.auteur}</p>
-                    <a href={"https://www.notrehistoire.ch/medias/" + this.props.id} target="_blank">Voir sur notreHistoire.ch</a>
+                    {!this.props.isSelfie ? (<a href={"https://www.notrehistoire.ch/medias/" + this.props.id} target="_blank">Voir sur notreHistoire.ch</a>) : null}
                 </div>
             </CSSTransition>
         )

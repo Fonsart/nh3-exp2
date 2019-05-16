@@ -52,7 +52,7 @@
 
 .desc-node-exit-active {
     opacity: 0;
-    transition: opacity 300ms;
+    transition: opacity 300ms;  
 }
 
 .desc-node-exit-done{

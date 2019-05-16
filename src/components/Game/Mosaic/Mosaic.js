@@ -4,7 +4,7 @@ import Images from "../../../assets/images.json";
 
 const Mosaic = (props) => {
 
-    const colorBlending = 0;
+    const colorBlending = 0.2;
     const ZOOM_STEPS = 4;
     const ZOOM_MIN = 5;
     const ZOOM_MAX = 45;
