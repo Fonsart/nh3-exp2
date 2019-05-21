@@ -24,9 +24,10 @@
 .game > .fullBG{
     padding:1rem 0 0 0;
     background-color:black;
+    background-image:none!important;
 }
 .hidden {
-    display: none;
+    opacity:0;
 }
 
 .desc-img-enter {
@@ -49,4 +50,12 @@
 
 .desc-img-exit-done {
     opacity: 0;
+}
+
+.fullscreen-loader {
+    position:absolute;
+    width:100%;
+    height:100%;
+    z-index:150;
+    background:black;
 }

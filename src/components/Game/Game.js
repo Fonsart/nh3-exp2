@@ -13,9 +13,9 @@ import {
   isChrome,
   isIOS
 } from "react-device-detect";
-import Modal from 'react-responsive-modal';
-import { GridLoader } from 'react-spinners';
+import Loading from '../commons/modals/loading/loading';
 
+const validBrowser = !(isIOS && isFirefox || isIOS && isChrome);
 
 class Game extends Component {
   constructor(props) {
@@ -35,7 +35,10 @@ class Game extends Component {
       img_id: null,
       img_place: null,
       imgLoaded: false,
-      mosaicLoading: true,
+      mosaicLoading: false,
+      visited: 0,
+      shared: false,
+      askSharing: false
     };
 
     this.imgRef = React.createRef();
@@ -49,7 +52,9 @@ class Game extends Component {
 
   componentDidMount() {
     this.setState({
-      initialState: true
+      initialState: true,
+      imgLoaded: false,
+      mosaicLoading: false
     })
   }
 
@@ -88,8 +93,7 @@ class Game extends Component {
   openCamera = () => {
     this.setState({
       isCamera: true,
-      selfie: true,
-      mosaicLoading:true,
+      selfie: true
     })
   }
 
@@ -107,37 +111,30 @@ class Game extends Component {
       img_id: null,
       img_place: null,
       imgLoaded: false,
+      mosaicLoading: true
     })
 
-    if(this.state.loadProgress === 1){
+    if (this.state.loadProgress === 1) {
       setTimeout(() => {
         this.setState({
           mosaicLoading: false
         })
       }, 2000);
     }
-    
+
   }
 
   clickedImage() {
-    if (this.state.selfie) {
-      this.setState({
-        selfie: !this.state.selfie,
-      })
-    }
-
     this.setState({
       initialState: !this.state.initialState,
-      imgLoaded: false
     })
-
   }
 
   handleImageLoaded() {
     this.setState({
       dimensions: {
-        height: this.imgRef.current.offsetHeight,
-        width: this.imgRef.current.offsetWidth,
+        height: this.imgRef.current.height,
+        width: this.imgRef.current.width,
       },
       imgLoaded: true
     });
@@ -152,10 +149,15 @@ class Game extends Component {
     let imgObject = this.getImgObjectFromSrc(this.getImgSrc(data.image));
     this.updateImageData(imgObject);
 
+    this.setState({
+      selfie: false,
+    });
+
     if (data.image != this.state.target) {
       this.setState({
         target: data.image,
-        initialState: !this.state.initialState
+        initialState: !this.state.initialState,
+        imgLoaded: false
       })
     }
     else {
@@ -184,7 +186,7 @@ class Game extends Component {
       loadProgress: progress
     })
 
-    if (this.state.loadProgress === 1) {
+    if (this.state.loadProgress > 0.9) {
       setTimeout(() => {
         this.setState({
           mosaicLoading: false
@@ -194,40 +196,43 @@ class Game extends Component {
   }
 
   render() {
+
     return (
       <div className="game">
-        <nav className="mainNav">
-          <div className="btn_back navbar-left">
-            <Link to={'/'} className="btn btn__secondary"><i className="fas fa-chevron-left"></i></Link>
-          </div>
-          {isIOS && isFirefox || isIOS && isChrome ? "" : (
-            <div className="navbar-right">
-              <a onClick={this.openCamera} id="openCamera" className="btn btn__secondary"><i className="fas fa-camera"></i></a>
+        <Loading
+          loading={(this.state.initialState && this.state.mosaicLoading)}
+        />
+        {this.state.mosaicLoading ? "" : (
+          <nav className="mainNav">
+            <div className="btn_back navbar-left">
+              <Link to={'/'} className="btn btn__secondary"><i className="fas fa-chevron-left"></i></Link>
             </div>
-          )}
-        </nav>
+            {!validBrowser ? "" : (
+              <div className="navbar-right">
+                <a onClick={this.openCamera} id="openCamera" className="btn btn__secondary"><i className="fas fa-camera"></i></a>
+              </div>
+            )}
+          </nav>
+        )}
+
 
         {this.state.isCamera ? (<WebcamCapture takeSelfie={this.takeSelfie} />) : null}
 
         <div className="fullBG flex flex-col " id="game">
           <main className="flex justify-center relative">
-            {this.state.target ? (<Mosaic
-              onClick={this.clickedCanvas.bind(this)}
-              loadProgress={this.onLoadProgress.bind(this)}
-              hidden={this.state.initialState}
-              height={this.state.dimensions.height}
-              width={this.state.dimensions.width}
-              target={this.state.target}
-            />) : null}
+            {this.state.target ? (
+              <Mosaic
+                onClick={this.clickedCanvas.bind(this)}
+                loadProgress={this.onLoadProgress.bind(this)}
+                hidden={this.state.initialState}
+                height={this.state.dimensions.height}
+                width={this.state.dimensions.width}
+                target={this.state.target}
+                isSelfie={this.state.selfie}
+              />) : null}
 
-            <GridLoader
-              sizeUnit={"px"}
-              size={20}
-              color={'#145185'}
-              loading={this.state.mosaicLoading}
-            />
-            <CSSTransition in={this.state.initialState && this.state.imgLoaded} timeout={500} classNames="desc-img" >
-              <div id="target">
+            <CSSTransition in={(this.state.initialState && this.state.imgLoaded && !this.state.mosaicLoading)} timeout={5000} classNames="desc-img">
+              <div id="target" className={this.state.mosaicLoading ? "hidden":""}>
                 <img onLoad={this.handleImageLoaded.bind(this)} onClick={this.clickedImage.bind(this)} className="target" src={this.state.target ? this.getImgSrc(this.state.target) : null} ref={this.imgRef} alt="" />
               </div>
             </CSSTransition>

@@ -1,0 +1,13 @@
+.saveOverlay{
+    background:none;
+}
+
+.saveModal{
+    color:black;
+    background:white;
+    width:80%;
+    left:0;
+    right:0;
+    position:absolute;
+    bottom:50px;
+}

@@ -2,8 +2,6 @@
 import React, { Component } from "react";
 import Webcam from 'react-webcam';
 import "./WebcamCapture.css";
-import Modal from 'react-responsive-modal';
-import {PulseLoader} from 'react-spinners';
 
 class WebcamCapture extends Component {
 
@@ -12,7 +10,8 @@ class WebcamCapture extends Component {
         this.state = {
             width: 0,
             height: 0,
-            showBtn: false
+            showBtn: false,
+            loading: this.props.loading
         };
         this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
     }
@@ -51,6 +50,7 @@ class WebcamCapture extends Component {
         }
         return (
             <div className="camera" style={containerStyles}>
+               
                 <Webcam
                     width={this.state.width}
                     height={this.state.height}

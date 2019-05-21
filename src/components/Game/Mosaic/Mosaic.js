@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ReactImageMosaic from "react-image-mosaic";
 import Images from "../../../assets/images.json";
+import SaveSelfie from "../../commons/modals/saveSelfie/saveSelfie";
 
 const Mosaic = (props) => {
 
@@ -9,11 +10,24 @@ const Mosaic = (props) => {
     const ZOOM_MIN = 5;
     const ZOOM_MAX = 45;
     const [zoom, setZoom] = useState(ZOOM_MAX);
+    const [clickedOnce, setClicked] = useState(false);
+    const [height, setHeight] = useState(720);
+    const [width, setWidth] = useState(480);
+    const [open,setOpen] = useState(false);
 
     useEffect(() => {
         if (!props.hidden) {
-            setTimeout(() => zooming(), 300);
+            if (clickedOnce) {
+                setTimeout(() => zooming(), 300);
+                setOpen(false);
+            } else {
+                setOpen(true);
+                setHeight(props.height);
+                setWidth(props.width);
+            }
         } else {
+            setOpen(false);
+            setClicked(false);
             setZoom(ZOOM_MAX);
         }
     })
@@ -25,8 +39,12 @@ const Mosaic = (props) => {
     }
 
     function clickedCanvas(data) {
-        setZoom(ZOOM_MAX);
-        props.onClick(data);
+        if (clickedOnce) {
+            setZoom(ZOOM_MAX);
+            props.onClick(data);
+        } else {
+            setClicked(true);
+        }
     }
 
     return (
@@ -34,14 +52,19 @@ const Mosaic = (props) => {
             <ReactImageMosaic
                 onClick={clickedCanvas}
                 colorBlending={colorBlending}
-                width={props.width}
-                height={props.height}
+                width={width}
+                height={height}
                 columns={zoom}
                 rows={zoom}
                 sources={Images.map(img => process.env.PUBLIC_URL + "/images/" + img.media.path.split("/")[3])}
                 target={props.target}
                 onLoadProgress={props.loadProgress}
             />
+            <SaveSelfie
+                open={open}
+                isSelfie={props.isSelfie}
+            />
+
         </div>
     )
 
