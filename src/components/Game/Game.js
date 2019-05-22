@@ -14,6 +14,7 @@ import {
   isIOS
 } from "react-device-detect";
 import Loading from '../commons/modals/loading/loading';
+import Share from '../commons/modals/share/share';
 
 const validBrowser = !(isIOS && isFirefox || isIOS && isChrome);
 
@@ -38,7 +39,8 @@ class Game extends Component {
       mosaicLoading: false,
       visited: 0,
       shared: false,
-      askSharing: false
+      askSharing: true,
+
     };
 
     this.imgRef = React.createRef();
@@ -125,8 +127,10 @@ class Game extends Component {
   }
 
   clickedImage() {
+    let visitedIterator = this.state.visited+1;
     this.setState({
       initialState: !this.state.initialState,
+      visited: visitedIterator
     })
   }
 
@@ -195,12 +199,30 @@ class Game extends Component {
     }
   }
 
+  denyShare(){
+    this.setState({
+      askSharing:false,
+    })
+  }
+
+  shareExperience(){
+    this.setState({
+      askSharing:false,
+      shared:true,
+    })
+  }
+
   render() {
 
     return (
       <div className="game">
         <Loading
           loading={(this.state.initialState && this.state.mosaicLoading)}
+        />
+        <Share
+          deny={this.denyShare.bind(this)}
+          share={this.shareExperience.bind(this)}
+          show={(this.state.visited === 4 && this.state.askSharing)}
         />
         {this.state.mosaicLoading ? "" : (
           <nav className="mainNav">
@@ -232,7 +254,7 @@ class Game extends Component {
               />) : null}
 
             <CSSTransition in={(this.state.initialState && this.state.imgLoaded && !this.state.mosaicLoading)} timeout={5000} classNames="desc-img">
-              <div id="target" className={this.state.mosaicLoading ? "hidden":""}>
+              <div id="target" className={this.state.mosaicLoading ? "hidden" : ""}>
                 <img onLoad={this.handleImageLoaded.bind(this)} onClick={this.clickedImage.bind(this)} className="target" src={this.state.target ? this.getImgSrc(this.state.target) : null} ref={this.imgRef} alt="" />
               </div>
             </CSSTransition>
