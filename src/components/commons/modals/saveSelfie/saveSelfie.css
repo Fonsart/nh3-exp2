@@ -1,13 +1,41 @@
-.saveOverlay{
-    background:none;
+.saveOverlay {
+    background: none;
 }
 
-.saveModal{
-    color:black;
+.saveModal {
+    color: black;
+    background: white;
+    width: 80%;
+    left: 0;
+    right: 0;
+    position: absolute;
+    bottom: 50px;
+}
+
+.ack-save {
+    width: 100%;
+}
+
+.ack-save tr {
+    height: 64px;
+}
+
+.btn__modal {
+    border: 2px solid #145185;
+    padding: .5em 1.5em;
+    text-transform: uppercase;
     background:white;
-    width:80%;
-    left:0;
-    right:0;
-    position:absolute;
-    bottom:50px;
+    font-family:inherit;
+    font-size:1.25rem;
+    margin-top:20px;
+}
+
+.btn__close{
+    color:red;
+    /*background:red;*/
+}
+
+.btn__agree{
+    color:green;
+    /*background:green;*/
 }

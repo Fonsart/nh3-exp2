@@ -13,7 +13,7 @@ const Mosaic = (props) => {
     const [clickedOnce, setClicked] = useState(false);
     const [height, setHeight] = useState(720);
     const [width, setWidth] = useState(480);
-    const [open,setOpen] = useState(false);
+    const [open, setOpen] = useState(false);
 
     useEffect(() => {
         if (!props.hidden) {
@@ -44,6 +44,8 @@ const Mosaic = (props) => {
             props.onClick(data);
         } else {
             setClicked(true);
+            setHeight(props.height);
+            setWidth(props.width);
         }
     }
 
