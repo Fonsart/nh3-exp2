@@ -49,7 +49,7 @@ class Home extends Component {
                     )}
 
                 <footer className="mt-auto">
-                    <Link to={`/about/`} className="btn">À propos</Link>
+                    <Link to={`/about/`} className="btn">À Propos</Link>
                 </footer>
             </div >
         );
