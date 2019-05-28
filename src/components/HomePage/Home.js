@@ -31,7 +31,7 @@ class Home extends Component {
                 {this.state.validBrowser ? (
                     <div>
                         <aside className="flex mt-auto justify-center relative">
-                            <p>Débuter l'expérience</p>
+                            <p>Commencer</p>
                         </aside>
                         <aside>
                             <p><Link to={`/game/`} className="btn btn__primary"><i className="fas fa-camera"></i></Link></p>
@@ -49,7 +49,7 @@ class Home extends Component {
                     )}
 
                 <footer className="mt-auto">
-                    <Link to={`/about/`} className="btn">À Propos</Link>
+                    <Link to={`/about/`} className="btn">À propos</Link>
                 </footer>
             </div >
         );
