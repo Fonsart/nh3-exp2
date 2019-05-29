@@ -5,10 +5,10 @@ import SaveSelfie from "../../commons/modals/saveSelfie/saveSelfie";
 
 const Mosaic = (props) => {
 
-    const colorBlending = 0.2;
+    const colorBlending = 0.4;
     const ZOOM_STEPS = 4;
     const ZOOM_MIN = 5;
-    const ZOOM_MAX = 45;
+    const ZOOM_MAX = 80;
     const [zoom, setZoom] = useState(ZOOM_MAX);
     const [clickedOnce, setClicked] = useState(false);
     const [height, setHeight] = useState(720);
@@ -44,8 +44,8 @@ const Mosaic = (props) => {
             props.onClick(data);
         } else {
             setClicked(true);
-            setHeight(props.height);
-            setWidth(props.width);
+            /*setHeight(props.height*10);
+            setWidth(props.width*10);*/
         }
     }
 
