@@ -26,7 +26,7 @@ class ImageDescription extends Component {
                     <h2>{this.props.titre}</h2>
                     <h3>{this.props.date} {this.props.lieu ? "- " + this.props.lieu :null}</h3>
                     <p>Auteur·e : {this.props.auteur}</p>
-                    {!this.props.isSelfie ? (<a href={"https://www.notrehistoire.ch/medias/" + this.props.id} target="_blank">Voir sur notreHistoire.ch</a>) : null}
+                    <a href={"https://www.notrehistoire.ch/medias/" + this.props.id} target="_blank">Voir sur notreHistoire.ch</a>
                 </div>
             </CSSTransition>
         )

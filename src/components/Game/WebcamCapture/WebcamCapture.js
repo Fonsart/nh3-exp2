@@ -41,19 +41,20 @@ class WebcamCapture extends Component {
 
     render() {
         const videoConstraints = {
-            facingMode: "user"
+            facingMode: {
+                exact: "user",
+            },
+            aspectRatio: {
+                exact: 1,
+            },
         };
 
-        const containerStyles = {
-            width: this.state.width,
-            height: this.state.height
-        }
         return (
-            <div className="camera" style={containerStyles}>
-               
+            <div className="camera">
+
                 <Webcam
+                    height={this.state.width}
                     width={this.state.width}
-                    height={this.state.height}
                     audio={false}
                     ref={this.setRef}
                     screenshotFormat="image/jpeg"

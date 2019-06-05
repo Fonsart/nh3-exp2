@@ -1,74 +1,70 @@
-import React, { useState, useEffect } from "react";
+import React, { Component } from "react";
 import ReactImageMosaic from "react-image-mosaic";
 import Images from "../../../assets/images.json";
-import SaveSelfie from "../../commons/modals/saveSelfie/saveSelfie";
+import PinchToZoom from 'react-pinch-and-zoom';
 
-const Mosaic = (props) => {
+const colorBlending = 0.4;
+const ZOOM_MAX = 50;
 
-    const colorBlending = 0.4;
-    const ZOOM_STEPS = 4;
-    const ZOOM_MIN = 5;
-    const ZOOM_MAX = 80;
-    const [zoom, setZoom] = useState(ZOOM_MAX);
-    const [clickedOnce, setClicked] = useState(false);
-    const [height, setHeight] = useState(720);
-    const [width, setWidth] = useState(480);
-    const [open, setOpen] = useState(false);
+class Mosaic extends Component {
 
-    useEffect(() => {
-        if (!props.hidden) {
-            if (clickedOnce) {
-                setTimeout(() => zooming(), 300);
-                setOpen(false);
-            } else {
-                setOpen(true);
-                setHeight(props.height);
-                setWidth(props.width);
-            }
-        } else {
-            setOpen(false);
-            setClicked(false);
-            setZoom(ZOOM_MAX);
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            zoom: ZOOM_MAX,
+            height: 720,
+            width: 480
         }
-    })
+    }
 
-    function zooming() {
+    componentDidMount() {
+
+        let newHeight = this.props.height * 10;
+        let newWidth = this.props.width * 10;
+
+        this.setState({
+            height: newHeight,
+            width: newWidth,
+            zoom: ZOOM_MAX,
+        });
+
+    }
+
+
+    /**
+     * deprecated function
+     */
+    /*function zooming() {
         if (zoom - ZOOM_STEPS >= ZOOM_MIN) {
             setZoom(zoom - ZOOM_STEPS);
         }
+    }*/
+
+    clickedCanvas(data) {
+        this.props.onClick(data);
     }
 
-    function clickedCanvas(data) {
-        if (clickedOnce) {
-            setZoom(ZOOM_MAX);
-            props.onClick(data);
-        } else {
-            setClicked(true);
-            /*setHeight(props.height*10);
-            setWidth(props.width*10);*/
-        }
+    render() {
+        return (
+            <div id="mosaic" className={!this.props.hidden ? "" : "hidden"}>
+                <PinchToZoom>
+                    <ReactImageMosaic
+                        onClick={this.clickedCanvas.bind(this)}
+                        colorBlending={colorBlending}
+                        width={this.state.width}
+                        height={this.state.height}
+                        columns={this.state.zoom}
+                        rows={this.state.zoom}
+                        sources={Images.map(img => process.env.PUBLIC_URL + "/images/" + img.media.path.split("/")[3])}
+                        target={this.props.target}
+                        onLoadProgress={this.props.loadProgress}
+                    />
+                </PinchToZoom>
+            </div>
+
+        )
     }
-
-    return (
-        <div id="mosaic" className={!props.hidden ? "" : "hidden"}>
-            <ReactImageMosaic
-                onClick={clickedCanvas}
-                colorBlending={colorBlending}
-                width={width}
-                height={height}
-                columns={zoom}
-                rows={zoom}
-                sources={Images.map(img => process.env.PUBLIC_URL + "/images/" + img.media.path.split("/")[3])}
-                target={props.target}
-                onLoadProgress={props.loadProgress}
-            />
-            <SaveSelfie
-                open={open}
-                isSelfie={props.isSelfie}
-            />
-
-        </div>
-    )
 
 }
 
