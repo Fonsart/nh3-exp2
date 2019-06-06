@@ -35,4 +35,12 @@ npx serve -s build
 ```bash
 npm run test
 ```
-
+## Images setup
+Images used to generate the mosaic are located in: 
+```bash
+public/images
+```
+JSON file served to ReactImageMosaic is located in:
+```bash
+src/assets/images.full.json
+```
