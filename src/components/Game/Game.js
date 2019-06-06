@@ -201,31 +201,31 @@ class Game extends Component {
 
     return (
       <div className="game">
-        /**
+        {/**
         LOADING SCREEN 
-        This component uses the Modal component along with react-spinners. Is shown whenever the mosaic is loading  */
+        This component uses the Modal component along with react-spinners. Is shown whenever the mosaic is loading  */}
         <Loading
           loading={(this.state.mosaicLoading)}
         />
 
-        /**
+        {/**
         CAMERA VIEW 
-        The camera Component is shown whenever it is asked to the user to take a selfie */
+        The camera Component is shown whenever it is asked to the user to take a selfie */}
         {this.state.isCamera ? (<WebcamCapture takeSelfie={this.takeSelfie} />) : null}
 
-        /**
+        {/**
         [NOT USED] SHARE MODAL
         Should be shown when 4 pictures are seen fullScreen (this.state.visited)
-        change component's property "open" to "props.show" inside the component to use it */
+        change component's property "open" to "props.show" inside the component to use it */}
         <Share
           deny={this.denyShare.bind(this)}
           share={this.shareExperience.bind(this)}
           show={(this.state.visited === 4 && this.state.askSharing)}
         />
 
-        /**
+        {/**
         TOP BAR NAVIGATION
-        condition : Shown if mosaic is not loading */
+        condition : Shown if mosaic is not loading */}
         {this.state.mosaicLoading ? "" : (
           <nav className="mainNav">
             <div className="btn_back navbar-left">
@@ -239,11 +239,11 @@ class Game extends Component {
           </nav>
         )}
 
-        /**
+        {/**
         MAIN CONTENT
-         */
+        */}
         <div className="fullBG flex flex-col " id="game">
-          <main className="flex justify-center relative">
+          <main className="flex relative">
             {!this.state.initialState ? (
               <Mosaic
                 onClick={this.clickedCanvas.bind(this)}

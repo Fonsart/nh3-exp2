@@ -56,7 +56,7 @@ class Mosaic extends Component {
                         height={this.state.height}
                         columns={this.state.zoom}
                         rows={this.state.zoom}
-                        sources={Images.map(img => process.env.PUBLIC_URL + "/images/" + img.media.path.split("/")[3])}
+                        sources={Images.map(img => process.env.PUBLIC_URL + "/images_mosaic/" + img.media.path.split("/")[3])}
                         target={this.props.target}
                         onLoadProgress={this.props.loadProgress}
                     />
