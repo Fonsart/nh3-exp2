@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import ReactImageMosaic from "react-image-mosaic";
 import Images from "../../../assets/images.json";
-import PinchToZoom from 'react-pinch-and-zoom';
+import PinchToZoom from 'react-pinch-and-zoom'; //Ce composant permet de rendre un canvas "pinchable", "zoomable" et "mouvant"
 
 const colorBlending = 0.4;
 const MOS_RESOLUTION = 60;
