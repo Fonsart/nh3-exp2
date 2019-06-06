@@ -24,8 +24,8 @@ class Game extends Component {
     this.updateImageData = this.updateImageData.bind(this);
 
     this.state = {
+      initialState:true,
       isCamera: true,
-      initialState: false,
       loadProgress: 0,
       target: null,
       dimensions: { height: null, width: null },
@@ -45,7 +45,6 @@ class Game extends Component {
     };
 
     this.imgRef = React.createRef();
-    this.indexFirstImage = Math.floor(Math.random() * Object.keys(Images).length);
   }
 
   shouldComponentUpdate(nextProps) {
@@ -55,7 +54,6 @@ class Game extends Component {
 
   componentDidMount() {
     this.setState({
-      initialState: true,
       imgLoaded: false,
       mosaicLoading: false
     })
@@ -71,13 +69,6 @@ class Game extends Component {
     });
 
     this.updateImageData(Images[this.indexFirstImage]);*/
-  }
-
-  componentWillUnmount() {
-    this.setState({
-      initialState: false,
-      imgLoaded: false
-    })
   }
 
   updateImageData(img) {
@@ -96,6 +87,8 @@ class Game extends Component {
   openCamera = () => {
     this.setState({
       isCamera: true,
+      imgLoaded:false,
+      showImage:false,
     })
   }
 
@@ -103,7 +96,6 @@ class Game extends Component {
     let date = new Date().getFullYear();
 
     this.setState({
-      initialState: true,
       selfie: selfie,
       isCamera: false,
       img_title: "Vous-même",
@@ -111,16 +103,16 @@ class Game extends Component {
       img_author: "Vous",
       img_id: null,
       img_place: null,
-      imgLoaded: false,
       mosaicLoading: true,
     })
 
     if (this.state.loadProgress === 1) {
       setTimeout(() => {
         this.setState({
-          mosaicLoading: false
+          mosaicLoading: false,
+          imgLoaded:true,
         })
-      }, 2000);
+      }, 3000);
     }
 
   }
@@ -128,7 +120,6 @@ class Game extends Component {
   clickedImage() {
     let visitedIterator = this.state.visited + 1;
     this.setState({
-      initialState: !this.state.initialState,
       showImage: false,
       visited: visitedIterator
     })
@@ -136,6 +127,7 @@ class Game extends Component {
 
   handleImageLoaded() {
     this.setState({
+      initialState:false,
       imgLoaded: true,
       dimensions:{
         height:this.imgRef.current.height,
@@ -155,7 +147,6 @@ class Game extends Component {
 
     this.setState({
       clickedTarget: data.image,
-      initialState: !this.state.initialState,
       showImage: true
     });
   }
@@ -178,12 +169,10 @@ class Game extends Component {
       loadProgress: progress
     })
 
-    if (this.state.loadProgress > 0.9) {
-      setTimeout(() => {
+    if (this.state.loadProgress > 0.95) {
         this.setState({
           mosaicLoading: false
         })
-      }, 2000);
     }
   }
 
@@ -213,7 +202,7 @@ class Game extends Component {
     return (
       <div className="game">
         <Loading
-          loading={(this.state.initialState && this.state.mosaicLoading)}
+          loading={(this.state.mosaicLoading)}
         />
         <Share
           deny={this.denyShare.bind(this)}
@@ -233,16 +222,15 @@ class Game extends Component {
           </nav>
         )}
 
-
         {this.state.isCamera ? (<WebcamCapture takeSelfie={this.takeSelfie} />) : null}
 
         <div className="fullBG flex flex-col " id="game">
           <main className="flex justify-center relative">
-            {(this.state.selfie && this.state.imgLoaded) ? (
+            {!this.state.initialState ? (
               <Mosaic
                 onClick={this.clickedCanvas.bind(this)}
                 loadProgress={this.onLoadProgress.bind(this)}
-                hidden={!this.state.initialState}
+                hidden={(this.state.showImage || this.state.mosaicLoading || this.state.isCamera)}
                 height={this.state.dimensions.height}
                 width={this.state.dimensions.width}
                 target={this.state.selfie}

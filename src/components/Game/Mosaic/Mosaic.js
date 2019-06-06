@@ -4,7 +4,7 @@ import Images from "../../../assets/images.json";
 import PinchToZoom from 'react-pinch-and-zoom';
 
 const colorBlending = 0.4;
-const ZOOM_MAX = 50;
+const MOS_RESOLUTION = 60;
 
 class Mosaic extends Component {
 
@@ -12,7 +12,7 @@ class Mosaic extends Component {
         super(props);
 
         this.state = {
-            zoom: ZOOM_MAX,
+            zoom: MOS_RESOLUTION,
             height: 720,
             width: 480
         }
@@ -20,13 +20,13 @@ class Mosaic extends Component {
 
     componentDidMount() {
 
-        let newHeight = this.props.height * 10;
-        let newWidth = this.props.width * 10;
+        let newHeight = this.props.height * 12;
+        let newWidth = this.props.width * 12;
 
         this.setState({
             height: newHeight,
             width: newWidth,
-            zoom: ZOOM_MAX,
+            zoom: MOS_RESOLUTION,
         });
 
     }
@@ -47,7 +47,7 @@ class Mosaic extends Component {
 
     render() {
         return (
-            <div id="mosaic" className={!this.props.hidden ? "" : "hidden"}>
+            <div id="mosaic" className={this.props.hidden ? "hidden" : ""}>
                 <PinchToZoom>
                     <ReactImageMosaic
                         onClick={this.clickedCanvas.bind(this)}
