@@ -34,7 +34,7 @@ class Home extends Component {
                             <p>Commencer</p>
                         </aside>
                         <aside>
-                            <p><Link to={`/game/`} className="btn btn__primary"><i className="fas fa-camera"></i></Link></p>
+                            <p><Link to={`/selfie/`} className="btn btn__primary"><i className="fas fa-camera"></i></Link></p>
                         </aside>
                     </div>
                 ) : (
