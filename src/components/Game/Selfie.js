@@ -45,12 +45,17 @@ class Selfie extends Component {
           .then(async(res) => {
             this.setState({selfieProcessing:false});
             // Image processed (mosaic) has the same name as the image uploaded (selfie)
-            const mosaicFileUrl = `https://localhost:3001/outputs/${filename}.jpg`
-            let image = await Image.load(mosaicFileUrl);
-            this.setState({loadingMosaic:false});
-            // Once the server image processing (mosaic building) is finished and the image returned is laoded
-            // we can go to the game
-            this.props.history.push('/game',{ mosaicFileUrl: mosaicFileUrl })
+            if(res.upload){
+              const mosaicFileUrl = `https://localhost:3001/outputs/${filename}.jpg`
+              let image = await Image.load(mosaicFileUrl);
+              this.setState({loadingMosaic:false});
+              // Once the server image processing (mosaic building) is finished and the image returned is laoded
+              // we can go to the game
+              this.props.history.push('/game',{ mosaicFileUrl: mosaicFileUrl, coord: res.coord, tilesWidth: res.tilesWidth, nbTiles: res.nbTiles })
+            }else{
+              // We should handle better this case
+              console.log('error')
+            }
           })
 
       })

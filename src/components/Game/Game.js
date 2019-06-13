@@ -9,7 +9,7 @@ import {
   isIOS
 } from "react-device-detect";
 import useWindowDimensions from '../Utils/useWindowDimensions';
-import { Map, Marker, Popup, ImageOverlay } from 'react-leaflet'
+import { Map, Rectangle, ImageOverlay } from 'react-leaflet'
 import L from 'leaflet'
 
 function Game (props) {
@@ -18,10 +18,15 @@ function Game (props) {
 
   const { height, width } = useWindowDimensions();
   const [loaded, setLoaded] = useState(false);
-  console.log(height,width)
   let w = width;
   let h = w;
-
+  const coord = props.location.state.coord
+  const rectangles = []
+  const nbTiles = props.location.state.nbTiles;
+  const tileWidth = (w/(nbTiles*nbTiles))*props.location.state.tilesWidth
+  coord.forEach((item,index) => {
+    rectangles.push(<Rectangle key={index} color="transparent" bounds={[[(nbTiles-item.x)*tileWidth,(item.y)*tileWidth],[((nbTiles-item.x)-1)*tileWidth,((item.y)+1)*tileWidth]]} onClick={(e) => console.log(e,item.thumbRef)}/>)
+  })
   return (
     <div className="game">
       <nav className="mainNav">
@@ -39,7 +44,9 @@ function Game (props) {
           url={props.location.state.mosaicFileUrl}
           bounds={[[0,0], [w,h]]}
         />
+        {rectangles}
       </Map>
+      <p>{rectangles.length}</p>
     </div>
   );
 }
