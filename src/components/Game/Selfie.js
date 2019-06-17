@@ -20,7 +20,11 @@ class Selfie extends Component {
 
     this.state = {
       selfieProcessing:false,
-      loadingMosaic:false
+      loadingMosaic:false,
+      mosaicFileUrl: '',
+      coor: [],
+      tilesWidth: 0,
+      nbTiles: 0
     };
   }
 
@@ -48,11 +52,10 @@ class Selfie extends Component {
             if(res.upload){
               // Download image
               const mosaicFileUrl = `https://nh3-exp2-server.herokuapp.com/outputs/${filename}.jpg`
-              let image = await Image.load(mosaicFileUrl);
-              this.setState({loadingMosaic:false});
+              // let image = await Image.load(mosaicFileUrl);
+              this.setState({mosaicFileUrl:mosaicFileUrl,coord:res.coord,tilesWidth:res.tilesWidth,nbTiles:res.nbTiles});
               // Once the server image processing (mosaic building) is finished and the image returned is laoded
               // we can go to the game
-              this.props.history.push('/game',{ mosaicFileUrl: mosaicFileUrl, coord: res.coord, tilesWidth: res.tilesWidth, nbTiles: res.nbTiles })
             }else{
               // We should handle better this case
               console.log('error')
@@ -60,6 +63,11 @@ class Selfie extends Component {
           })
 
       })
+  }
+
+  goToGame = () => {
+    this.setState({loadingMosaic:false});
+    this.props.history.push('/game',{ mosaicFileUrl: this.state.mosaicFileUrl, coord: this.state.coord, tilesWidth: this.state.tilesWidth, nbTiles: this.state.nbTiles })
   }
 
   render() {
@@ -71,7 +79,8 @@ class Selfie extends Component {
             !this.state.selfieProcessing && !this.state.loadingMosaic ? (
               <WebcamCapture takeSelfie={this.takeSelfie} />
               ):(!this.state.selfieProcessing && this.state.loadingMosaic ? (
-                <p>Loading...2</p>
+                [<p key='dsadas'>Loading...2</p>,
+                <img key='fidjfsij' src={this.state.mosaicFileUrl} onLoad={() => this.goToGame()} style={{display:'none'}}/>]
               ):(
                 <p>Loading...1</p>
               )
