@@ -44,14 +44,14 @@ class Selfie extends Component {
         const file = new File([blob], `${filename}.jpg`);
         fd.append('selfie', file)
         // After conversion we can upload blob file to server
-        fetch('https://nh3-exp2-server.herokuapp.com/upload', {method: 'POST', body: fd})
+        fetch('https://lab.notrehistoire.ch/exp2/api/upload', {method: 'POST', body: fd})
           .then(res => res.json()) 
           .then(async(res) => {
             this.setState({selfieProcessing:false});
             // Image processed (mosaic) has the same name as the image uploaded (selfie)
             if(res.upload){
               // Download image
-              const mosaicFileUrl = `https://nh3-exp2-server.herokuapp.com/outputs/${filename}.jpg`
+              const mosaicFileUrl = `https://lab.notrehistoire.ch/exp2/api/outputs/${filename}.jpg`
               // let image = await Image.load(mosaicFileUrl);
               this.setState({mosaicFileUrl:mosaicFileUrl,coord:res.coord,tilesWidth:res.tilesWidth,nbTiles:res.nbTiles});
               // Once the server image processing (mosaic building) is finished and the image returned is laoded
