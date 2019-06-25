@@ -39,7 +39,7 @@ function Game (props) {
           </div>
         )}
       </nav>
-      <Map crs={L.CRS.Simple} boundsOptions={[[0,0], [w,h]]} bounds={[[0,0], [w,h]]} maxBounds={[[0,0], [w,h]]} maxBoundsViscosity={1.0} style={{width: `${w}px`, height:`${w}px`}}>
+      <Map crs={L.CRS.Simple} boundsOptions={[[0,0], [w,h]]} maxZoom={4} bounds={[[0,0], [w,h]]} maxBounds={[[0,0], [w,h]]} maxBoundsViscosity={1.0} style={{width: `${w}px`, height:`${w}px`}}>
         <ImageOverlay
           url={props.location.state.mosaicFileUrl}
           bounds={[[0,0], [w,h]]}
