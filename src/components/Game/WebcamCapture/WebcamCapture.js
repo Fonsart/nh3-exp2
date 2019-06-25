@@ -35,8 +35,9 @@ class WebcamCapture extends Component {
         const videoConstraints = {
             facingMode: "user"
         };
+        const cameraButton = this.state.showBtn ? (<a onClick={this.capture} id="openCamera" className="btn btn__secondary btn_capture"><i className="fas fa-camera"></i></a>) : null;
         return (
-            <div className="camera" style={{position:'relative'}}>
+            [<div className="camera" style={{position:'relative'}}>
                 <div style={{height:`${this.state.selfiePaddingTop}px`, background:'black', position:'absolute', top:0, left:0, width:'100%'}}></div>
                 <Webcam
                     audio={false}
@@ -48,10 +49,7 @@ class WebcamCapture extends Component {
                     videoConstraints={videoConstraints}
                 />
                 <div style={{height:`${this.state.selfiePaddingTop}px`, background:'black', position:'absolute', bottom:0, left:0, width:'100%'}}></div>
-                {this.state.showBtn ? (
-                    <a onClick={this.capture} id="openCamera" className="btn btn__secondary btn_capture"><i className="fas fa-camera"></i></a>
-                ) : ""}
-            </div>
+            </div>,cameraButton]
         );
     }
 }
