@@ -16,7 +16,7 @@ class WebcamCapture extends Component {
         this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
     }
 
-    componentDidMount() {
+    componentWillMount() {
         this.updateWindowDimensions();
     }
 
@@ -41,24 +41,21 @@ class WebcamCapture extends Component {
 
     render() {
         const videoConstraints = {
-            facingMode: {
-                exact: "user",
-            },
-            aspectRatio: {
-                exact: 1,
-            },
+            facingMode: "user",
+            height:this.state.width,
+            width:this.state.width
         };
 
         return (
             <div className="camera">
 
                 <Webcam
-                    height={this.state.width}
-                    width={this.state.width}
                     audio={false}
                     ref={this.setRef}
                     screenshotFormat="image/jpeg"
                     onUserMedia={this.showButton.bind(this)}
+                    width={this.state.width}
+                    height={this.state.width}
                     videoConstraints={videoConstraints}
                 />
                 {this.state.showBtn ? (
