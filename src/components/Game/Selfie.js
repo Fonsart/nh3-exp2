@@ -26,7 +26,18 @@ class Selfie extends Component {
       tilesWidth: 0,
       nbTiles: 0
     };
+
+    this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
   }
+
+  componentWillMount() {
+      this.updateWindowDimensions();
+  }
+
+  updateWindowDimensions() {
+      this.setState({ width: window.innerWidth, height: window.innerHeight });
+  }
+
 
   takeSelfie = (selfie) => {
     let date = new Date().getFullYear();
@@ -77,7 +88,14 @@ class Selfie extends Component {
       <div className="game">
         {validBrowser ? (
             !this.state.selfieProcessing && !this.state.loadingMosaic ? (
-              <WebcamCapture takeSelfie={this.takeSelfie} />
+              <div className="selfie">
+                <nav className="mainNav">
+                  <div className="btn_back navbar-left">
+                    <a onClick={() => this.props.history.push('/')} className="btn btn__secondary"><i className="fas fa-chevron-left"></i></a>
+                  </div>
+                </nav>
+                <WebcamCapture width={this.state.width} takeSelfie={this.takeSelfie} />
+              </div>
               ):(!this.state.selfieProcessing && this.state.loadingMosaic ? (
                 [<p key='dsadas'>Loading...2</p>,
                 <img key='fidjfsij' src={this.state.mosaicFileUrl} onLoad={() => this.goToGame()} style={{display:'none'}}/>]
