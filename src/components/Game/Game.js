@@ -25,7 +25,7 @@ function Game (props) {
   const nbTiles = props.location.state.nbTiles;
   const tileWidth = (w/(nbTiles*nbTiles))*props.location.state.tilesWidth
   coord.forEach((item,index) => {
-    rectangles.push(<Rectangle key={index} color="transparent" bounds={[[(nbTiles-item.x)*tileWidth,(item.y)*tileWidth],[((nbTiles-item.x)-1)*tileWidth,((item.y)+1)*tileWidth]]} onClick={(e) => console.log(e,item.thumbRef)}/>)
+    rectangles.push(<Rectangle key={index} color="transparent" bounds={[[(nbTiles-item.x)*tileWidth,(item.y)*tileWidth],[((nbTiles-item.x)-1)*tileWidth,((item.y)+1)*tileWidth]]} onClick={(e) => props.history.push('/image',{})}/>)
   })
   return (
     <div className="game">
@@ -39,13 +39,15 @@ function Game (props) {
           </div>
         )}
       </nav>
-      <Map crs={L.CRS.Simple} boundsOptions={[[0,0], [w,h]]} maxZoom={4} attributionControl={false} bounds={[[0,0], [w,h]]} maxBounds={[[0,0], [w,h]]} maxBoundsViscosity={1.0} style={{width: `${w}px`, height:`${w}px`}}>
-        <ImageOverlay
-          url={props.location.state.mosaicFileUrl}
-          bounds={[[0,0], [w,h]]}
-        />
-        {rectangles}
-      </Map>
+      <div style={{marginTop:`${props.location.state.paddingTop}px`}}>
+        <Map crs={L.CRS.Simple} boundsOptions={[[0,0], [w,h]]} maxZoom={4} attributionControl={false} bounds={[[0,0], [w,h]]} maxBounds={[[0,0], [w,h]]} maxBoundsViscosity={1.0} style={{width: `${w}px`, height:`${w}px`}}>
+          <ImageOverlay
+            url={props.location.state.mosaicFileUrl}
+            bounds={[[0,0], [w,h]]}
+          />
+          {rectangles}
+        </Map>
+      </div>
     </div>
   );
 }

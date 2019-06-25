@@ -7,6 +7,10 @@
     height:auto;
 }
 
+.camera{
+    background: red;
+}
+
 .btn_capture {
     position: absolute;
     z-index: 1000;

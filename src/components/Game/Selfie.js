@@ -24,7 +24,8 @@ class Selfie extends Component {
       mosaicFileUrl: '',
       coor: [],
       tilesWidth: 0,
-      nbTiles: 0
+      nbTiles: 0,
+      selfiePaddingTop: 0 // This state is used to keep the same padding top for the game as the selfie... Maybe it's useless...
     };
 
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
@@ -39,9 +40,9 @@ class Selfie extends Component {
   }
 
 
-  takeSelfie = (selfie) => {
+  takeSelfie = (selfie,selfiePaddingTop) => {
     let date = new Date().getFullYear();
-    this.setState({selfieProcessing:true,loadingMosaic:true});
+    this.setState({selfieProcessing:true,loadingMosaic:true,selfiePaddingTop:selfiePaddingTop});
     this.upload(selfie);
   }
 
@@ -55,14 +56,14 @@ class Selfie extends Component {
         const file = new File([blob], `${filename}.jpg`);
         fd.append('selfie', file)
         // After conversion we can upload blob file to server
-        fetch('https://lab.notrehistoire.ch/exp2/api/upload', {method: 'POST', body: fd})
+        fetch('https://nh3-exp2-server.herokuapp.com/upload', {method: 'POST', body: fd})
           .then(res => res.json()) 
           .then(async(res) => {
             this.setState({selfieProcessing:false});
             // Image processed (mosaic) has the same name as the image uploaded (selfie)
             if(res.upload){
               // Download image
-              const mosaicFileUrl = `https://lab.notrehistoire.ch/exp2/api/outputs/${filename}.jpg`
+              const mosaicFileUrl = `https://nh3-exp2-server.herokuapp.com/outputs/${filename}.jpg`
               // let image = await Image.load(mosaicFileUrl);
               this.setState({mosaicFileUrl:mosaicFileUrl,coord:res.coord,tilesWidth:res.tilesWidth,nbTiles:res.nbTiles});
               // Once the server image processing (mosaic building) is finished and the image returned is laoded
@@ -78,7 +79,7 @@ class Selfie extends Component {
 
   goToGame = () => {
     this.setState({loadingMosaic:false});
-    this.props.history.push('/game',{ mosaicFileUrl: this.state.mosaicFileUrl, coord: this.state.coord, tilesWidth: this.state.tilesWidth, nbTiles: this.state.nbTiles })
+    this.props.history.push('/game',{ mosaicFileUrl: this.state.mosaicFileUrl, coord: this.state.coord, tilesWidth: this.state.tilesWidth, nbTiles: this.state.nbTiles, paddingTop: this.state.selfiePaddingTop })
   }
 
   render() {

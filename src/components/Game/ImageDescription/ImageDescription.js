@@ -21,8 +21,16 @@ class ImageDescription extends Component {
     render() {
 
         return (
-            <CSSTransition in={(this.props.show && this.state.mounted)} timeout={500} classNames="desc-node" unmountOnExit>
+            <CSSTransition in={(this.state.mounted)} timeout={500} classNames="desc-node" unmountOnExit>
                 <div className="description">
+                    <nav className="mainNav">
+                        <div className="btn_back navbar-left">
+                            <a onClick={() => props.history.push('/selfie')} className="btn btn__secondary"><i className="fas fa-chevron-left"></i></a>
+                        </div>
+                        <div className="navbar-right">
+                            <a onClick={() => props.history.push('/selfie')} id="openCamera" className="btn btn__secondary"><i className="fas fa-camera"></i></a>
+                        </div>
+                    </nav>
                     <h2>{this.props.titre}</h2>
                     <h3>{this.props.date} {this.props.lieu ? "- " + this.props.lieu :null}</h3>
                     <p>Auteur·e : {this.props.auteur}</p>

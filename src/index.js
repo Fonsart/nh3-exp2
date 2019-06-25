@@ -6,6 +6,7 @@ import Game from "./components/Game/Game";
 import About from "./components/About/About";
 import Home from "./components/HomePage/Home" ;
 import Selfie from "./components/Game/Selfie" ;
+import ImageDescription from "./components/Game/ImageDescription/ImageDescription" ;
 import registerServiceWorker from "./registerServiceWorker";
 
 export default class App extends Component {
@@ -23,6 +24,7 @@ export default class App extends Component {
         <Route exact path={'/about'} component={About} />
         <Route exact path={'/game'} component={Game} />
         <Route exact path={'/selfie'} component={Selfie} />
+        <Route exact path={'/image'} component={ImageDescription} />
       </div>
     </Router>
     );
