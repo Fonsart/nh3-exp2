@@ -53,7 +53,7 @@ class ImageDescription extends Component {
             <CSSTransition in={(this.state.mounted)} timeout={500} classNames="desc-node" unmountOnExit>
                 <div className='image-description'>
                     <div className="image">
-                        <img src='https://localhost:3001/raw-images/uvjzTcpQnxVj1M2KAMGj8SdHTYqZE7bJg4RzkKy6.jpeg' width={777} height={1146}/>,
+                        <img src={`https://lab.notrehistoire.ch/exp2/api/raw-images/${this.props.location.state.imageName}`} width={777} height={1146}/>,
                     </div>
                     <div className="description"
                         ref={ (divElement) => this.divElement = divElement}
