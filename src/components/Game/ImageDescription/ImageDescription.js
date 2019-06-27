@@ -64,10 +64,10 @@ class ImageDescription extends Component {
                     >
                         <nav className="mainNav">
                             <div className="btn_back navbar-left">
-                                <a onClick={() => props.history.push('/selfie')} className="btn btn__secondary"><i className="fas fa-chevron-left"></i></a>
+                                <a onClick={() => this.props.history.goBack()} className="btn btn__secondary"><i className="fas fa-chevron-left"></i></a>
                             </div>
                             <div className="navbar-right">
-                                <a onClick={() => props.history.push('/selfie')} id="openCamera" className="btn btn__secondary"><i className="fas fa-camera"></i></a>
+                                <a onClick={() => this.props.history.push('/selfie')} id="openCamera" className="btn btn__secondary"><i className="fas fa-camera"></i></a>
                             </div>
                         </nav>
                         <div className='info'>
