@@ -35,16 +35,20 @@ class ImageDescription extends Component {
     }
 
     async getImageDescription(imageName){
-        const response = await fetch(`https://localhost:3001/images-info/${imageName}`);
-        const responseJson = await response.json();
-        const info = responseJson.info;
-        this.setState({
-            title: info.titre,
-            date: `${info.date.day}/${info.date.month}/${info.date.year}`,
-            location: info.location,
-            author: info.author,
-            id: info.id
-        })
+        try {
+            const response = await fetch(`https://lab.notrehistoire.ch/exp2/api/images-info/${imageName}`);
+            const responseJson = await response.json();
+            const info = responseJson.info;
+            this.setState({
+                title: info.titre,
+                date: `${info.date.day}/${info.date.month}/${info.date.year}`,
+                location: info.location,
+                author: info.author,
+                id: info.id
+            })
+        } catch (err) {
+            console.log(err)
+        }
     }
 
     render() {

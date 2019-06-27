@@ -25,7 +25,7 @@ function Game (props) {
   const nbTiles = props.location.state.nbTiles;
   const tileWidth = (w/(nbTiles*nbTiles))*props.location.state.tilesWidth
   coord.forEach((item,index) => {
-    rectangles.push(<Rectangle key={index} color="transparent" bounds={[[(nbTiles-item.x)*tileWidth,(item.y)*tileWidth],[((nbTiles-item.x)-1)*tileWidth,((item.y)+1)*tileWidth]]} onClick={(e) => props.history.push('/image',{imageName:'jjvRYfdGZzZfYEBldur7c3iuTFWD1ZADRyOp5NIn'})}/>)
+    rectangles.push(<Rectangle key={index} color="transparent" bounds={[[(nbTiles-item.x)*tileWidth,(item.y)*tileWidth],[((nbTiles-item.x)-1)*tileWidth,((item.y)+1)*tileWidth]]} onClick={(e) => {console.log(item.thumbRef); props.history.push('/image',{imageName:'uvjzTcpQnxVj1M2KAMGj8SdHTYqZE7bJg4RzkKy6.jpeg'})}}/>)
   })
   return (
     <div className="game">
