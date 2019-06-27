@@ -10,13 +10,18 @@ class ImageDescription extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            mounted: false
+            title: '',
+            date: '',
+            location: '',
+            author: '',
+            id: ''
         }
         this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
     }
 
     componentWillMount() {
         this.updateWindowDimensions();
+        this.getImageDescription(this.props.location.state.imageName)
     }
 
     updateWindowDimensions() {
@@ -27,6 +32,19 @@ class ImageDescription extends Component {
         this.setState({ mounted: true });
         const height = this.divElement;
         console.log(height)
+    }
+
+    async getImageDescription(imageName){
+        const response = await fetch(`https://localhost:3001/images-info/${imageName}`);
+        const responseJson = await response.json();
+        const info = responseJson.info;
+        this.setState({
+            title: info.titre,
+            date: `${info.date.day}/${info.date.month}/${info.date.year}`,
+            location: info.location,
+            author: info.author,
+            id: info.id
+        })
     }
 
     render() {
@@ -48,10 +66,12 @@ class ImageDescription extends Component {
                                 <a onClick={() => props.history.push('/selfie')} id="openCamera" className="btn btn__secondary"><i className="fas fa-camera"></i></a>
                             </div>
                         </nav>
-                        <h2>{this.props.titre}</h2>
-                        <h3>{this.props.date} {this.props.lieu ? "- " + this.props.lieu :null}</h3>
-                        <p>Auteur·e : {this.props.auteur}</p>
-                        <a href={"https://www.notrehistoire.ch/medias/" + this.props.id} target="_blank">Voir sur notreHistoire.ch</a>
+                        <div className='info'>
+                            <h2>{this.state.title}</h2>
+                            <h3>{this.state.date} {this.state.location != '' ? "- " + this.state.location :null}</h3>
+                            <p>Auteur·e : {this.state.author}</p>
+                            <a href={"https://www.notrehistoire.ch/medias/" + this.props.id} target="_blank">Voir sur notreHistoire.ch</a>
+                        </div>
                     </div>
                 </div>
             </CSSTransition>

@@ -19,6 +19,15 @@
     background: #000;
 }
 
+.description .info {
+    display: flex;
+    flex-direction: column;
+    width: 100% ;
+    padding-left: 8px;
+    padding-bottom: 8px;
+    align-items: flex-start;
+}
+
 .description h2 {
     font-size:0.875rem;
 }
