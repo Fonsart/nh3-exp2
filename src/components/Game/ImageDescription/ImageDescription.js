@@ -3,6 +3,7 @@
 import React, { Component } from "react";
 import { CSSTransition } from "react-transition-group";
 import './ImageDescription.css';
+import Div100vh from 'react-div-100vh'
 
 class ImageDescription extends Component {
 
@@ -58,30 +59,33 @@ class ImageDescription extends Component {
     render() {
 
         return (
+            
             <CSSTransition in={(this.state.mounted)} timeout={500} classNames="desc-node" unmountOnExit>
-                <div className='image-description'>
-                    <div className="image">
-                        <img src={`https://lab.notrehistoire.ch/exp2/api/raw-images/${this.props.location.state.imageName}`} width={this.state.width} height={this.state.height}/>,
-                    </div>
-                    <div className="description"
-                        ref={ (divElement) => this.divElement = divElement}
-                    >
-                        <nav className="mainNav">
-                            <div className="btn_back navbar-left">
-                                <a onClick={() => this.props.history.goBack()} className="btn btn__secondary"><i className="fas fa-chevron-left"></i></a>
+                <Div100vh>
+                    <div className='image-description'>
+                        <div className="image">
+                            <img src={`https://lab.notrehistoire.ch/exp2/api/raw-images/${this.props.location.state.imageName}`} width={this.state.width} height={this.state.height}/>,
+                        </div>
+                        <div className="description"
+                            ref={ (divElement) => this.divElement = divElement}
+                        >
+                            <nav className="mainNav">
+                                <div className="btn_back navbar-left">
+                                    <a onClick={() => this.props.history.goBack()} className="btn btn__secondary"><i className="fas fa-chevron-left"></i></a>
+                                </div>
+                                <div className="navbar-right">
+                                    <a onClick={() => this.props.history.push('/selfie')} id="openCamera" className="btn btn__secondary"><i className="fas fa-camera"></i></a>
+                                </div>
+                            </nav>
+                            <div className='info'>
+                                <h2>{this.state.title}</h2>
+                                <h3>{this.state.date} {this.state.location != '' ? "- " + this.state.location :null}</h3>
+                                <p>Auteur·e : {this.state.author}</p>
+                                <a href={"https://www.notrehistoire.ch/medias/" + this.state.id} target="_blank">Voir sur notreHistoire.ch</a>
                             </div>
-                            <div className="navbar-right">
-                                <a onClick={() => this.props.history.push('/selfie')} id="openCamera" className="btn btn__secondary"><i className="fas fa-camera"></i></a>
-                            </div>
-                        </nav>
-                        <div className='info'>
-                            <h2>{this.state.title}</h2>
-                            <h3>{this.state.date} {this.state.location != '' ? "- " + this.state.location :null}</h3>
-                            <p>Auteur·e : {this.state.author}</p>
-                            <a href={"https://www.notrehistoire.ch/medias/" + this.state.id} target="_blank">Voir sur notreHistoire.ch</a>
                         </div>
                     </div>
-                </div>
+                </Div100vh>
             </CSSTransition>
         )
     }
