@@ -14,7 +14,9 @@ class ImageDescription extends Component {
             date: '',
             location: '',
             author: '',
-            id: ''
+            id: '',
+            width:0,
+            height:0
         }
         this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
     }
@@ -44,7 +46,9 @@ class ImageDescription extends Component {
                 date: `${info.date.day}/${info.date.month}/${info.date.year}`,
                 location: info.location,
                 author: info.author,
-                id: info.id
+                id: info.id,
+                width: info.media.width > this.state.width ? this.state.width : info.media.width,
+                height: info.media.height/(info.media.width/this.state.width)
             })
         } catch (err) {
             console.log(err)
@@ -57,7 +61,7 @@ class ImageDescription extends Component {
             <CSSTransition in={(this.state.mounted)} timeout={500} classNames="desc-node" unmountOnExit>
                 <div className='image-description'>
                     <div className="image">
-                        <img src={`https://lab.notrehistoire.ch/exp2/api/raw-images/${this.props.location.state.imageName}`} width={777} height={1146}/>,
+                        <img src={`https://lab.notrehistoire.ch/exp2/api/raw-images/${this.props.location.state.imageName}`} width={this.state.width} height={this.state.height}/>,
                     </div>
                     <div className="description"
                         ref={ (divElement) => this.divElement = divElement}
@@ -74,7 +78,7 @@ class ImageDescription extends Component {
                             <h2>{this.state.title}</h2>
                             <h3>{this.state.date} {this.state.location != '' ? "- " + this.state.location :null}</h3>
                             <p>Auteur·e : {this.state.author}</p>
-                            <a href={"https://www.notrehistoire.ch/medias/" + this.props.id} target="_blank">Voir sur notreHistoire.ch</a>
+                            <a href={"https://www.notrehistoire.ch/medias/" + this.state.id} target="_blank">Voir sur notreHistoire.ch</a>
                         </div>
                     </div>
                 </div>
