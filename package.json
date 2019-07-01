@@ -23,9 +23,11 @@
     "react-router-dom": "^5.0.0",
     "react-scripts": "^2.1.8",
     "react-spinners": "^0.5.4",
+    "react-spinners-kit": "^1.9.0",
     "react-transition-group": "^4.0.0",
     "react-webcam": "^1.1.1",
-    "serve": "^11.0.0"
+    "serve": "^11.0.0",
+    "styled-components": "^4.3.2"
   },
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "^7.4.0",

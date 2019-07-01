@@ -11,6 +11,7 @@ import {
   isIOS
 } from "react-device-detect";
 import Image from 'image-js';
+import { FlagSpinner } from "react-spinners-kit";
 
 const validBrowser = !(isIOS && isFirefox || isIOS && isChrome);
 
@@ -98,10 +99,21 @@ class Selfie extends Component {
                 <WebcamCapture width={this.state.width} takeSelfie={this.takeSelfie} />
               </div>
               ):(!this.state.selfieProcessing && this.state.loadingMosaic ? (
-                [<p key='dsadas'>Loading...2</p>,
+                [<div className="spinner">
+                  <FlagSpinner
+                      size={60}
+                      color="#145185"
+                      loading={this.state.loadingMosaic}
+                  /></div>,
                 <img key='fidjfsij' src={this.state.mosaicFileUrl} onLoad={() => this.goToGame()} style={{display:'none'}}/>]
               ):(
-                <p>Loading...1</p>
+                <div className="spinner">
+                  <FlagSpinner
+                    size={60}
+                    color="#145185"
+                    loading={this.state.loadingMosaic}
+                  />
+                </div>
               )
             )
           ):(
