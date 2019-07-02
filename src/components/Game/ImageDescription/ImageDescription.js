@@ -4,6 +4,7 @@ import React, { Component } from "react";
 import { CSSTransition } from "react-transition-group";
 import './ImageDescription.css';
 import Div100vh from 'react-div-100vh'
+import moment from 'moment'
 
 class ImageDescription extends Component {
 
@@ -38,13 +39,14 @@ class ImageDescription extends Component {
     }
 
     async getImageDescription(imageName){
+
         try {
             const response = await fetch(`https://lab.notrehistoire.ch/exp2/api/images-info/${imageName}`);
             const responseJson = await response.json();
             const info = responseJson.info;
             this.setState({
                 title: info.titre,
-                date: `${info.date.day}/${info.date.month}/${info.date.year}`,
+                date: info.date.day != null ? moment(`${info.date.year}/${info.date.month}/${info.date.day}`,'YYYY/MM/DD').format('DD/MM/YYYY') : info.date.year ? `${info.date.year}` : '',
                 location: info.location,
                 author: info.author,
                 id: info.id,
@@ -79,7 +81,7 @@ class ImageDescription extends Component {
                             </nav>
                             <div className='info'>
                                 <h2>{this.state.title}</h2>
-                                <h3>{this.state.date} {this.state.location != '' ? "- " + this.state.location :null}</h3>
+                                <h3>{this.state.date} {this.state.location != null && this.state.date != '' ? ' - '+this.state.location : this.state.location != null ? this.state.location : ''}</h3>
                                 <p>Auteur·e : {this.state.author}</p>
                                 <a href={"https://www.notrehistoire.ch/medias/" + this.state.id} target="_blank">Voir sur notreHistoire.ch</a>
                             </div>
