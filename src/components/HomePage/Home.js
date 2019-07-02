@@ -5,6 +5,7 @@ import {
     isFirefox,
     isChrome,
     isIOS,
+    isMobile,
     browserName,
     osName
 } from "react-device-detect";
@@ -12,15 +13,6 @@ import {
 
 class Home extends Component {
 
-    constructor(props) {
-        //eslint-disable-next-line
-        const validBrowser = !((isIOS && isFirefox) || (isIOS && isChrome));
-
-        super(props);
-        this.state = {
-            validBrowser: validBrowser
-        }
-    }
     render() {
         return (
             <div className="fullBG blue-bg flex flex-col" id="home" >
@@ -28,7 +20,7 @@ class Home extends Component {
                     <h1>PixPlorer</h1>
                 </header>
 
-                {this.state.validBrowser ? (
+                {!((isIOS && isFirefox) || (isIOS && isChrome)) && isMobile ? (
                     <div>
                         <aside className="flex mt-auto justify-center relative">
                             <p>Commencer</p>
@@ -37,7 +29,11 @@ class Home extends Component {
                             <p><Link to={`/selfie/`} className="btn btn__primary"><i className="fas fa-camera"></i></Link></p>
                         </aside>
                     </div>
-                ) : (
+                ) : !isMobile ? (<div>
+                                    <aside className="flex mt-auto justify-center relative">
+                                        <p>Cette webapp est destinée aux smartphones</p>
+                                    </aside>
+                                </div>) : (
                         <div>
                             <aside className="flex mt-auto justify-center relative">
                                 <p>Oups ! Il semblerait que vous utilisiez le navigateur {browserName} avec votre smartphone {osName}</p>
