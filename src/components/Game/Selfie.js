@@ -12,6 +12,9 @@ import {
 } from "react-device-detect";
 import Image from 'image-js';
 import { FlagSpinner } from "react-spinners-kit";
+import anime from 'animejs';
+import Anime from 'react-anime';
+
 
 const validBrowser = !(isIOS && isFirefox || isIOS && isChrome);
 
@@ -20,8 +23,8 @@ class Selfie extends Component {
     super(props);
 
     this.state = {
-      selfieProcessing:false,
-      loadingMosaic:false,
+      selfieProcessing:true,
+      loadingMosaic:true,
       mosaicFileUrl: '',
       coor: [],
       tilesWidth: 0,
@@ -57,14 +60,14 @@ class Selfie extends Component {
         const file = new File([blob], `${filename}.jpg`);
         fd.append('selfie', file)
         // After conversion we can upload blob file to server
-        fetch('https://lab.notrehistoire.ch/exp2/api/upload', {method: 'POST', body: fd})
+        fetch('https://localhost:3001/upload', {method: 'POST', body: fd})
           .then(res => res.json()) 
           .then(async(res) => {
             this.setState({selfieProcessing:false});
             // Image processed (mosaic) has the same name as the image uploaded (selfie)
             if(res.upload){
               // Download image
-              const mosaicFileUrl = `https://lab.notrehistoire.ch/exp2/api/outputs/${filename}.jpg`
+              const mosaicFileUrl = `https://localhost:3001/outputs/${filename}.jpg`
               // let image = await Image.load(mosaicFileUrl);
               this.setState({mosaicFileUrl:mosaicFileUrl,coord:res.coord,tilesWidth:res.tilesWidth,nbTiles:res.nbTiles});
               // Once the server image processing (mosaic building) is finished and the image returned is laoded
@@ -85,6 +88,12 @@ class Selfie extends Component {
 
   render() {
 
+    const gridElement = <div style={{width:'5px',height:'5px',backgroundColor:'red',marginRight:'1px',marginLeft:'1px'}}></div>
+    const gridElements = []
+    for (var i = 0; i < 20; i++) {
+      gridElements.push(gridElement)
+    }
+
     return (
 
       <div className="game">
@@ -100,19 +109,16 @@ class Selfie extends Component {
               </div>
               ):(!this.state.selfieProcessing && this.state.loadingMosaic ? (
                 [<div className="spinner">
-                  <FlagSpinner
-                      size={60}
-                      color="#145185"
-                      loading={this.state.loadingMosaic}
-                  /></div>,
+                  {gridElements}</div>,
                 <img key='fidjfsij' src={this.state.mosaicFileUrl} onLoad={() => this.goToGame()} style={{display:'none'}}/>]
               ):(
                 <div className="spinner">
-                  <FlagSpinner
-                    size={60}
-                    color="#145185"
-                    loading={this.state.loadingMosaic}
-                  />
+                  <Anime
+                    loop={true}
+                    delay={anime.stagger(200, {grid: [19, 1], from: 'center'})}
+                    scale={[{value: .1, easing: 'easeOutSine', duration: 500},{value: 1, easing: 'easeInOutQuad', duration: 1200}]}>
+                    {gridElements}
+                  </Anime>
                 </div>
               )
             )

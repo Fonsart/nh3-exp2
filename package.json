@@ -9,11 +9,13 @@
     "node": "^12.2.0"
   },
   "dependencies": {
+    "animejs": "^3.0.1",
     "image-js": "^0.21.6",
     "leaflet": "^1.5.1",
     "moment": "^2.24.0",
     "prop-types": "^15.7.2",
     "react": "16.8.0",
+    "react-anime": "^2.2.0",
     "react-device-detect": "^1.6.2",
     "react-div-100vh": "^0.3.4",
     "react-dom": "16.8.0",
