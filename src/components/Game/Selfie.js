@@ -88,9 +88,13 @@ class Selfie extends Component {
 
   render() {
 
-    const gridElement = <div style={{width:'5px',height:'5px',backgroundColor:'red',marginRight:'1px',marginLeft:'1px'}}></div>
-    const gridElements = []
-    for (var i = 0; i < 20; i++) {
+    const gridElementWidth = 20;
+    const gridElementMargin = 1;
+    const gridElement = <div style={{width:`${gridElementWidth}px`,height:`${gridElementWidth}px`,backgroundColor:'#145185',marginRight:`${gridElementMargin}px`,marginLeft:`${gridElementMargin}px`, marginBottom:`${gridElementMargin*2}px`}}></div>;
+    const gridElements = [];
+    const gridElementsCols = Math.floor(this.state.width/(gridElementWidth+gridElementMargin*2))
+    const gridElementsRows = 5;
+    for (var i = 0; i < gridElementsCols*gridElementsRows; i++) {
       gridElements.push(gridElement)
     }
 
@@ -113,12 +117,14 @@ class Selfie extends Component {
                 <img key='fidjfsij' src={this.state.mosaicFileUrl} onLoad={() => this.goToGame()} style={{display:'none'}}/>]
               ):(
                 <div className="spinner">
+                  <div className="gridElements">
                   <Anime
                     loop={true}
-                    delay={anime.stagger(200, {grid: [19, 1], from: 'center'})}
+                    delay={anime.stagger(200, {grid: [gridElementsCols, gridElementsRows], from: 'center'})}
                     scale={[{value: .1, easing: 'easeOutSine', duration: 500},{value: 1, easing: 'easeInOutQuad', duration: 1200}]}>
-                    {gridElements}
+                  {gridElements}
                   </Anime>
+                  </div>
                 </div>
               )
             )

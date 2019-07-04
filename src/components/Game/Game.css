@@ -66,3 +66,9 @@
     align-items: center; 
     justify-content: center;
 }
+
+.gridElements{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
