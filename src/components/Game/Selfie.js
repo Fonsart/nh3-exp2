@@ -23,8 +23,8 @@ class Selfie extends Component {
     super(props);
 
     this.state = {
-      selfieProcessing:true,
-      loadingMosaic:true,
+      selfieProcessing:false,
+      loadingMosaic:false,
       mosaicFileUrl: '',
       coor: [],
       tilesWidth: 0,
@@ -113,17 +113,20 @@ class Selfie extends Component {
               </div>
               ):(!this.state.selfieProcessing && this.state.loadingMosaic ? (
                 [<div className="spinner">
-                  {gridElements}</div>,
+                    <div className="gridElements">
+                      {gridElements}
+                    </div>
+                  </div>,
                 <img key='fidjfsij' src={this.state.mosaicFileUrl} onLoad={() => this.goToGame()} style={{display:'none'}}/>]
               ):(
                 <div className="spinner">
                   <div className="gridElements">
-                  <Anime
-                    loop={true}
-                    delay={anime.stagger(200, {grid: [gridElementsCols, gridElementsRows], from: 'center'})}
-                    scale={[{value: .1, easing: 'easeOutSine', duration: 500},{value: 1, easing: 'easeInOutQuad', duration: 1200}]}>
-                  {gridElements}
-                  </Anime>
+                    <Anime
+                      loop={true}
+                      delay={anime.stagger(200, {grid: [gridElementsCols, gridElementsRows], from: 'center'})}
+                      scale={[{value: .1, easing: 'easeOutSine', duration: 500},{value: 1, easing: 'easeInOutQuad', duration: 1200}]}>
+                    {gridElements}
+                    </Anime>
                   </div>
                 </div>
               )
