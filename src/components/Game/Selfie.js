@@ -14,6 +14,7 @@ import Image from 'image-js';
 import { FlagSpinner } from "react-spinners-kit";
 import anime from 'animejs';
 import Anime from 'react-anime';
+import loadingInfoWords from '../../data/loadingInfoWords.js'
 
 
 const validBrowser = !(isIOS && isFirefox || isIOS && isChrome);
@@ -29,6 +30,7 @@ class Selfie extends Component {
       coor: [],
       tilesWidth: 0,
       nbTiles: 0,
+      loadingInfoWordsIndex: 0,
       selfiePaddingTop: 0 // This state is used to keep the same padding top for the game as the selfie... Maybe it's useless...
     };
 
@@ -36,11 +38,11 @@ class Selfie extends Component {
   }
 
   componentWillMount() {
-      this.updateWindowDimensions();
+    this.updateWindowDimensions();
   }
 
   updateWindowDimensions() {
-      this.setState({ width: window.innerWidth, height: window.innerHeight });
+    this.setState({ width: window.innerWidth, height: window.innerHeight });
   }
 
 
@@ -116,17 +118,19 @@ class Selfie extends Component {
                     <div className="gridElements">
                       {gridElements}
                     </div>
+                    <p className="loadingInfo">Livraison...</p>
                   </div>,
                 <img key='fidjfsij' src={this.state.mosaicFileUrl} onLoad={() => this.goToGame()} style={{display:'none'}}/>]
               ):(
                 <div className="spinner">
                   <div className="gridElements">
-                    <Anime
+                    <Anime key={11+Date.now()}
                       loop={true}
                       delay={anime.stagger(200, {grid: [gridElementsCols, gridElementsRows], from: 'center'})}
                       scale={[{value: .1, easing: 'easeOutSine', duration: 500},{value: 1, easing: 'easeInOutQuad', duration: 1200}]}>
                     {gridElements}
                     </Anime>
+                    <TextLoading/>
                   </div>
                 </div>
               )
@@ -135,6 +139,50 @@ class Selfie extends Component {
             <p>Redirect to home?</p>
         )}
       </div>
+    );
+  }
+}
+
+class TextLoading extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      loadingInfoWordsIndex: 0,
+      loadingProgress:'.'
+    };
+
+  }
+
+  componentWillUnmount(){
+    clearInterval(this.interval);
+  }
+
+  componentDidMount() {
+    this.handleLoadingProgress();
+    this.interval = setInterval(() => {
+      this.setState({loadingProgress: '.'});
+      this.handleLoadingProgress();
+      let randomIndex = (Math.floor(Math.random() * (loadingInfoWords.length-1))) + 1;
+      if(randomIndex === this.state.loadingInfoWordsIndex){
+        randomIndex === loadingInfoWords.length-1 ? randomIndex-- : randomIndex++;
+      };
+      this.setState({loadingInfoWordsIndex: randomIndex});
+    }, 3000);
+  }
+
+  handleLoadingProgress() {
+    setTimeout(() => {
+      this.setState({loadingProgress: `${this.state.loadingProgress}.`})
+    },1000)
+    setTimeout(() => {
+      this.setState({loadingProgress: `${this.state.loadingProgress}.`})
+    },2000)
+  }
+
+  render() {
+    return (
+      <p className="loadingInfo">{loadingInfoWords[this.state.loadingInfoWordsIndex]}{this.state.loadingProgress}</p>
     );
   }
 }

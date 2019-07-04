@@ -65,10 +65,16 @@
     height: 100%;
     align-items: center; 
     justify-content: center;
+    flex-direction: column;
 }
 
 .gridElements{
     display:flex;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+.loadingInfo{
+    font-size: 1.1em;
+    text-align: center;
 }
