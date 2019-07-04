@@ -42,7 +42,7 @@ function Game (props) {
         )}
       </nav>
       <div style={{marginTop:`${props.location.state.paddingTop}px`}}>
-        <Map onZoom={(e) => console.log(e)} crs={L.CRS.Simple} boundsOptions={[[0,0], [w,h]]} maxZoom={4} attributionControl={false} bounds={zoomLevel} maxBounds={[[0,0], [w,h]]} maxBoundsViscosity={1.0} style={{width: `${w}px`, height:`${w}px`}}>
+        <Map onZoom={(e) => console.log(e)} crs={L.CRS.Simple} boundsOptions={[[0,0], [w,h]]} maxZoom={4} zoomControl={false} attributionControl={false} bounds={zoomLevel} maxBounds={[[0,0], [w,h]]} maxBoundsViscosity={1.0} style={{width: `${w}px`, height:`${w}px`}}>
           <ImageOverlay
             url={props.location.state.mosaicFileUrl}
             bounds={[[0,0], [w,h]]}
