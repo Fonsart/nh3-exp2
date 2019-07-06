@@ -1,6 +1,7 @@
 /* eslint-disable */
 
 import React, { Component } from "react";
+import { withRouter } from "react-router-dom";
 import { CSSTransition } from "react-transition-group";
 import './ImageDescription.css';
 import Div100vh from 'react-div-100vh'
@@ -62,7 +63,7 @@ class ImageDescription extends Component {
 
         return (
             
-            <CSSTransition in={(this.state.mounted)} timeout={500} classNames="desc-node" unmountOnExit>
+            
                 <Div100vh>
                     <div className='image-description'>
                         <div className="image">
@@ -88,10 +89,10 @@ class ImageDescription extends Component {
                         </div>
                     </div>
                 </Div100vh>
-            </CSSTransition>
+            
         )
     }
 
 }
 
-export default ImageDescription;
+export default withRouter(ImageDescription);

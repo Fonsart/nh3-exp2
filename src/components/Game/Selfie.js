@@ -15,6 +15,7 @@ import { FlagSpinner } from "react-spinners-kit";
 import anime from 'animejs';
 import Anime from 'react-anime';
 import loadingInfoWords from '../../data/loadingInfoWords.js'
+import { CSSTransition } from 'react-transition-group';
 
 
 const validBrowser = !(isIOS && isFirefox || isIOS && isChrome);
@@ -30,6 +31,7 @@ class Selfie extends Component {
       coor: [],
       tilesWidth: 0,
       nbTiles: 0,
+      loadingFinished: false,
       loadingInfoWordsIndex: 0,
       selfiePaddingTop: 0 // This state is used to keep the same padding top for the game as the selfie... Maybe it's useless...
     };
@@ -71,6 +73,7 @@ class Selfie extends Component {
               // Download image
               const mosaicFileUrl = `https://localhost:3001/outputs/${filename}.jpg`
               // let image = await Image.load(mosaicFileUrl);
+              console.log(res.coord)
               this.setState({mosaicFileUrl:mosaicFileUrl,coord:res.coord,tilesWidth:res.tilesWidth,nbTiles:res.nbTiles});
               // Once the server image processing (mosaic building) is finished and the image returned is laoded
               // we can go to the game
@@ -84,8 +87,8 @@ class Selfie extends Component {
   }
 
   goToGame = () => {
-    this.setState({loadingMosaic:false});
-    this.props.history.push('/game',{ mosaicFileUrl: this.state.mosaicFileUrl, coord: this.state.coord, tilesWidth: this.state.tilesWidth, nbTiles: this.state.nbTiles, paddingTop: this.state.selfiePaddingTop })
+    console.log('goToGame')
+    this.setState({loadingFinished:true});
   }
 
   render() {
@@ -101,7 +104,6 @@ class Selfie extends Component {
     }
 
     return (
-
       <div className="game">
         {validBrowser ? (
             !this.state.selfieProcessing && !this.state.loadingMosaic ? (
@@ -114,12 +116,12 @@ class Selfie extends Component {
                 <WebcamCapture width={this.state.width} takeSelfie={this.takeSelfie} />
               </div>
               ):(!this.state.selfieProcessing && this.state.loadingMosaic ? (
-                [<div className="spinner">
+                [<CSSTransition in={!this.state.loadingFinished} enter={false} onExited={() => this.props.history.push('/game',{ mosaicFileUrl: this.state.mosaicFileUrl, coord: this.state.coord, tilesWidth: this.state.tilesWidth, nbTiles: this.state.nbTiles, paddingTop: this.state.selfiePaddingTop })} timeout={500} classNames="spinner-wrapper"><div className="spinner">
                     <div className="gridElements">
                       {gridElements}
                     </div>
                     <p className="loadingInfo">Livraison...</p>
-                  </div>,
+                  </div></CSSTransition>,
                 <img key='fidjfsij' src={this.state.mosaicFileUrl} onLoad={() => this.goToGame()} style={{display:'none'}}/>]
               ):(
                 <div className="spinner">
