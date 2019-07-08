@@ -120,7 +120,7 @@ class Selfie extends Component {
                     <div className="gridElements">
                       {gridElements}
                     </div>
-                    <p className="loadingInfo">Livraison...</p>
+                    <TextLoading word="Livraison"/>
                   </div></CSSTransition>,
                 <img key='img' src={this.state.mosaicFileUrl} onLoad={() => this.goToGame()} style={{display:'none'}}/>]
               ):(
@@ -157,11 +157,17 @@ class TextLoading extends Component {
   }
 
   componentWillUnmount(){
+    console.log('unmount')
+    console.log(this.timeOut1)
+    console.log(this.interval)
+    clearTimeout(this.timeOut1);
+    clearTimeout(this.timeOut2);
     clearInterval(this.interval);
   }
 
   componentDidMount() {
     this.handleLoadingProgress();
+    this.timeOut1,this.timeOut2;
     this.interval = setInterval(() => {
       this.setState({loadingProgress: '.'});
       this.handleLoadingProgress();
@@ -174,17 +180,21 @@ class TextLoading extends Component {
   }
 
   handleLoadingProgress() {
-    setTimeout(() => {
+    this.timeOut1 = setTimeout(() => {
       this.setState({loadingProgress: `${this.state.loadingProgress}.`})
-    },1000)
-    setTimeout(() => {
+    },1000);
+    this.timeOut2 = setTimeout(() => {
       this.setState({loadingProgress: `${this.state.loadingProgress}.`})
-    },2000)
+    },2000);
   }
 
   render() {
+    let word = loadingInfoWords[this.state.loadingInfoWordsIndex]
+    if(this.props.word){
+      word = this.props.word
+    }
     return (
-      <p className="loadingInfo">{loadingInfoWords[this.state.loadingInfoWordsIndex]}{this.state.loadingProgress}</p>
+      <p className="loadingInfo">{word}{this.state.loadingProgress}</p>
     );
   }
 }
