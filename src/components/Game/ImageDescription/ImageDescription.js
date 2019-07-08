@@ -47,9 +47,9 @@ class ImageDescription extends Component {
             const info = responseJson.info;
             this.setState({
                 title: info.titre,
-                date: info.date.day != null ? moment(`${info.date.year}/${info.date.month}/${info.date.day}`,'YYYY/MM/DD').format('DD/MM/YYYY') : info.date.year ? `${info.date.year}` : '',
+                date: info.date.year,
                 location: info.location,
-                author: info.author,
+                author: info.author != null ? info.author : '-',
                 id: info.id,
                 width: info.media.width > this.state.width ? this.state.width : info.media.width,
                 height: info.media.height/(info.media.width/this.state.width)
