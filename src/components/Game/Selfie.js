@@ -109,8 +109,8 @@ class Selfie extends Component {
             !this.state.selfieProcessing && !this.state.loadingMosaic ? (
               <div className="selfie">
                 <nav className="mainNav">
-                  <div className="btn_back navbar-left">
-                    <a onClick={() => this.props.history.push('/')} className="btn btn__secondary"><i className="fas fa-chevron-left"></i></a>
+                  <div className="navbar-left">
+                    <a onClick={() => this.props.history.push('/')} className="navbar-left_link-text">Accueil</a>
                   </div>
                 </nav>
                 <WebcamCapture width={this.state.width} takeSelfie={this.takeSelfie} />

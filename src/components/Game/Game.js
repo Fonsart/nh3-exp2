@@ -48,8 +48,8 @@ function Game (props) {
     <div className="game">
     
       <nav className="mainNav">
-        <div className="btn_back navbar-left">
-          <a onClick={() => props.history.push('/selfie')} className="btn btn__secondary"><i className="fas fa-chevron-left"></i></a>
+        <div className="navbar-left">
+          <a onClick={() => props.history.push('/selfie')} className="navbar-left_link-text">Accueil</a>
         </div>
         {!validBrowser ? "" : (
           <div className="navbar-right">

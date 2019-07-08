@@ -163,6 +163,10 @@ a {
     float: left;
 }
 
+.navbar-left_link-text{
+    font-size: 1.2em;
+}
+
 *, ::after, ::before {
     box-sizing: inherit;
 }
