@@ -151,7 +151,8 @@ class TextLoading extends Component {
 
     this.state = {
       loadingInfoWordsIndex: 0,
-      loadingProgress:'.'
+      loadingProgress:'.',
+      shuffleArray: []
     };
 
   }
@@ -166,16 +167,32 @@ class TextLoading extends Component {
   }
 
   componentDidMount() {
+    const sortByMapped = map => compareFn => (a,b) => compareFn(map(a),map(b));
+    const withRandom = (e) => ({ random: Math.random(), original: e });
+    const toOriginal = ({original}) => original;
+    const toRandom = ({random}) => random;
+    const byValue = (a,b) => a - b;
+    const byRandom = sortByMapped(toRandom)(byValue);
+    const shuffleArray = loadingInfoWords
+      .splice(1,loadingInfoWords.length)
+      .map(withRandom)
+      .sort(byRandom)
+      .map(toOriginal);
+
+    this.setState({shuffleArray: shuffleArray})
+
     this.handleLoadingProgress();
+    
     this.timeOut1,this.timeOut2;
+
     this.interval = setInterval(() => {
       this.setState({loadingProgress: '.'});
       this.handleLoadingProgress();
-      let randomIndex = (Math.floor(Math.random() * (loadingInfoWords.length-1))) + 1;
-      if(randomIndex === this.state.loadingInfoWordsIndex){
-        randomIndex === loadingInfoWords.length-1 ? randomIndex-- : randomIndex++;
-      };
-      this.setState({loadingInfoWordsIndex: randomIndex});
+      if(this.state.loadingInfoWordsIndex < this.state.shuffleArray.length){
+        this.setState({loadingInfoWordsIndex: this.state.loadingInfoWordsIndex+1});
+      }else{
+        this.setState({loadingInfoWordsIndex: 0});
+      }
     }, 3000);
   }
 
@@ -189,7 +206,7 @@ class TextLoading extends Component {
   }
 
   render() {
-    let word = loadingInfoWords[this.state.loadingInfoWordsIndex]
+    let word = this.state.loadingInfoWordsIndex == 0 ? loadingInfoWords[0] : this.state.shuffleArray[this.state.loadingInfoWordsIndex]
     if(this.props.word){
       word = this.props.word
     }
