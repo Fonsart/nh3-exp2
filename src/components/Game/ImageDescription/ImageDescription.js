@@ -66,20 +66,17 @@ class ImageDescription extends Component {
             
                 <Div100vh>
                     <div className='image-description'>
+                        <nav className="mainNav">
+                            <div className="navbar-left">
+                                <a onClick={() => this.props.history.goBack()} className="navbar-left_link-text">Retour</a>
+                            </div>
+                        </nav>
                         <div className="image">
                             <img src={`https://lab.notrehistoire.ch/exp2/api/raw-images/${this.props.location.state.imageName}`} width={this.state.width} height={this.state.height}/>,
                         </div>
                         <div className="description"
                             ref={ (divElement) => this.divElement = divElement}
                         >
-                            <nav className="mainNav">
-                                <div className="btn_back navbar-left">
-                                    <a onClick={() => this.props.history.goBack()} className="btn btn__secondary"><i className="fas fa-chevron-left"></i></a>
-                                </div>
-                                <div className="navbar-right">
-                                    <a onClick={() => this.props.history.push('/selfie')} id="openCamera" className="btn btn__secondary"><i className="fas fa-camera"></i></a>
-                                </div>
-                            </nav>
                             <div className='info'>
                                 <h2>{this.state.title}</h2>
                                 <h3>{this.state.date} {this.state.location != null && this.state.date != '' ? ' - '+this.state.location : this.state.location != null ? this.state.location : ''}</h3>
