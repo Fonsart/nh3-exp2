@@ -49,7 +49,7 @@ function Game (props) {
     
       <nav className="mainNav">
         <div className="navbar-left">
-          <a onClick={() => props.history.push('/selfie')} className="navbar-left_link-text">Accueil</a>
+          <a onClick={() => props.history.push('/')} className="navbar-left_link-text">Accueil</a>
         </div>
         {!validBrowser ? "" : (
           <div className="navbar-right">

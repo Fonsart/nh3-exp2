@@ -1,14 +1,21 @@
-
-#home footer {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-items: center;
+main {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
-
-#home footer :first-child {
-    justify-self: start;
+.home-header{
+  margin-top: 80px;
 }
-
-#home footer>* {
-    padding: 0.5rem;
+.home-header_title, .home-content_text{
+  font-size: 1.8rem;
+}
+.home-content_text{
+  font-size: 1.8rem;
+}
+.home-title{
+  margin-top: 40px;
+}
+.footer_link{
+  font-size: 1.2em;
+  text-decoration: none; 
 }
