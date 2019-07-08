@@ -25,8 +25,8 @@ class Selfie extends Component {
     super(props);
 
     this.state = {
-      selfieProcessing:true,
-      loadingMosaic:true,
+      selfieProcessing:false,
+      loadingMosaic:false,
       mosaicFileUrl: '',
       coor: [],
       tilesWidth: 0,
@@ -116,13 +116,13 @@ class Selfie extends Component {
                 <WebcamCapture width={this.state.width} takeSelfie={this.takeSelfie} />
               </div>
               ):(!this.state.selfieProcessing && this.state.loadingMosaic ? (
-                [<CSSTransition in={!this.state.loadingFinished} enter={false} onExited={() => this.props.history.push('/game',{ mosaicFileUrl: this.state.mosaicFileUrl, coord: this.state.coord, tilesWidth: this.state.tilesWidth, nbTiles: this.state.nbTiles, paddingTop: this.state.selfiePaddingTop })} timeout={500} classNames="spinner-wrapper"><div className="spinner">
+                [<CSSTransition key='CSSTransition' in={!this.state.loadingFinished} enter={false} onExited={() => this.props.history.push('/game',{ mosaicFileUrl: this.state.mosaicFileUrl, coord: this.state.coord, tilesWidth: this.state.tilesWidth, nbTiles: this.state.nbTiles, paddingTop: this.state.selfiePaddingTop })} timeout={500} classNames="spinner-wrapper"><div className="spinner">
                     <div className="gridElements">
                       {gridElements}
                     </div>
                     <p className="loadingInfo">Livraison...</p>
                   </div></CSSTransition>,
-                <img key='fidjfsij' src={this.state.mosaicFileUrl} onLoad={() => this.goToGame()} style={{display:'none'}}/>]
+                <img key='img' src={this.state.mosaicFileUrl} onLoad={() => this.goToGame()} style={{display:'none'}}/>]
               ):(
                 <div className="spinner">
                   <div className="gridElements">
