@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { render } from "react-dom";
 import "./styles.css";
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import { LastLocationProvider } from 'react-router-last-location';
 import Game from "./components/Game/Game";
 import About from "./components/About/About";
 import Home from "./components/HomePage/Home" ;
@@ -19,13 +20,15 @@ export default class App extends Component {
 
     return (
     <Router basename={basename}>
-      <div id="App">
-        <Route exact path={'/'} component={Home} />
-        <Route exact path={'/about'} component={About} />
-        <Route exact path={'/game'} component={Game} />
-        <Route exact path={'/selfie'} component={Selfie} />
-        <Route exact path={'/image'} component={ImageDescription} />
-      </div>
+      <LastLocationProvider>
+        <div id="App">
+          <Route exact path={'/'} component={Home} />
+          <Route exact path={'/about'} component={About} />
+          <Route exact path={'/game'} component={Game} />
+          <Route exact path={'/selfie'} component={Selfie} />
+          <Route exact path={'/image'} component={ImageDescription} />
+        </div>
+        </LastLocationProvider>
     </Router>
     );
   }
