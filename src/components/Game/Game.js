@@ -13,6 +13,24 @@ import useWindowDimensions from '../Utils/useWindowDimensions';
 import { Map, Rectangle, ImageOverlay } from 'react-leaflet'
 import L from 'leaflet'
 import { CSSTransition } from 'react-transition-group';
+import Modal from 'react-modal';
+
+const modalStyles = {
+  content : {
+    top: '50%',
+    left: 0,
+    right: 0,
+    bottom: 'auto',
+    marginRight: '-50%',
+    transform: 'translate(0, -50%)',
+    marginRight: '10px',
+    marginLeft: '10px'
+  },
+  overlay: {
+    zIndex: 99999,
+  }
+};
+
 
 function Game (props) {
 
@@ -23,14 +41,15 @@ function Game (props) {
   let h = w;
 
   const [showMapAnimation, setShowMapAnimation] = useState(false);
+  const [modalIsOpen, setModalIsOpen] = useState(false);
   const lastLocation = useLastLocation();
 
   
   let mapAnimationState = false;
   let mapZoomLevelState = [[0,0], [w,h]];
   if(lastLocation != null){
-    mapAnimationState = lastLocation.pathname == '/selfie' ? true : false;
-    mapZoomLevelState = lastLocation.pathname == '/selfie' ? [[w/2,h/2], [w/2,h/2]] : [[0,0], [w,h]];
+    mapAnimationState = lastLocation.pathname == '/selfie' || lastLocation.pathname == '/selfie/' ? true : false;
+    mapZoomLevelState = lastLocation.pathname == '/selfie' || lastLocation.pathname == '/selfie/' ? [[w/2,h/2], [w/2,h/2]] : [[0,0], [w,h]];
   }
   
   useEffect(() => setShowMapAnimation(mapAnimationState), []);
@@ -44,12 +63,17 @@ function Game (props) {
     rectangles.push(<Rectangle key={index} color="transparent" bounds={[[(nbTiles-item.x)*tileWidth,(item.y)*tileWidth],[((nbTiles-item.x)-1)*tileWidth,((item.y)+1)*tileWidth]]} onClick={(e) => {console.log(item.thumbRef);props.history.push('/image',{imageName:item.thumbRef})}}/>)
   })
   const [zoomLevel, setZoomLevel] = useState(mapZoomLevelState);
+
+  const closeModal = (goToHome) => {
+    goToHome ? props.history.push('/') : setModalIsOpen(false)
+  }
+
   return (
     <div className="game">
     
       <nav className="mainNav">
         <div className="navbar-left">
-          <a onClick={() => props.history.push('/')} className="navbar-left_link-text">Accueil</a>
+          <a onClick={() => setModalIsOpen(true)} className="navbar-left_link-text">Accueil</a>
         </div>
         {!validBrowser ? "" : (
           <div className="navbar-right">
@@ -74,9 +98,40 @@ function Game (props) {
           {rectangles}
         </Map>
         </CSSTransition>
-      </div></div>
+      </div>
+      <Modal
+          isOpen={modalIsOpen}
+          onRequestClose={() => closeModal(false)}
+          style={customStyles}
+          contentLabel="Example Modal"
+          ariaHideApp={false}
+        >
+        <article style={{color:'#333',fontSize:'1.2rem',marginBottom:'10px'}}>La mosaïque est éphémère, si vous retournez à l’accueil, elle sera supprimée</article>
+        <ModalButton text="Ok" handleClick={() => closeModal(true)} />
+        <ModalButton text="Rester ici" handleClick={() => closeModal(false)} />
+      </Modal>
+    </div>
 
   );
+}
+
+function ModalButton (props) {
+  
+  const buttonStyle = {
+    display:"inline-block",
+    padding:"0.35em 1.2em",
+    border:"0.1em solid #333",
+    margin:"0 0.3em 0.3em 0",
+    borderRadius:"0.12em",
+    boxSizing: "border-box",
+    textDecoration:"none",
+    fontWeight:300,
+    color:"#333",
+    textAlign:"center"
+  }
+  return(
+    <a style={buttonStyle} onClick={props.handleClick}>{props.text}</a>
+  )
 }
 
 export default withRouter(Game);

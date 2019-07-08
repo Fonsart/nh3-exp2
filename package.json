@@ -21,6 +21,7 @@
     "react-dom": "16.8.0",
     "react-leaflet": "^2.4.0",
     "react-load-image": "^0.1.7",
+    "react-modal": "^3.8.2",
     "react-responsive-modal": "^4.0.1",
     "react-router-dom": "^5.0.0",
     "react-router-last-location": "^2.0.1",
