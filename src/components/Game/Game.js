@@ -102,7 +102,7 @@ function Game (props) {
       <Modal
           isOpen={modalIsOpen}
           onRequestClose={() => closeModal(false)}
-          style={customStyles}
+          style={modalStyles}
           contentLabel="Example Modal"
           ariaHideApp={false}
         >
