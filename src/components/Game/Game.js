@@ -83,27 +83,30 @@ function Game (props) {
       </nav>
       <div style={{marginTop:`${props.location.state.paddingTop}px`}}>
         <CSSTransition in={showMapAnimation} timeout={1000} classNames="map-wrapper">
-        <Map crs={L.CRS.Simple} boundsOptions={[[0,0], [w,h]]} maxZoom={4} zoomControl={false} attributionControl={false} bounds={zoomLevel} maxBounds={[[0,0], [w,h]]} maxBoundsViscosity={1.0} style={{width: `${w}px`, height:`${w}px`}}>
-          <ImageOverlay
-            url={props.location.state.mosaicFileUrl}
-            bounds={[[0,0], [w,h]]}
-            onLoad={() => {
-              if(mapAnimationState){
-                setTimeout(() => {
-                  setZoomLevel([[0,0], [w,h]])
-                },1200)
-              }
-            }}
-          />
-          {rectangles}
-        </Map>
+          <Map crs={L.CRS.Simple} boundsOptions={[[0,0], [w,h]]} maxZoom={4} zoomControl={false} attributionControl={false} bounds={zoomLevel} maxBounds={[[0,0], [w,h]]} maxBoundsViscosity={1.0} style={{width: `${w}px`, height:`${w}px`}}>
+            <ImageOverlay
+              url={props.location.state.mosaicFileUrl}
+              bounds={[[0,0], [w,h]]}
+              onLoad={() => {
+                if(mapAnimationState){
+                  setTimeout(() => {
+                    setZoomLevel([[0,0], [w,h]])
+                  },1200)
+                }
+              }}
+            />
+            {rectangles}
+          </Map>
+        </CSSTransition>
+        <CSSTransition in={showMapAnimation} timeout={4000} classNames="map-howto" className="map-howto">
+          <p>Votre exploration peut commencer</p>
         </CSSTransition>
       </div>
       <Modal
           isOpen={modalIsOpen}
           onRequestClose={() => closeModal(false)}
           style={modalStyles}
-          contentLabel="Example Modal"
+          contentLabel="Leave Game Modal"
           ariaHideApp={false}
         >
         <article style={{color:'#333',fontSize:'1.2rem',marginBottom:'10px'}}>La mosaïque est éphémère, si vous retournez à l’accueil, elle sera supprimée</article>
@@ -116,7 +119,7 @@ function Game (props) {
 }
 
 function ModalButton (props) {
-  
+
   const buttonStyle = {
     display:"inline-block",
     padding:"0.35em 1.2em",
