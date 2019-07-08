@@ -25,8 +25,8 @@ class Selfie extends Component {
     super(props);
 
     this.state = {
-      selfieProcessing:false,
-      loadingMosaic:false,
+      selfieProcessing:true,
+      loadingMosaic:true,
       mosaicFileUrl: '',
       coor: [],
       tilesWidth: 0,
@@ -95,11 +95,11 @@ class Selfie extends Component {
 
     const gridElementWidth = 20;
     const gridElementMargin = 1;
-    const gridElement = <div style={{width:`${gridElementWidth}px`,height:`${gridElementWidth}px`,backgroundColor:'#145185',marginRight:`${gridElementMargin}px`,marginLeft:`${gridElementMargin}px`, marginBottom:`${gridElementMargin*2}px`}}></div>;
     const gridElements = [];
     const gridElementsCols = Math.floor(this.state.width/(gridElementWidth+gridElementMargin*2))
     const gridElementsRows = 5;
     for (var i = 0; i < gridElementsCols*gridElementsRows; i++) {
+      const gridElement = <div key={i.toString()}style={{width:`${gridElementWidth}px`,height:`${gridElementWidth}px`,backgroundColor:'#145185',marginRight:`${gridElementMargin}px`,marginLeft:`${gridElementMargin}px`, marginBottom:`${gridElementMargin*2}px`}}></div>;
       gridElements.push(gridElement)
     }
 
