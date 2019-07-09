@@ -1,6 +1,6 @@
 /* eslint-disable */
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { withRouter } from "react-router-dom";
 import { useLastLocation } from 'react-router-last-location';
 import "./Game.css";
@@ -40,16 +40,25 @@ function Game (props) {
   let w = width;
   let h = w;
 
+  const mapEl = useRef(null);
   const [showMapAnimation, setShowMapAnimation] = useState(false);
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const lastLocation = useLastLocation();
 
+  const [lastZoomLevel, setLastZoomLevel ] = useState(
+    localStorage.getItem('lastZoomLevel') || null
+  );
+
   
   let mapAnimationState = false;
   let mapZoomLevelState = [[0,0], [w,h]];
+
   if(lastLocation != null){
     mapAnimationState = lastLocation.pathname == '/selfie' || lastLocation.pathname == '/selfie/' ? true : false;
     mapZoomLevelState = lastLocation.pathname == '/selfie' || lastLocation.pathname == '/selfie/' ? [[w/2,h/2], [w/2,h/2]] : [[0,0], [w,h]];
+    if(lastLocation.pathname == '/image' || lastLocation.pathname == '/image/'){
+      mapZoomLevelState = JSON.parse(lastZoomLevel)  
+    }
   }
   
   useEffect(() => setShowMapAnimation(mapAnimationState), []);
@@ -59,8 +68,9 @@ function Game (props) {
   const rectangles = []
   const nbTiles = props.location.state.nbTiles;
   const tileWidth = (w/(nbTiles*nbTiles))*props.location.state.tilesWidth
+
   coord.forEach((item,index) => {
-    rectangles.push(<Rectangle key={index} color="transparent" bounds={[[(nbTiles-item.x)*tileWidth,(item.y)*tileWidth],[((nbTiles-item.x)-1)*tileWidth,((item.y)+1)*tileWidth]]} onClick={(e) => {console.log(item.thumbRef);props.history.push('/image',{imageName:item.thumbRef})}}/>)
+    rectangles.push(<Rectangle key={index} color="transparent" bounds={[[(nbTiles-item.x)*tileWidth,(item.y)*tileWidth],[((nbTiles-item.x)-1)*tileWidth,((item.y)+1)*tileWidth]]} onClick={(e) => {console.log(mapEl.current.leafletElement.getBounds()); const lastBounds = mapEl.current.leafletElement.getBounds(); localStorage.setItem('lastZoomLevel', JSON.stringify([[lastBounds._southWest.lat,lastBounds._southWest.lng],[lastBounds._northEast.lat,lastBounds._northEast.lng]]));; console.log(item.thumbRef);props.history.push('/image',{imageName:item.thumbRef})}}/>)
   })
   const [zoomLevel, setZoomLevel] = useState(mapZoomLevelState);
 
@@ -83,7 +93,7 @@ function Game (props) {
       </nav>
       <div style={{marginTop:`${props.location.state.paddingTop}px`}}>
         <CSSTransition in={showMapAnimation} timeout={1000} classNames="map-wrapper">
-          <Map crs={L.CRS.Simple} boundsOptions={[[0,0], [w,h]]} maxZoom={4} zoomControl={false} attributionControl={false} bounds={zoomLevel} maxBounds={[[0,0], [w,h]]} maxBoundsViscosity={1.0} style={{width: `${w}px`, height:`${w}px`}}>
+          <Map ref={mapEl} crs={L.CRS.Simple} boundsOptions={[[0,0], [w,h]]} maxZoom={4} zoomControl={false} attributionControl={false} bounds={zoomLevel} maxBounds={[[0,0], [w,h]]} maxBoundsViscosity={1.0} style={{width: `${w}px`, height:`${w}px`}}>
             <ImageOverlay
               url={props.location.state.mosaicFileUrl}
               bounds={[[0,0], [w,h]]}
