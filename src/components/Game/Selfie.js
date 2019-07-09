@@ -64,14 +64,14 @@ class Selfie extends Component {
         const file = new File([blob], `${filename}.jpg`);
         fd.append('selfie', file)
         // After conversion we can upload blob file to server
-        fetch('https://localhost:3001/upload', {method: 'POST', body: fd})
+        fetch('https://lab.notrehistoire.ch/exp2/api/upload', {method: 'POST', body: fd})
           .then(res => res.json()) 
           .then(async(res) => {
             this.setState({selfieProcessing:false});
             // Image processed (mosaic) has the same name as the image uploaded (selfie)
             if(res.upload){
               // Download image
-              const mosaicFileUrl = `https://localhost:3001/outputs/${filename}.jpg`
+              const mosaicFileUrl = `https://lab.notrehistoire.ch/exp2/api/outputs/${filename}.jpg`
               // let image = await Image.load(mosaicFileUrl);
               console.log(res.coord)
               this.setState({mosaicFileUrl:mosaicFileUrl,coord:res.coord,tilesWidth:res.tilesWidth,nbTiles:res.nbTiles});
