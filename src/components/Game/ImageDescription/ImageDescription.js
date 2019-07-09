@@ -9,7 +9,6 @@ import moment from 'moment'
 
 class ImageDescription extends Component {
 
-
     constructor(props) {
         super(props);
         this.state = {
@@ -22,6 +21,8 @@ class ImageDescription extends Component {
             height:0
         }
         this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+        this.navHeight = 52;
+        this.descriptionHeight = 110;
     }
 
     componentWillMount() {
@@ -33,26 +34,23 @@ class ImageDescription extends Component {
         this.setState({ width: window.innerWidth, height: window.innerHeight });
     }
 
-    componentDidMount(){
-        this.setState({ mounted: true });
-        const height = this.divElement;
-        console.log(height)
-    }
-
     async getImageDescription(imageName){
 
         try {
             const response = await fetch(`https://lab.notrehistoire.ch/exp2/api/images-info/${imageName}`);
             const responseJson = await response.json();
             const info = responseJson.info;
+            let imgHeight = info.media.height > this.state.height - this.navHeight - this.descriptionHeight ? (this.state.height - this.navHeight - this.descriptionHeight) : info.media.height;
+            let imgWidth = info.media.width/(info.media.height/imgHeight)
+            
             this.setState({
                 title: info.titre,
                 date: info.date.year,
                 location: info.location,
                 author: info.author != null ? info.author : '-',
                 id: info.id,
-                width: info.media.width > this.state.width ? this.state.width : info.media.width,
-                height: info.media.height/(info.media.width/this.state.width)
+                width: imgWidth,
+                height: imgHeight
             })
         } catch (err) {
             console.log(err)
@@ -66,7 +64,7 @@ class ImageDescription extends Component {
             
                 <Div100vh>
                     <div className='image-description'>
-                        <nav className="mainNav">
+                        <nav className="mainNav" style={{height:`${this.navHeight}px`}}>
                             <div className="navbar-left">
                                 <a onClick={() => this.props.history.goBack()} className="navbar-left_link-text">Retour</a>
                             </div>
@@ -74,10 +72,8 @@ class ImageDescription extends Component {
                         <div className="image">
                             <img src={`https://lab.notrehistoire.ch/exp2/api/raw-images/${this.props.location.state.imageName}`} width={this.state.width} height={this.state.height}/>,
                         </div>
-                        <div className="description"
-                            ref={ (divElement) => this.divElement = divElement}
-                        >
-                            <div className='info'>
+                        <div className="description" style={{height:`${this.descriptionHeight}px`}}>
+                            <div className='info' >
                                 <h2>{this.state.title}</h2>
                                 <h3>{this.state.date} {this.state.location != null && this.state.date != '' ? ' - '+this.state.location : this.state.location != null ? this.state.location : ''}</h3>
                                 <p>Auteur·e : {this.state.author}</p>
