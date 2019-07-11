@@ -73,7 +73,6 @@ class Selfie extends Component {
               // Download image
               const mosaicFileUrl = `https://lab.notrehistoire.ch/exp2/api/outputs/${filename}.jpg`
               // let image = await Image.load(mosaicFileUrl);
-              console.log(res.coord)
               this.setState({mosaicFileUrl:mosaicFileUrl,coord:res.coord,tilesWidth:res.tilesWidth,nbTiles:res.nbTiles});
               // Once the server image processing (mosaic building) is finished and the image returned is laoded
               // we can go to the game
@@ -87,7 +86,6 @@ class Selfie extends Component {
   }
 
   goToGame = () => {
-    console.log('goToGame')
     this.setState({loadingFinished:true});
   }
 
@@ -158,9 +156,6 @@ class TextLoading extends Component {
   }
 
   componentWillUnmount(){
-    console.log('unmount')
-    console.log(this.timeOut1)
-    console.log(this.interval)
     clearTimeout(this.timeOut1);
     clearTimeout(this.timeOut2);
     clearInterval(this.interval);

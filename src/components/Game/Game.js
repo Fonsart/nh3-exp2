@@ -72,7 +72,7 @@ function Game (props) {
   const tileWidth = (w/(nbTiles*nbTiles))*props.location.state.tilesWidth
 
   coord.forEach((item,index) => {
-    rectangles.push(<Rectangle key={index} color="transparent" bounds={[[(nbTiles-item.x)*tileWidth,(item.y)*tileWidth],[((nbTiles-item.x)-1)*tileWidth,((item.y)+1)*tileWidth]]} onClick={(e) => {console.log(mapEl.current.leafletElement.getBounds()); const lastBounds = mapEl.current.leafletElement.getBounds(); localStorage.setItem('lastZoomLevel', JSON.stringify([[lastBounds._southWest.lat,lastBounds._southWest.lng],[lastBounds._northEast.lat,lastBounds._northEast.lng]]));; console.log(item.thumbRef);props.history.push('/image',{imageName:item.thumbRef})}}/>)
+    rectangles.push(<Rectangle key={index} color="transparent" bounds={[[(nbTiles-item.x)*tileWidth,(item.y)*tileWidth],[((nbTiles-item.x)-1)*tileWidth,((item.y)+1)*tileWidth]]} onClick={(e) => {const lastBounds = mapEl.current.leafletElement.getBounds(); localStorage.setItem('lastZoomLevel', JSON.stringify([[lastBounds._southWest.lat,lastBounds._southWest.lng],[lastBounds._northEast.lat,lastBounds._northEast.lng]]));props.history.push('/image',{imageName:item.thumbRef})}}/>)
   })
   const [zoomLevel, setZoomLevel] = useState(mapZoomLevelState);
 
