@@ -42,7 +42,10 @@ class ImageDescription extends Component {
             const info = responseJson.info;
             let imgHeight = info.media.height > this.state.height - this.navHeight - this.descriptionHeight ? (this.state.height - this.navHeight - this.descriptionHeight) : info.media.height;
             let imgWidth = info.media.width/(info.media.height/imgHeight)
-            
+            if(imgWidth > this.state.width){
+                imgHeight = imgHeight/(imgWidth/this.state.width)
+                imgWidth = this.state.width;
+            }
             this.setState({
                 title: info.titre,
                 date: info.date.year,
