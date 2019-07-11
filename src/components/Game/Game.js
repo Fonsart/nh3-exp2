@@ -45,6 +45,7 @@ function Game (props) {
   const [showMapAnimation, setShowMapAnimation] = useState(false);
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [sharingModalIsOpen, setSharingModalIsOpen] = useState(false);
+  const [zoomLevel, setZoomLevel] = useState(mapZoomLevelState);
   const lastLocation = useLastLocation();
 
   const [lastZoomLevel, setLastZoomLevel ] = useState(
@@ -64,7 +65,6 @@ function Game (props) {
   }
   
   useEffect(() => setShowMapAnimation(mapAnimationState), []);
-
   
   const coord = props.location.state.coord
   const rectangles = []
@@ -74,7 +74,6 @@ function Game (props) {
   coord.forEach((item,index) => {
     rectangles.push(<Rectangle key={index} color="transparent" bounds={[[(nbTiles-item.x)*tileWidth,(item.y)*tileWidth],[((nbTiles-item.x)-1)*tileWidth,((item.y)+1)*tileWidth]]} onClick={(e) => {const lastBounds = mapEl.current.leafletElement.getBounds(); localStorage.setItem('lastZoomLevel', JSON.stringify([[lastBounds._southWest.lat,lastBounds._southWest.lng],[lastBounds._northEast.lat,lastBounds._northEast.lng]]));props.history.push('/image',{imageName:item.thumbRef})}}/>)
   })
-  const [zoomLevel, setZoomLevel] = useState(mapZoomLevelState);
 
   const closeModal = (goToHome) => {
     goToHome ? props.history.push('/') : setModalIsOpen(false)

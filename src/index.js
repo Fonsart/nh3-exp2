@@ -36,4 +36,3 @@ export default class App extends Component {
 
 const rootElement = document.getElementById("root");
 render(<App />, rootElement);
-registerServiceWorker();
