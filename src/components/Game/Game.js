@@ -45,7 +45,7 @@ function Game (props) {
   const [showMapAnimation, setShowMapAnimation] = useState(false);
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [sharingModalIsOpen, setSharingModalIsOpen] = useState(false);
-  const [zoomLevel, setZoomLevel] = useState(mapZoomLevelState);
+  
   const lastLocation = useLastLocation();
 
   const [lastZoomLevel, setLastZoomLevel ] = useState(
@@ -57,15 +57,17 @@ function Game (props) {
   let mapZoomLevelState = [[0,0], [w,h]];
 
   if(lastLocation != null){
-    // mapAnimationState = lastLocation.pathname == '/selfie' || lastLocation.pathname == '/selfie/' ? true : false; // This used to be used for map zoom animation at the begining of the experience
-    // mapZoomLevelState = lastLocation.pathname == '/selfie' || lastLocation.pathname == '/selfie/' ? [[0,0], [w,h]] : [[0,0], [w,h]];
+    mapAnimationState = lastLocation.pathname == '/selfie' || lastLocation.pathname == '/selfie/' ? true : false; 
+    // mapZoomLevelState = lastLocation.pathname == '/selfie' || lastLocation.pathname == '/selfie/' ? [[0,0], [w,h]] : [[0,0], [w,h]]; // This used to be used for map zoom animation at the begining of the experience
     if(lastLocation.pathname == '/image' || lastLocation.pathname == '/image/'){
       mapZoomLevelState = JSON.parse(lastZoomLevel)  
     }
   }
   
   useEffect(() => setShowMapAnimation(mapAnimationState), []);
-  
+  const [zoomLevel, setZoomLevel] = useState(mapZoomLevelState);
+
+
   const coord = props.location.state.coord
   const rectangles = []
   const nbTiles = props.location.state.nbTiles;
