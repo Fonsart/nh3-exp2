@@ -26,6 +26,7 @@
     "react-router-dom": "^5.0.0",
     "react-router-last-location": "^2.0.1",
     "react-scripts": "^2.1.8",
+    "react-share": "^3.0.0",
     "react-spinners": "^0.5.4",
     "react-spinners-kit": "^1.9.0",
     "react-transition-group": "^4.0.0",

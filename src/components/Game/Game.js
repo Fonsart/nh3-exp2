@@ -14,6 +14,7 @@ import { Map, Rectangle, ImageOverlay } from 'react-leaflet'
 import L from 'leaflet'
 import { CSSTransition } from 'react-transition-group';
 import Modal from 'react-modal';
+import { FacebookShareButton, FacebookIcon, WhatsappShareButton, WhatsappIcon, TwitterShareButton, TwitterIcon } from 'react-share';
 
 const modalStyles = {
   content : {
@@ -43,6 +44,7 @@ function Game (props) {
   const mapEl = useRef(null);
   const [showMapAnimation, setShowMapAnimation] = useState(false);
   const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [sharingModalIsOpen, setSharingModalIsOpen] = useState(false);
   const lastLocation = useLastLocation();
 
   const [lastZoomLevel, setLastZoomLevel ] = useState(
@@ -87,7 +89,7 @@ function Game (props) {
         </div>
         {!validBrowser ? "" : (
           <div className="navbar-right">
-            <a onClick={() => props.history.push('/selfie')} id="openCamera" className="btn btn__secondary"><i className="fas fa-camera"></i></a>
+            <a onClick={() => setSharingModalIsOpen(true)} id="openCamera" className="btn btn__secondary"><i className="fas fa-share-alt"></i></a>
           </div>
         )}
       </nav>
@@ -122,6 +124,20 @@ function Game (props) {
         <article style={{color:'#333',fontSize:'1.2rem',marginBottom:'10px'}}>La mosaïque est éphémère, si vous retournez à l’accueil, elle sera supprimée</article>
         <ModalButton text="Ok" handleClick={() => closeModal(true)} />
         <ModalButton text="Rester ici" handleClick={() => closeModal(false)} />
+      </Modal>
+      <Modal
+          isOpen={sharingModalIsOpen}
+          onRequestClose={() => setSharingModalIsOpen(false)}
+          style={modalStyles}
+          contentLabel="Sharing Modal"
+          ariaHideApp={false}
+        >
+        <article style={{color:'#333',fontSize:'1.2rem',marginBottom:'10px', paddingTop:'20px', paddingBottom: '20px', display: 'flex', justifyContent: 'space-around'}}>
+          <FacebookShareButton url={'https://lab.notrehistoire.ch/exp2'} ><FacebookIcon size={32} round={true} /></FacebookShareButton>
+          <TwitterShareButton url={'https://lab.notrehistoire.ch/exp2'} ><TwitterIcon size={32} round={true} /></TwitterShareButton>
+          <WhatsappShareButton url={'https://lab.notrehistoire.ch/exp2'} ><WhatsappIcon size={32} round={true} /></WhatsappShareButton>
+        </article>
+        <ModalButton text="Fermer" handleClick={() => setSharingModalIsOpen(false)} />
       </Modal>
     </div>
 
