@@ -69,7 +69,7 @@ class ImageDescription extends Component {
                                 <a onClick={() => this.props.history.goBack()} className="navbar-left_link-text">Retour</a>
                             </div>
                         </nav>
-                        <div className="image">
+                        <div className="image" onClick={() => this.props.history.goBack()}>
                             <img src={`https://lab.notrehistoire.ch/exp2/api/raw-images/${this.props.location.state.imageName}`} width={this.state.width} height={this.state.height}/>,
                         </div>
                         <div className="description" style={{height:`${this.descriptionHeight}px`}}>
