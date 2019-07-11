@@ -56,8 +56,8 @@ function Game (props) {
   let mapZoomLevelState = [[0,0], [w,h]];
 
   if(lastLocation != null){
-    mapAnimationState = lastLocation.pathname == '/selfie' || lastLocation.pathname == '/selfie/' ? true : false;
-    mapZoomLevelState = lastLocation.pathname == '/selfie' || lastLocation.pathname == '/selfie/' ? [[w/2,h/2], [w/2,h/2]] : [[0,0], [w,h]];
+    // mapAnimationState = lastLocation.pathname == '/selfie' || lastLocation.pathname == '/selfie/' ? true : false; // This used to be used for map zoom animation at the begining of the experience
+    // mapZoomLevelState = lastLocation.pathname == '/selfie' || lastLocation.pathname == '/selfie/' ? [[0,0], [w,h]] : [[0,0], [w,h]];
     if(lastLocation.pathname == '/image' || lastLocation.pathname == '/image/'){
       mapZoomLevelState = JSON.parse(lastZoomLevel)  
     }
@@ -99,13 +99,6 @@ function Game (props) {
             <ImageOverlay
               url={props.location.state.mosaicFileUrl}
               bounds={[[0,0], [w,h]]}
-              onLoad={() => {
-                if(mapAnimationState){
-                  setTimeout(() => {
-                    setZoomLevel([[0,0], [w,h]])
-                  },1200)
-                }
-              }}
             />
             {rectangles}
           </Map>
