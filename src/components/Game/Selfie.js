@@ -14,8 +14,8 @@ import Image from 'image-js';
 import { FlagSpinner } from "react-spinners-kit";
 import anime from 'animejs';
 import Anime from 'react-anime';
-import loadingInfoWords from '../../data/loadingInfoWords.js'
 import { CSSTransition } from 'react-transition-group';
+import loadingInfoWords from '../../data/loadingInfoWords.js'
 
 
 const validBrowser = !(isIOS && isFirefox || isIOS && isChrome);
@@ -168,7 +168,7 @@ class TextLoading extends Component {
     const toRandom = ({random}) => random;
     const byValue = (a,b) => a - b;
     const byRandom = sortByMapped(toRandom)(byValue);
-    const shuffleArray = loadingInfoWords
+    const shuffleArray = [...loadingInfoWords]
       .splice(1,loadingInfoWords.length)
       .map(withRandom)
       .sort(byRandom)
