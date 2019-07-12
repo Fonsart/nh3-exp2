@@ -16,7 +16,7 @@ class Home extends Component {
     render() {
         return (
             <div className="fullBG blue-bg flex flex-col" id="home" >
-                <main>
+                <main className="home-main">
                     <div className="home-header">
                         <h2 className="home-header_title">Explorez les visages de notre histoire.</h2>
                     </div>
