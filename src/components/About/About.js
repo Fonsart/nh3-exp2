@@ -5,23 +5,14 @@ import "./About.css";
 
 
 class About extends Component {
-
-    render() {
-        return (
-            <div className="fullBG blue-bg flex flex-col justify-between text-center">
-                <nav className="relative"><Link to={'/'} className="btn btn--close router-link-active"></Link></nav>
-
-                <header>
-                    <h1 className="normal-case text-2xl">Une expérience du Lab de notrehistoire.ch</h1>
-                </header>
-
-                <aside>
+/**
+ * To insert after <header>
+ * <aside>
                     <h2>
                         <a href="https://lab.notrehistoire.ch" target="_blank">Tester nos autres expériences</a>
                     </h2>
                 </aside>
-
-                <main>
+ <main>
                     <h2>Nos autres univers:</h2>
                     <ul className="nh3-univers">
                         <li><a href="https://notrehistoire.ch" target="_blank">
@@ -32,6 +23,15 @@ class About extends Component {
                         </a></li>
                     </ul>
                 </main>
+ */
+    render() {
+        return (
+            <div className="fullBG blue-bg flex flex-col justify-between text-center">
+                <nav className="relative"><Link to={'/'} className="btn btn--close router-link-active"></Link></nav>
+
+                <header>
+                    <h1 className="normal-case text-2xl">Une expérience du Lab de notrehistoire.ch</h1>
+                </header>
 
                 <aside>
                     <h3>Conçu et développé par:</h3>
