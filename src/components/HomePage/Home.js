@@ -31,7 +31,7 @@ class Home extends Component {
                     {!((isIOS && isFirefox) || (isIOS && isChrome)) && isMobile ? (
                         <div className='home-actions'>
                             <aside>
-                                <p><Link to={`/selfie/`}><img src="/img/icon_home_pixplorer.svg" class="start-icon"/></Link></p>
+                                <p><Link to={`/selfie/`}><img src={process.env.PUBLIC_URL+"/img/icon_home_pixplorer.svg"} class="start-icon"/></Link></p>
                             </aside>
                         </div>
                     ) : !isMobile ? (<div>
