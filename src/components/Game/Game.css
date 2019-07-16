@@ -59,3 +59,77 @@
     z-index:150;
     background:black;
 }
+
+.spinner{
+    display:flex;
+    height: 100%;
+    align-items: center; 
+    justify-content: center;
+    flex-direction: column;
+}
+
+.gridElements{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.loadingInfo{
+    font-size: 1.1em;
+    text-align: center;
+}
+
+.map-wrapper-appear {
+  opacity: 0;
+}
+.map-wrapper-appear-done {
+  opacity: 0;
+}
+.map-wrapper-enter {
+  opacity: 0;
+}
+.map-wrapper-enter-active {
+  opacity: 1;
+  transition: opacity 1000ms;
+}
+.map-wrapper-exit {
+  opacity: 1;
+}
+.map-wrapper-exit-active {
+  opacity: 1;
+  transition: opacity 1000ms;
+}
+
+.spinner-wrapper-enter {
+  opacity: 1;
+}
+.spinner-wrapper-enter-active {
+  opacity: 0;
+  transition: opacity 500ms;
+}
+.spinner-wrapper-exit {
+  opacity: 1;
+}
+.spinner-wrapper-exit-active {
+  opacity: 0;
+  transition: opacity 500ms;
+}
+.spinner-wrapper-exit-done {
+  opacity: 0;
+}
+
+.map-howto {
+  opacity: 0;
+  font-size: 1.5rem;
+}
+.map-howto-enter {
+  opacity: 1;
+}
+.map-howto-enter-active {
+  opacity: 1;
+  transition: opacity 1000ms;
+}
+.map-howto-enter-done {
+  opacity: 0;
+  transition: opacity 1000ms;
+}

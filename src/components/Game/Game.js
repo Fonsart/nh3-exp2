@@ -1,279 +1,160 @@
 /* eslint-disable */
 
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect, useRef } from "react";
+import { withRouter } from "react-router-dom";
+import { useLastLocation } from 'react-router-last-location';
 import "./Game.css";
-import Images from "../../assets/images.json";
-import WebcamCapture from "./WebcamCapture/WebcamCapture";
-import ImageDescription from "./ImageDescription/ImageDescription";
-import Mosaic from "./Mosaic/Mosaic";
-import { CSSTransition } from "react-transition-group";
 import {
   isFirefox,
   isChrome,
   isIOS
 } from "react-device-detect";
-import Loading from '../commons/modals/loading/loading';
-import Share from '../commons/modals/share/share';
+import useWindowDimensions from '../Utils/useWindowDimensions';
+import { Map, Rectangle, ImageOverlay } from 'react-leaflet'
+import L from 'leaflet'
+import { CSSTransition } from 'react-transition-group';
+import Modal from 'react-modal';
+import { FacebookShareButton, FacebookIcon, WhatsappShareButton, WhatsappIcon, TwitterShareButton, TwitterIcon } from 'react-share';
 
-const validBrowser = !(isIOS && isFirefox || isIOS && isChrome);
-
-class Game extends Component {
-  constructor(props) {
-    super(props);
-    this.updateImageData = this.updateImageData.bind(this);
-
-    this.state = {
-      isCamera: true,
-      initialState: false,
-      loadProgress: 0,
-      target: null,
-      dimensions: { height: {}, width: {} },
-      selfie: true,
-      img_title: null,
-      img_date: null,
-      img_author: null,
-      img_id: null,
-      img_place: null,
-      imgLoaded: false,
-      mosaicLoading: false,
-      visited: 0,
-      shared: false,
-      askSharing: true,
-
-    };
-
-    this.imgRef = React.createRef();
-    this.indexFirstImage = Math.floor(Math.random() * Object.keys(Images).length);
+const modalStyles = {
+  content : {
+    top: '50%',
+    left: 0,
+    right: 0,
+    bottom: 'auto',
+    marginRight: '-50%',
+    transform: 'translate(0, -50%)',
+    marginRight: '10px',
+    marginLeft: '10px'
+  },
+  overlay: {
+    zIndex: 99999,
   }
+};
 
-  shouldComponentUpdate(nextProps) {
-    return (nextProps.columns !== this.state.columns
-      || nextProps.target !== this.state.target);
-  }
 
-  componentDidMount() {
-    this.setState({
-      initialState: true,
-      imgLoaded: false,
-      mosaicLoading: false
-    })
-  }
+function Game (props) {
 
-  componentWillMount() {
-    /*//get a random starting image
-    let imgPath = Images[this.indexFirstImage].media.path;
-    let imgName = imgPath.split("/");
+  const validBrowser = !(isIOS && isFirefox || isIOS && isChrome);
 
-    this.setState({
-      target: process.env.PUBLIC_URL + "/images/" + imgName[3],
-    });
+  const { height, width } = useWindowDimensions();
+  let w = width;
+  let h = w;
 
-    this.updateImageData(Images[this.indexFirstImage]);*/
-  }
+  const mapEl = useRef(null);
+  const [showMapAnimation, setShowMapAnimation] = useState(false);
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [sharingModalIsOpen, setSharingModalIsOpen] = useState(false);
+  
+  const lastLocation = useLastLocation();
 
-  componentWillUnmount() {
-    this.setState({
-      initialState: false,
-      imgLoaded: false
-    })
-  }
+  const [lastZoomLevel, setLastZoomLevel ] = useState(
+    localStorage.getItem('lastZoomLevel') || null
+  );
 
-  updateImageData(img) {
+  
+  let mapAnimationState = false;
+  let mapZoomLevelState = [[0,0], [w,h]];
 
-    if (img != null) {
-      this.setState({
-        img_title: img.titre,
-        img_date: img.date.year,
-        img_author: img.author,
-        img_id: img.id,
-        img_place: img.location
-      })
+  if(lastLocation != null){
+    mapAnimationState = lastLocation.pathname == '/selfie' || lastLocation.pathname == '/selfie/' ? true : false; 
+    // mapZoomLevelState = lastLocation.pathname == '/selfie' || lastLocation.pathname == '/selfie/' ? [[0,0], [w,h]] : [[0,0], [w,h]]; // This used to be used for map zoom animation at the begining of the experience
+    if(lastLocation.pathname == '/image' || lastLocation.pathname == '/image/'){
+      mapZoomLevelState = JSON.parse(lastZoomLevel)  
     }
   }
+  
+  useEffect(() => setShowMapAnimation(mapAnimationState), []);
+  const [zoomLevel, setZoomLevel] = useState(mapZoomLevelState);
 
-  openCamera = () => {
-    this.setState({
-      isCamera: true,
-      selfie: true
-    })
+
+  const coord = props.location.state.coord
+  const rectangles = []
+  const nbTiles = props.location.state.nbTiles;
+  const tileWidth = (w/(nbTiles*nbTiles))*props.location.state.tilesWidth
+
+  coord.forEach((item,index) => {
+    rectangles.push(<Rectangle key={index} color="transparent" bounds={[[(nbTiles-item.x)*tileWidth,(item.y)*tileWidth],[((nbTiles-item.x)-1)*tileWidth,((item.y)+1)*tileWidth]]} onClick={(e) => {const lastBounds = mapEl.current.leafletElement.getBounds(); localStorage.setItem('lastZoomLevel', JSON.stringify([[lastBounds._southWest.lat,lastBounds._southWest.lng],[lastBounds._northEast.lat,lastBounds._northEast.lng]]));props.history.push('/image',{imageName:item.thumbRef})}}/>)
+  })
+
+  const closeModal = (goToHome) => {
+    goToHome ? props.history.push('/') : setModalIsOpen(false)
   }
 
-  takeSelfie = (selfie) => {
-    let date = new Date().getFullYear();
-
-    this.setState({
-      initialState: true,
-      target: selfie,
-      selfie: true,
-      isCamera: false,
-      img_title: "Vous-même",
-      img_date: date,
-      img_author: "Vous",
-      img_id: null,
-      img_place: null,
-      imgLoaded: false,
-      mosaicLoading: true
-    })
-
-    if (this.state.loadProgress === 1) {
-      setTimeout(() => {
-        this.setState({
-          mosaicLoading: false
-        })
-      }, 2000);
-    }
-
-  }
-
-  clickedImage() {
-    let visitedIterator = this.state.visited+1;
-    this.setState({
-      initialState: !this.state.initialState,
-      visited: visitedIterator
-    })
-  }
-
-  handleImageLoaded() {
-    this.setState({
-      dimensions: {
-        height: this.imgRef.current.height,
-        width: this.imgRef.current.width,
-      },
-      imgLoaded: true
-    });
-  }
-
-  getImgSrc(img) {
-    return typeof img === "string" ? img : img.src;
-  }
-
-  clickedCanvas(data) {
-
-    let imgObject = this.getImgObjectFromSrc(this.getImgSrc(data.image));
-    this.updateImageData(imgObject);
-
-    this.setState({
-      selfie: false,
-    });
-
-    if (data.image != this.state.target) {
-      this.setState({
-        target: data.image,
-        initialState: !this.state.initialState,
-        imgLoaded: false
-      })
-    }
-    else {
-      this.setState({
-        imgLoaded: true,
-        initialState: !this.state.initialState
-      })
-    }
-  }
-
-  getImgObjectFromSrc(src) {
-
-    let imgPath = src.split("/");
-    let index = imgPath.length - 1;
-
-    let currentImg = Images.filter(img => {
-      let targetPath = img.media.path.split("/");
-      return targetPath[3] === imgPath[index]
-    });
-
-    return currentImg[0];
-  }
-
-  onLoadProgress(progress) {
-    this.setState({
-      loadProgress: progress
-    })
-
-    if (this.state.loadProgress > 0.9) {
-      setTimeout(() => {
-        this.setState({
-          mosaicLoading: false
-        })
-      }, 2000);
-    }
-  }
-
-  denyShare(){
-    this.setState({
-      askSharing:false,
-    })
-  }
-
-  shareExperience(){
-    this.setState({
-      askSharing:false,
-      shared:true,
-    })
-  }
-
-  render() {
-
-    return (
-      <div className="game">
-        <Loading
-          loading={(this.state.initialState && this.state.mosaicLoading)}
-        />
-        <Share
-          deny={this.denyShare.bind(this)}
-          share={this.shareExperience.bind(this)}
-          show={(this.state.visited === 4 && this.state.askSharing)}
-        />
-        {this.state.mosaicLoading ? "" : (
-          <nav className="mainNav">
-            <div className="btn_back navbar-left">
-              <Link to={'/'} className="btn btn__secondary"><i className="fas fa-chevron-left"></i></Link>
-            </div>
-            {!validBrowser ? "" : (
-              <div className="navbar-right">
-                <a onClick={this.openCamera} id="openCamera" className="btn btn__secondary"><i className="fas fa-camera"></i></a>
-              </div>
-            )}
-          </nav>
-        )}
-
-
-        {this.state.isCamera ? (<WebcamCapture takeSelfie={this.takeSelfie} />) : null}
-
-        <div className="fullBG flex flex-col " id="game">
-          <main className="flex justify-center relative">
-            {this.state.target ? (
-              <Mosaic
-                onClick={this.clickedCanvas.bind(this)}
-                loadProgress={this.onLoadProgress.bind(this)}
-                hidden={this.state.initialState}
-                height={this.state.dimensions.height}
-                width={this.state.dimensions.width}
-                target={this.state.target}
-                isSelfie={this.state.selfie}
-              />) : null}
-
-            <CSSTransition in={(this.state.initialState && this.state.imgLoaded && !this.state.mosaicLoading)} timeout={5000} classNames="desc-img">
-              <div id="target" className={this.state.mosaicLoading ? "hidden" : ""}>
-                <img onLoad={this.handleImageLoaded.bind(this)} onClick={this.clickedImage.bind(this)} className="target" src={this.state.target ? this.getImgSrc(this.state.target) : null} ref={this.imgRef} alt="" />
-              </div>
-            </CSSTransition>
-
-            <ImageDescription
-              id={this.state.img_id}
-              titre={this.state.img_title}
-              auteur={this.state.img_author}
-              date={this.state.img_date}
-              lieu={this.state.img_place}
-              show={(this.state.initialState && this.state.imgLoaded && !this.state.mosaicLoading)}
-              isSelfie={this.state.selfie}
-            />
-
-          </main>
+  return (
+    <div className="game">
+    
+      <nav className="mainNav">
+        <div className="navbar-left">
+          <a onClick={() => setModalIsOpen(true)} className="navbar-left_link-text">Accueil</a>
         </div>
+        {!validBrowser ? "" : (
+          <div className="navbar-right">
+            <a onClick={() => setSharingModalIsOpen(true)} id="openCamera" className="btn btn__secondary"><i className="fas fa-share-alt"></i></a>
+          </div>
+        )}
+      </nav>
+      <div style={{marginTop:`${props.location.state.paddingTop}px`}}>
+        <CSSTransition in={showMapAnimation} timeout={1000} classNames="map-wrapper">
+          <Map ref={mapEl} crs={L.CRS.Simple} boundsOptions={[[0,0], [w,h]]} maxZoom={4} zoomControl={false} attributionControl={false} bounds={zoomLevel} maxBounds={[[0,0], [w,h]]} maxBoundsViscosity={1.0} style={{width: `${w}px`, height:`${w}px`}}>
+            <ImageOverlay
+              url={props.location.state.mosaicFileUrl}
+              bounds={[[0,0], [w,h]]}
+            />
+            {rectangles}
+          </Map>
+        </CSSTransition>
+        <CSSTransition in={showMapAnimation} timeout={4000} classNames="map-howto" className="map-howto">
+          <p>Votre exploration peut commencer</p>
+        </CSSTransition>
       </div>
-    );
-  }
+      <Modal
+          isOpen={modalIsOpen}
+          onRequestClose={() => closeModal(false)}
+          style={modalStyles}
+          contentLabel="Leave Game Modal"
+          ariaHideApp={false}
+        >
+        <article style={{color:'#333',fontSize:'1.2rem',marginBottom:'10px'}}>La mosaïque est éphémère, si vous retournez à l’accueil, elle sera supprimée</article>
+        <ModalButton text="Ok" handleClick={() => closeModal(true)} />
+        <ModalButton text="Rester ici" handleClick={() => closeModal(false)} />
+      </Modal>
+      <Modal
+          isOpen={sharingModalIsOpen}
+          onRequestClose={() => setSharingModalIsOpen(false)}
+          style={modalStyles}
+          contentLabel="Sharing Modal"
+          ariaHideApp={false}
+        >
+        <article style={{color:'#333',fontSize:'1.2rem',marginBottom:'10px', paddingTop:'20px', paddingBottom: '20px', display: 'flex', justifyContent: 'space-around'}}>
+          <FacebookShareButton url={'https://lab.notrehistoire.ch/exp2'} ><FacebookIcon size={32} round={true} /></FacebookShareButton>
+          <TwitterShareButton url={'https://lab.notrehistoire.ch/exp2'} ><TwitterIcon size={32} round={true} /></TwitterShareButton>
+          <WhatsappShareButton url={'https://lab.notrehistoire.ch/exp2'} ><WhatsappIcon size={32} round={true} /></WhatsappShareButton>
+        </article>
+        <ModalButton text="Fermer" handleClick={() => setSharingModalIsOpen(false)} />
+      </Modal>
+    </div>
+
+  );
 }
 
-export default Game;
+function ModalButton (props) {
+
+  const buttonStyle = {
+    display:"inline-block",
+    padding:"0.35em 1.2em",
+    border:"0.1em solid #333",
+    margin:"0 0.3em 0.3em 0",
+    borderRadius:"0.12em",
+    boxSizing: "border-box",
+    textDecoration:"none",
+    fontWeight:300,
+    color:"#333",
+    textAlign:"center"
+  }
+  return(
+    <a style={buttonStyle} onClick={props.handleClick}>{props.text}</a>
+  )
+}
+
+export default withRouter(Game);

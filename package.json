@@ -4,20 +4,35 @@
   "description": "",
   "keywords": [],
   "main": "src/index.js",
+  "engines": {
+    "npm": "^6.9.0",
+    "node": "^12.2.0"
+  },
   "dependencies": {
+    "animejs": "^3.0.1",
+    "image-js": "^0.21.6",
+    "leaflet": "^1.5.1",
+    "moment": "^2.24.0",
     "prop-types": "^15.7.2",
     "react": "16.8.0",
+    "react-anime": "^2.2.0",
     "react-device-detect": "^1.6.2",
+    "react-div-100vh": "^0.3.4",
     "react-dom": "16.8.0",
-    "react-easy-swipe": "0.0.17",
-    "react-image-mosaic": "1.0.4",
+    "react-leaflet": "^2.4.0",
+    "react-load-image": "^0.1.7",
+    "react-modal": "^3.8.2",
     "react-responsive-modal": "^4.0.1",
     "react-router-dom": "^5.0.0",
+    "react-router-last-location": "^2.0.1",
     "react-scripts": "^2.1.8",
+    "react-share": "^3.0.0",
     "react-spinners": "^0.5.4",
+    "react-spinners-kit": "^1.9.0",
     "react-transition-group": "^4.0.0",
     "react-webcam": "^1.1.1",
-    "serve": "^11.0.0"
+    "serve": "^11.0.0",
+    "styled-components": "^4.3.2"
   },
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "^7.4.0",
@@ -27,7 +42,7 @@
   },
   "scripts": {
     "start": "set NODE_ENV=production&&react-scripts start",
-    "dev": "set HTTPS=true&&npm start",
+    "https": "set HTTPS=true&&npm start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"

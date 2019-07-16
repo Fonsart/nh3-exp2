@@ -11,17 +11,9 @@ class WebcamCapture extends Component {
             width: 0,
             height: 0,
             showBtn: false,
-            loading: this.props.loading
+            loading: this.props.loading,
+            selfiePaddingTop: (this.props.width*(4/3)-this.props.width)/2
         };
-        this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
-    }
-
-    componentDidMount() {
-        this.updateWindowDimensions();
-    }
-
-    updateWindowDimensions() {
-        this.setState({ width: window.innerWidth, height: window.innerHeight });
     }
 
     setRef = webcam => {
@@ -30,7 +22,7 @@ class WebcamCapture extends Component {
 
     capture = () => {
         let img = this.webcam.getScreenshot();
-        this.props.takeSelfie(img);
+        this.props.takeSelfie(img,this.state.selfiePaddingTop);
     };
 
     showButton() {
@@ -43,27 +35,21 @@ class WebcamCapture extends Component {
         const videoConstraints = {
             facingMode: "user"
         };
-
-        const containerStyles = {
-            width: this.state.width,
-            height: this.state.height
-        }
+        const cameraButton = this.state.showBtn ? (<a key='cameraButton' onClick={this.capture} id="openCamera" className="btn btn__secondary btn_capture"><i className="fas fa-camera"></i></a>) : null;
         return (
-            <div className="camera" style={containerStyles}>
-               
+            [<div key='camera' className="camera" style={{position:'relative'}}>
+                <div style={{height:`${this.state.selfiePaddingTop}px`, background:'black', position:'absolute', top:0, left:0, width:'100%'}}></div>
                 <Webcam
-                    width={this.state.width}
-                    height={this.state.height}
                     audio={false}
                     ref={this.setRef}
                     screenshotFormat="image/jpeg"
                     onUserMedia={this.showButton.bind(this)}
+                    width={this.props.width}
+                    height={this.props.width*(4/3)}
                     videoConstraints={videoConstraints}
                 />
-                {this.state.showBtn ? (
-                    <a onClick={this.capture} id="openCamera" className="btn btn__secondary btn_capture"><i className="fas fa-camera"></i></a>
-                ) : ""}
-            </div>
+                <div style={{height:`${this.state.selfiePaddingTop}px`, background:'black', position:'absolute', bottom:0, left:0, width:'100%'}}></div>
+            </div>,cameraButton]
         );
     }
 }

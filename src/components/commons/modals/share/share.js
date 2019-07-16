@@ -6,7 +6,7 @@ import './share.css';
 import Modal from "react-responsive-modal";
 
 const Share = (props) => {
-
+  //set prop "open" of Modal component to show the share popup after 4 images clicked
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
@@ -16,7 +16,7 @@ const Share = (props) => {
   return (
     <div>
       <Modal
-        open={open}
+        open={false}
         onClose={() => setOpen(false)}
         center
         classNames={{
